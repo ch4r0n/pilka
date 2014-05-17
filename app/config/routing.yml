@@ -1,0 +1,3 @@
+skoki_orlik:
+    resource: "@SkokiOrlikBundle/Resources/config/routing.yml"
+    prefix:   /orlik

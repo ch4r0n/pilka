@@ -1,0 +1,98 @@
+html {
+    background: #fff;
+}
+body {
+    font-size: 14px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+h1.title {
+    font-size: 45px;
+    padding-bottom: 30px;
+}
+
+.top_menu ul li{
+    display: inline-block;
+    width: auto;
+    /*height: 40px;*/
+    margin: 10px;
+}
+.top_menu ul li ul.menu_level_1 {
+    margin-top: 10px;
+    position: absolute;
+}
+.top_menu ul li ul.menu_level_1 li{
+    height: auto;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+.top_menu ul li ul.menu_level_1 li:hover{
+    background-color: #fcf8e3;
+    font-weight: bold;
+}
+
+.top_menu ul li .menu_level_1 {
+    display: none;
+}
+.top_menu ul li:hover {
+    background-color: #fbeed5;
+}
+.top_menu ul li:hover > .menu_level_1 {
+    display: block;
+    background-color: #fbeed5;
+}
+
+.top_menu ul li a {
+    font-weight: bold;
+    color: #000000;
+}
+.top_menu ul li a:hover {
+    text-decoration: none;
+}
+
+.middle_menu {
+    display: block;
+    float: right;
+    width: 200px;
+    height: 60px;
+    background-color: #428bca;
+    bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.middle_menu ul li a {
+    color: #000;
+}
+.middle_menu ul li a:hover {
+    text-decoration: none;
+}
+.middle_menu ul li {
+    text-align: center;
+    display: block;
+    padding: 5px;
+}
+.middle_menu ul li:hover {
+    background-color: #46b8da;
+    font-weight: bold;
+}
+
+#news_box .news {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 4px;
+    width: 400px;
+}
+#news_box .news .create_date {
+    font-size: 10px;
+    margin-top: 5px;
+}
+.buttonForm {
+    display: block;
+    width: 100px;
+    height: 20px;
+    background-color: #0025fe;
+}
+#tabela_box table tr td {
+    padding:5px;
+}

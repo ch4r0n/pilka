@@ -1,0 +1,52 @@
+{#{% extends "OrlikHomepageBundle::main_layout.html.twig" %}#}
+{% extends "TwigBundle::layout.html.twig" %}
+{#{% extends 'MopaBootstrapBundle::layout.html.twig' %}#}
+{#{% extends 'MopaBootstrapBundle::base.html.twig' %}#}
+
+
+{% block head %}
+    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/skokiorlik/css/style.css') }}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" href="{{ asset('bundles/skokiorlik/js/form_script.js') }}"></script>
+    {#{% stylesheets filter='cssrewrite,?yui_css'#}
+    {#'@MopaBootstrapBundle/Resources/public/bootstrap/bootstrap.css'#}
+    {#'@OrlikHomepageBundle/Resources/public/css/*'#}
+    {#%}#}
+    {#<link href="{{ asset('bundles/orlikhomepage/css/style.css') }}" type="text/css" rel="stylesheet"#}
+    {#media="screen" />#}
+
+{% endblock %}
+
+{% block title 'Orlik Skoki' %}
+
+{% block body %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-message">
+            <em>Notice</em>: {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    <div class="top_menu">
+        {% block menu_header %}{% endblock %}
+    </div>
+    {% block content_header %}
+        <div style="clear: both"></div>
+    {% endblock %}
+
+    <div class="block">
+        {% block content %}{% endblock %}
+
+
+        {% block middle_menu_header %}{% endblock %}
+
+
+    </div>
+
+    {% if code is defined %}
+        <h2>Code behind this page</h2>
+        <div class="block">
+            <div class="symfony-content">{{ code|raw }}</div>
+        </div>
+    {% endif %}
+{% endblock %}

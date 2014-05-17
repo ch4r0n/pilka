@@ -1,0 +1,17 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block title %}Orlik News{% endblock %}
+
+    {% block menu_header %}
+        {#{{ knp_menu_render('OrlikHomepageBundle:Builder:mainMenu', {'depth': 2, 'currentAsLink': false}) }}#}
+    {% endblock %}
+
+{% block content_header '' %}
+
+    {% block content %}
+        {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
+
+        <h1 class="title">Witamy!</h1>
+        Orlik HELLO
+        {#<a href="{{ path('_orlik_login') }}">Zaloguj</a>#}
+    {% endblock %}
