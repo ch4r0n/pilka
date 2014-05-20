@@ -5,3 +5,12 @@ skoki_orlik_homepage:
 orlik_homepage:
     pattern:  /
     defaults: { _controller: SkokiOrlikBundle:Default:homepage }
+
+_show_table:
+    pattern: /table
+    defaults: { _controller: SkokiOrlikBundle:Table:showTable }
+
+_show_team:
+    path: /team/show/{id}
+    defaults: { _controller: SkokiOrlikBundle:Team:show }
+    methods: GET

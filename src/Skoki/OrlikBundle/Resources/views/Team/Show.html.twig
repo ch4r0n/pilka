@@ -1,0 +1,9 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block title %}SkokiOrlikBundle:Team:Show{% endblock %}
+
+    {% block content %}
+        {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
+
+<h1>Welcome to the Team:Show page for ID: {{ id }}</h1>
+{% endblock %}

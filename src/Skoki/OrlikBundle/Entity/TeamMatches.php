@@ -1,21 +1,21 @@
 <?php
 
-namespace Orlik\HomepageBundle\Entity;
+namespace Skoki\OrlikBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use Orlik\HomepageBundle\Entity\Tournaments;
-use Orlik\HomepageBundle\Entity\Teams;
+use Skoki\OrlikBundle\Entity\Tournaments;
+use Skoki\OrlikBundle\Entity\Teams;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  *
- * Orlik\HomepageBundle\Entity\TeamMatches
+ * Skoki\OrlikBundle\Entity\TeamMatches
  *
  * TournamentTeams
  *
  * @ORM\Table(name="team_matches")
- * @ORM\Entity(repositoryClass="Orlik\HomepageBundle\Repository\TeamMatchesRepository")
+ * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\TeamMatchesRepository")
  */
 class TeamMatches
 {
@@ -29,9 +29,9 @@ class TeamMatches
     protected $id;
 
     /**
-     * @var \Orlik\HomepageBundle\Entity\Teams $team
+     * @var \Skoki\OrlikBundle\Entity\Teams $team
      *
-     * @ORM\ManyToOne(targetEntity="\Orlik\HomepageBundle\Entity\Teams", inversedBy="teamMatches")
+     * @ORM\ManyToOne(targetEntity="\Skoki\OrlikBundle\Entity\Teams", inversedBy="teamMatches")
      * @ORM\JoinColumn(name="team_id", referencedColumnName="id")
      */
     protected $team;
@@ -46,9 +46,9 @@ class TeamMatches
 
 
     /**
-     * @var \Orlik\HomepageBundle\Entity\Matches $match
+     * @var \Skoki\OrlikBundle\Entity\Matches $match
      *
-     * @ORM\ManyToOne(targetEntity="\Orlik\HomepageBundle\Entity\Matches", inversedBy="rounds")
+     * @ORM\ManyToOne(targetEntity="\Skoki\OrlikBundle\Entity\Matches", inversedBy="rounds")
      * @ORM\JoinColumn(name="match_id", referencedColumnName="id")
      */
     protected $match;
@@ -121,10 +121,10 @@ class TeamMatches
     /**
      * Add tournamentId
      *
-     * @param \Orlik\HomepageBundle\Entity\Tournaments $tournamentId
+     * @param \Skoki\OrlikBundle\Entity\Tournaments $tournamentId
      * @return TournamentTeams
      */
-    public function addTournamentId(\Orlik\HomepageBundle\Entity\Tournaments $tournamentId)
+    public function addTournamentId(\Skoki\OrlikBundle\Entity\Tournaments $tournamentId)
     {
         $this->tournamentId[] = $tournamentId;
 
@@ -134,19 +134,19 @@ class TeamMatches
     /**
      * Remove tournamentId
      *
-     * @param \Orlik\HomepageBundle\Entity\Tournaments $tournamentId
+     * @param \Skoki\OrlikBundle\Entity\Tournaments $tournamentId
      */
-    public function removeTournamentId(\Orlik\HomepageBundle\Entity\Tournaments $tournamentId)
+    public function removeTournamentId(\Skoki\OrlikBundle\Entity\Tournaments $tournamentId)
     {
         $this->tournamentId->removeElement($tournamentId);
     }
 //    /**
 //     * Add teamId
 //     *
-//     * @param \Orlik\HomepageBundle\Entity\Teams $teamId
+//     * @param \Skoki\OrlikBundle\Entity\Teams $teamId
 //     * @return TournamentTeams
 //     */
-//    public function addTeamId(\Orlik\HomepageBundle\Entity\Teams $teamId)
+//    public function addTeamId(\Skoki\OrlikBundle\Entity\Teams $teamId)
 //    {
 //        $this->teamId[] = $teamId;
 //
@@ -156,9 +156,9 @@ class TeamMatches
 //    /**
 //     * Remove teamId
 //     *
-//     * @param \Orlik\HomepageBundle\Entity\Teams $teamId
+//     * @param \Skoki\OrlikBundle\Entity\Teams $teamId
 //     */
-//    public function removeTeamId(\Orlik\HomepageBundle\Entity\Teams $teamId)
+//    public function removeTeamId(\Skoki\OrlikBundle\Entity\Teams $teamId)
 //    {
 //        $this->teamId->removeElement($teamId);
 //    }
@@ -166,10 +166,10 @@ class TeamMatches
     /**
      * Set tournament
      *
-     * @param \Orlik\HomepageBundle\Entity\Tournaments $tournament
+     * @param \Skoki\OrlikBundle\Entity\Tournaments $tournament
      * @return TournamentTeams
      */
-    public function setTournament(\Orlik\HomepageBundle\Entity\Tournaments $tournament = null)
+    public function setTournament(\Skoki\OrlikBundle\Entity\Tournaments $tournament = null)
     {
         $this->tournament = $tournament;
 
@@ -179,7 +179,7 @@ class TeamMatches
     /**
      * Get tournament
      *
-     * @return \Orlik\HomepageBundle\Entity\Tournaments
+     * @return \Skoki\OrlikBundle\Entity\Tournaments
      */
     public function getTournament()
     {
@@ -189,10 +189,10 @@ class TeamMatches
 //    /**
 //     * Set team
 //     *
-//     * @param \Orlik\HomepageBundle\Entity\Teams $team
+//     * @param \Skoki\OrlikBundle\Entity\Teams $team
 //     * @return TournamentTeams
 //     */
-//    public function setTeam(\Orlik\HomepageBundle\Entity\Teams $team = null)
+//    public function setTeam(\Skoki\OrlikBundle\Entity\Teams $team = null)
 //    {
 //        $this->team = $team;
 //
@@ -202,7 +202,7 @@ class TeamMatches
 //    /**
 //     * Get team
 //     *
-//     * @return \Orlik\HomepageBundle\Entity\Teams
+//     * @return \Skoki\OrlikBundle\Entity\Teams
 //     */
 //    public function getTeam()
 //    {
@@ -212,10 +212,10 @@ class TeamMatches
     /**
      * Set home
      *
-     * @param \Orlik\HomepageBundle\Entity\Teams $homeId
+     * @param \Skoki\OrlikBundle\Entity\Teams $homeId
      * @return TeamMatches
      */
-    public function setHome(\Orlik\HomepageBundle\Entity\Teams $homeId = null)
+    public function setHome(\Skoki\OrlikBundle\Entity\Teams $homeId = null)
     {
         $this->home = $homeId;
     
@@ -225,7 +225,7 @@ class TeamMatches
     /**
      * Get home
      *
-     * @return \Orlik\HomepageBundle\Entity\Teams 
+     * @return \Skoki\OrlikBundle\Entity\Teams 
      */
     public function getHome()
     {
@@ -235,10 +235,10 @@ class TeamMatches
     /**
      * Set away
      *
-     * @param \Orlik\HomepageBundle\Entity\Teams $awayId
+     * @param \Skoki\OrlikBundle\Entity\Teams $awayId
      * @return TeamMatches
      */
-    public function setAway(\Orlik\HomepageBundle\Entity\Teams $awayId = null)
+    public function setAway(\Skoki\OrlikBundle\Entity\Teams $awayId = null)
     {
         $this->away = $awayId;
     
@@ -248,7 +248,7 @@ class TeamMatches
     /**
      * Get awayId
      *
-     * @return \Orlik\HomepageBundle\Entity\Teams 
+     * @return \Skoki\OrlikBundle\Entity\Teams 
      */
     public function getAway()
     {
@@ -281,10 +281,10 @@ class TeamMatches
     /**
      * Set team
      *
-     * @param \Orlik\HomepageBundle\Entity\Teams $team
+     * @param \Skoki\OrlikBundle\Entity\Teams $team
      * @return TeamMatches
      */
-    public function setTeam(\Orlik\HomepageBundle\Entity\Teams $team = null)
+    public function setTeam(\Skoki\OrlikBundle\Entity\Teams $team = null)
     {
         $this->team = $team;
     
@@ -294,7 +294,7 @@ class TeamMatches
     /**
      * Get team
      *
-     * @return \Orlik\HomepageBundle\Entity\Teams 
+     * @return \Skoki\OrlikBundle\Entity\Teams 
      */
     public function getTeam()
     {

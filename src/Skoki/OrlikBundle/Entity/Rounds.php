@@ -1,6 +1,6 @@
 <?php
 
-namespace Orlik\HomepageBundle\Entity;
+namespace Skoki\OrlikBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Rounds
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Orlik\HomepageBundle\Repository\RoundsRepository")
+ * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\RoundsRepository")
  */
 class Rounds
 {
@@ -175,10 +175,10 @@ class Rounds
     /**
      * Set tournament
      *
-     * @param \Orlik\HomepageBundle\Entity\Tournaments $tournament
+     * @param \Skoki\OrlikBundle\Entity\Tournaments $tournament
      * @return Rounds
      */
-    public function setTournament(\Orlik\HomepageBundle\Entity\Tournaments $tournament = null)
+    public function setTournament(\Skoki\OrlikBundle\Entity\Tournaments $tournament = null)
     {
         $this->tournament = $tournament;
     
@@ -188,7 +188,7 @@ class Rounds
     /**
      * Get tournament
      *
-     * @return \Orlik\HomepageBundle\Entity\Tournaments 
+     * @return \Skoki\OrlikBundle\Entity\Tournaments 
      */
     public function getTournament()
     {
@@ -206,10 +206,10 @@ class Rounds
     /**
      * Add roundMatches
      *
-     * @param \Orlik\HomepageBundle\Entity\Matches $roundMatches
+     * @param \Skoki\OrlikBundle\Entity\Matches $roundMatches
      * @return Rounds
      */
-    public function addRoundMatche(\Orlik\HomepageBundle\Entity\Matches $roundMatches)
+    public function addRoundMatche(\Skoki\OrlikBundle\Entity\Matches $roundMatches)
     {
         $this->roundMatches[] = $roundMatches;
     
@@ -219,9 +219,9 @@ class Rounds
     /**
      * Remove roundMatches
      *
-     * @param \Orlik\HomepageBundle\Entity\Matches $roundMatches
+     * @param \Skoki\OrlikBundle\Entity\Matches $roundMatches
      */
-    public function removeRoundMatche(\Orlik\HomepageBundle\Entity\Matches $roundMatches)
+    public function removeRoundMatche(\Skoki\OrlikBundle\Entity\Matches $roundMatches)
     {
         $this->roundMatches->removeElement($roundMatches);
     }
@@ -280,5 +280,28 @@ class Rounds
     public function getTorder()
     {
         return $this->torder;
+    }
+
+    /**
+     * Add roundMatches
+     *
+     * @param \Skoki\OrlikBundle\Entity\Matches $roundMatches
+     * @return Rounds
+     */
+    public function addRoundMatch(\Skoki\OrlikBundle\Entity\Matches $roundMatches)
+    {
+        $this->roundMatches[] = $roundMatches;
+
+        return $this;
+    }
+
+    /**
+     * Remove roundMatches
+     *
+     * @param \Skoki\OrlikBundle\Entity\Matches $roundMatches
+     */
+    public function removeRoundMatch(\Skoki\OrlikBundle\Entity\Matches $roundMatches)
+    {
+        $this->roundMatches->removeElement($roundMatches);
     }
 }

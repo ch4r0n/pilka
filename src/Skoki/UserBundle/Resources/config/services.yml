@@ -1,0 +1,7 @@
+parameters:
+#    skoki_user.example.class: Skoki\UserBundle\Example
+
+services:
+#    skoki_user.example:
+#        class: %skoki_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

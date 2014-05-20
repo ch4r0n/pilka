@@ -1,6 +1,6 @@
 <?php
 
-namespace Orlik\HomepageBundle\Entity;
+namespace Skoki\OrlikBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * TeamPlayers
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Orlik\HomepageBundle\Repository\TeamPlayersRepository")
+ * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\TeamPlayersRepository")
  */
 class TeamPlayers
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace Orlik\HomepageBundle\Entity;
+namespace Skoki\OrlikBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use Orlik\HomepageBundle\Entity\TournamentsTeams;
+use Skoki\OrlikBundle\Entity\TournamentsTeams;
 
 /**
  * Tournaments
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Orlik\HomepageBundle\Repository\TournamentsRepository")
+ * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\TournamentsRepository")
  */
 class Tournaments
 {
@@ -84,7 +84,7 @@ class Tournaments
     /**
      * @var ArrayCollection<TournamentTeams> $teamTournament
      *
-     * @ORM\OneToMany(targetEntity="Orlik\HomepageBundle\Entity\TournamentTeams", mappedBy="tournament_id", cascade={"all"}, orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TournamentTeams", mappedBy="tournament_id", cascade={"all"}, orphanRemoval=true)
      */
     private $tournamentTeams;
 
@@ -292,10 +292,10 @@ class Tournaments
     /**
      * Add teams
      *
-     * @param \Orlik\HomepageBundle\Entity\TournamentTeams $teams
+     * @param \Skoki\OrlikBundle\Entity\TournamentTeams $teams
      * @return Tournaments
      */
-    public function addTeam(\Orlik\HomepageBundle\Entity\TournamentTeams $teams)
+    public function addTeam(\Skoki\OrlikBundle\Entity\TournamentTeams $teams)
     {
         $this->teams[] = $teams;
     
@@ -305,9 +305,9 @@ class Tournaments
     /**
      * Remove teams
      *
-     * @param \Orlik\HomepageBundle\Entity\TournamentTeams $teams
+     * @param \Skoki\OrlikBundle\Entity\TournamentTeams $teams
      */
-    public function removeTeam(\Orlik\HomepageBundle\Entity\TournamentTeams $teams)
+    public function removeTeam(\Skoki\OrlikBundle\Entity\TournamentTeams $teams)
     {
         $this->teams->removeElement($teams);
     }
@@ -325,10 +325,10 @@ class Tournaments
     /**
      * Set teams
      *
-     * @param \Orlik\HomepageBundle\Entity\TournamentTeams $teams
+     * @param \Skoki\OrlikBundle\Entity\TournamentTeams $teams
      * @return Tournaments
      */
-    public function setTeams(\Orlik\HomepageBundle\Entity\TournamentTeams $teams = null)
+    public function setTeams(\Skoki\OrlikBundle\Entity\TournamentTeams $teams = null)
     {
         $this->teams = $teams;
     
@@ -338,10 +338,10 @@ class Tournaments
     /**
      * Add tournamentTeams
      *
-     * @param \Orlik\HomepageBundle\Entity\TournamentTeams $tournamentTeams
+     * @param \Skoki\OrlikBundle\Entity\TournamentTeams $tournamentTeams
      * @return Tournaments
      */
-    public function addTournamentTeam(\Orlik\HomepageBundle\Entity\TournamentTeams $tournamentTeams)
+    public function addTournamentTeam(\Skoki\OrlikBundle\Entity\TournamentTeams $tournamentTeams)
     {
         $this->tournamentTeams[] = $tournamentTeams;
     
@@ -351,9 +351,9 @@ class Tournaments
     /**
      * Remove tournamentTeams
      *
-     * @param \Orlik\HomepageBundle\Entity\TournamentTeams $tournamentTeams
+     * @param \Skoki\OrlikBundle\Entity\TournamentTeams $tournamentTeams
      */
-    public function removeTournamentTeam(\Orlik\HomepageBundle\Entity\TournamentTeams $tournamentTeams)
+    public function removeTournamentTeam(\Skoki\OrlikBundle\Entity\TournamentTeams $tournamentTeams)
     {
         $this->tournamentTeams->removeElement($tournamentTeams);
     }
@@ -371,10 +371,10 @@ class Tournaments
     /**
      * Add rounds
      *
-     * @param \Orlik\HomepageBundle\Entity\Rounds $rounds
+     * @param \Skoki\OrlikBundle\Entity\Rounds $rounds
      * @return Tournaments
      */
-    public function addRound(\Orlik\HomepageBundle\Entity\Rounds $rounds)
+    public function addRound(\Skoki\OrlikBundle\Entity\Rounds $rounds)
     {
         $this->rounds[] = $rounds;
     
@@ -384,9 +384,9 @@ class Tournaments
     /**
      * Remove rounds
      *
-     * @param \Orlik\HomepageBundle\Entity\Rounds $rounds
+     * @param \Skoki\OrlikBundle\Entity\Rounds $rounds
      */
-    public function removeRound(\Orlik\HomepageBundle\Entity\Rounds $rounds)
+    public function removeRound(\Skoki\OrlikBundle\Entity\Rounds $rounds)
     {
         $this->rounds->removeElement($rounds);
     }

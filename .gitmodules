@@ -1,0 +1,3 @@
+[submodule "vendor/KnpMenu"]
+	path = vendor/KnpMenu
+	url = https://github.com/KnpLabs/KnpMenu.git

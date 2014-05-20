@@ -1,6 +1,6 @@
 <?php
 
-namespace Orlik\HomepageBundle\Entity;
+namespace Skoki\OrlikBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Players
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Orlik\HomepageBundle\Repository\PlayersRepository")
+ * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\PlayersRepository")
  */
 class Players
 {
@@ -276,10 +276,10 @@ class Players
     /**
      * Set team
      *
-     * @param \Orlik\HomepageBundle\Entity\Teams $team
+     * @param \Skoki\OrlikBundle\Entity\Teams $team
      * @return Players
      */
-    public function setTeam(\Orlik\HomepageBundle\Entity\Teams $team = null)
+    public function setTeam(\Skoki\OrlikBundle\Entity\Teams $team = null)
     {
         $this->team = $team;
     
@@ -289,7 +289,7 @@ class Players
     /**
      * Get team
      *
-     * @return \Orlik\HomepageBundle\Entity\Teams 
+     * @return \Skoki\OrlikBundle\Entity\Teams 
      */
     public function getTeam()
     {
