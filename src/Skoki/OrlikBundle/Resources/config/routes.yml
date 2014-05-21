@@ -1,0 +1,7 @@
+orlik_blog_Page:
+    type: rest
+    prefix: /v1
+    resource: "@SkokiOrlikBundle/Controller/PageController.php"
+#    defaults: { _controller: SkokiOrlikBundle:Page }
+#    resource: Skoki\OrlikBundle\Controller\PageController
+    name_prefix:  api_1_ # naming collision

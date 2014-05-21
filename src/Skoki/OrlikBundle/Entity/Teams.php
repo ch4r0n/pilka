@@ -5,7 +5,7 @@ namespace Skoki\OrlikBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Skoki\OrlikBundle\Entity\TournamentsTeams;
-use Skoki\OrlikBundle\Entity\TeamMatches;
+
 
 /**
  * Teams
@@ -85,7 +85,7 @@ class Teams
     /**
      * @var ArrayCollection<teamMatches> $teamMatches
      *
-     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\teamMatches", mappedBy="team")
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TeamMatches", mappedBy="team")
      */
     private $teamMatches;
 //    /**

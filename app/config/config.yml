@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: "@SkokiOrlikBundle/Resources/config/services.yml" }
 
 framework:
     #esi:             ~
@@ -26,6 +27,11 @@ framework:
 
 # Twig Configuration
 twig:
+    exception_controller:  twig.controller.exception:showAction
+    form:
+        resources:
+            - form_div_layout.html.twig
+    autoescape:       ~
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
@@ -59,6 +65,9 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+        metadata_cache_driver: array
+        query_cache_driver: array
+        result_cache_driver: array
 
 # Swiftmailer Configuration
 swiftmailer:

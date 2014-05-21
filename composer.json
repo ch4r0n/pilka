@@ -24,7 +24,11 @@
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
         "knplabs/knp-menu": "2.0.*@dev",
         "knplabs/knp-menu-bundle": "2.0.*@dev",
-        "friendsofsymfony/user-bundle": "2.0.*@dev"
+        "friendsofsymfony/user-bundle": "2.0.*@dev",
+        "friendsofsymfony/rest-bundle": "@dev",
+        "jms/serializer-bundle": "@dev",
+        "nelmio/api-doc-bundle": "@dev",
+        "symfony/serializer": "2.5.*@dev"
     },
     "scripts": {
         "post-install-cmd": [

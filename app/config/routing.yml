@@ -6,6 +6,11 @@ skoki_orlik:
     resource: "@SkokiOrlikBundle/Resources/config/routing.yml"
     prefix:   /orlik
 
+orlik_blog:
+    type: rest
+    prefix: /api
+    resource: "@SkokiOrlikBundle/Resources/config/routes.yml"
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 

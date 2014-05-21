@@ -14,3 +14,24 @@ _show_team:
     path: /team/show/{id}
     defaults: { _controller: SkokiOrlikBundle:Team:show }
     methods: GET
+
+_show_teams_list:
+    path: /team/list
+    defaults: { _controller: SkokiOrlikBundle:Team:list }
+_orlik_timetable:
+    pattern: /timetable
+    defaults: { _controller: SkokiOrlikBundle:Timetable:index }
+
+_show_match:
+    pattern: /match/show/{id}
+    defaults: { _controller: SkokiOrlikBundle:Match:show }
+
+_match_update:
+    pattern: /match/{id}/update
+    defaults: { _controller: SkokiOrlikBundle:Match:update }
+    methods: GET
+
+_match_update_process:
+    pattern: /match/{id}/update
+    defaults: { _controller: SkokiOrlikBundle:Match:update }
+    methods: POST

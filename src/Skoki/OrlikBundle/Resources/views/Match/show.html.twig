@@ -1,0 +1,22 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block title %}SkokiOrlikBundle:Match:show{% endblock %}
+
+{% block content_header '' %}
+
+    {% block content %}
+<h1>Welcome to the Match:show page</h1>
+    <h1 class="title">Witamy - dane meczu!</h1>
+
+    Orlik HELLO drużyny
+    {#{% for te in team %}#}
+    <p>ID: </p>{{ match.match_id }}</p>
+    <p>Home:  <a href="{{ path('_show_team', {'id' : match.home_id}) }}">{{ match.home_name }}</a></p>
+    <p>Away:  <a href="{{ path('_show_team', {'id' : match.away_id}) }}">{{ match.away_name }}</a></p>
+    <p>Score: {{ match.score }}</p>
+    <p>Kolejka: {{ match.round }}</p>
+    <p>Data: {{ match.matchDate|date('Y-m-d') }}</p>
+    <p>Godzina: {{ match.matchDate|date('H:m') }}</p>
+    {#{% endfor %}#}
+    <a href="{{ path('_match_update', {'id' : match.match_id }) }}">Edytuj mecz</a>
+{% endblock %}
