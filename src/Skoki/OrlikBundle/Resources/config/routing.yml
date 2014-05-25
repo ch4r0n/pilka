@@ -10,7 +10,7 @@ _show_table:
     pattern: /table
     defaults: { _controller: SkokiOrlikBundle:Table:showTable }
 
-_show_team:
+_orlik_show_team:
     path: /team/show/{id}
     defaults: { _controller: SkokiOrlikBundle:Team:show }
     methods: GET
@@ -22,7 +22,11 @@ _orlik_timetable:
     pattern: /timetable
     defaults: { _controller: SkokiOrlikBundle:Timetable:index }
 
-_show_match:
+_orlik_show_timetable:
+    pattern: /timetable/show
+    defaults: { _controller: SkokiOrlikBundle:Timetable:showTimetable }
+
+_orlik_show_match:
     pattern: /match/show/{id}
     defaults: { _controller: SkokiOrlikBundle:Match:show }
 

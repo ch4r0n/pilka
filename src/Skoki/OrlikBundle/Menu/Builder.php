@@ -14,7 +14,7 @@ class Builder extends ContainerAware
         $menu->addChild('Home', array('route' => 'orlik_homepage'));
         $menu->addChild('Table', array('route' => '_show_table'));
         $menu->addChild('Teams', array('route' => '_show_teams_list'));
-        $menu->addChild('Timetable', array('route' => '_orlik_timetable'));
+        $menu->addChild('Timetable', array('route' => '_orlik_show_timetable'));
 
         return $menu;
     }

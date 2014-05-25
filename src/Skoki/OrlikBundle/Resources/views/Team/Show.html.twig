@@ -9,4 +9,7 @@
 
 <h1>Welcome to the Team:Show page for ID: {{ id }}</h1>
         <h2>{{ team.name }}</h2>
+        {% block teamMatches %}
+            {% include 'SkokiOrlikBundle:Timetable:matchesList.html.twig' with {'matches': matches} %}
+        {% endblock %}
 {% endblock %}

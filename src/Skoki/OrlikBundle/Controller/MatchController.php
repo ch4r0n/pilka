@@ -13,7 +13,7 @@ class MatchController extends Controller
             ->getRepository(Repository::MATCHES)
             ->findOneById($id);
 
-        $matchManager = $this->get('match_manager');
+        $matchManager = $this->get('orlik.match.manager');
         $match = $matchManager->getMatchDetails($match);
 
         return $this->render('SkokiOrlikBundle:Match:show.html.twig', array('match' => $match));

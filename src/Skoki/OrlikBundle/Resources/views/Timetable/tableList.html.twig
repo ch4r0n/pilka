@@ -1,0 +1,18 @@
+{% if matches|length > 0  %}
+<div class="table-container">
+{% for round_id, roundData in matches %}
+
+    {% if roundData.status == 0 %}
+    <div class="timetable round prev">
+    {% else %}
+    <div class="timetable round next">
+    {% endif %}
+    <h3>Kolejka {{ roundData.roundNumber }}:</h3>
+        {% block roundMatches %}
+            {% include 'SkokiOrlikBundle:Timetable:matchesList.html.twig' with {'matches': roundData.matches} %}
+        {% endblock roundMatches %}
+    </div>
+    {% endfor %}
+
+</div>
+{% endif %}

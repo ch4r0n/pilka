@@ -1,0 +1,37 @@
+{% if matches|length > 0  %}
+    <div id="matches_list_box">
+        <ul>
+            {% for match in matches %}
+                <li>
+                    <div class="match_row">
+                        <a href="{{ path('_orlik_show_match', {'id' : match.match_id}) }}">
+                            {#{{ match.matchDate|date('d/m/y') }}#}
+                            {{ match.matchDate|date('d/m/y') }}
+                        </a>
+                        {#<a href="{{ path('orlik_round_show', {'round_id' : match.round_id}) }}">#}
+                            {{ match.round }}
+                        {#</a>#}
+                        {#<span class="Kolejka">Kolejka: {{ match.round }}</span>#}
+                        <span class="home_team">
+                            <a href="{{ path('_orlik_show_team', {'id' : match.home_id}) }}">{{ match.home_name }}</a>
+                        </span>
+                        <span class="score">
+                            <a href="{{ path('_orlik_show_match', {'id' : match.match_id}) }}">
+                                {% if match.score %}
+                                    {{ match.score }}
+                                {% else %}
+                                    {#{{ match.matchDate|date('H:i') }}#}
+                                    {{ match.matchHour }}
+                                {% endif %}
+
+                            </a>
+                        </span>
+                        <span class="away_team">
+                            <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}">{{ match.away_name }}</a>
+                        </span>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

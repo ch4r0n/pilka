@@ -1,11 +1,25 @@
 parameters:
-    orlik_match.manager.class: Skoki\OrlikBundle\Model\MatchManager
+  orlik.match.manager.class: Skoki\OrlikBundle\Model\MatchManager
+  orlik.table.generator.class: Skoki\OrlikBundle\Generator\TableGenerator
+  orlik.timetable.manager.class: Skoki\OrlikBundle\Generator\TimetableManager
 #    skoki_orlik.example.class: Skoki\OrlikBundle\Example
 
 services:
-    match_manager:
-        class: "%orlik_match.manager.class%"
-        arguments: [@doctrine.orm.default_entity_manager]
+  orlik.table.generator:
+      class: %orlik.table.generator.class%
+      arguments:
+        em : "@doctrine.orm.default_entity_manager"
+        dbal : "@doctrine.dbal.default_connection"
+  orlik.timetable.manager:
+      class: %orlik.timetable.manager.class%
+      arguments:
+        em : "@doctrine.orm.default_entity_manager"
+        matchManager : "@orlik.match.manager"
+  orlik.match.manager:
+      class: %orlik.match.manager.class%
+      arguments:
+        em : "@doctrine.orm.default_entity_manager"
+
 #    skoki_orlik.example:
 #        class: %skoki_orlik.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]

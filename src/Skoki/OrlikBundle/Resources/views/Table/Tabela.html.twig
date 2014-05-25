@@ -1,0 +1,39 @@
+{% if tabela|length > 0  %}
+    <div id="tabela_box">
+        <table>
+            <tr>
+                <th title="Pozycja">Poz</th>
+                <th title="Drużyna">Drużyna</th>
+                <th title="Rozegrane mecze">RM</th>
+                <th title="Wygrane">W</th>
+                <th title="Przegrane">P</th>
+                <th title="Remisy">R</th>
+                <th title="Bramki zdobyte">BZ</th>
+                <th title="Bramki stracone">BS</th>
+                <th title="Różnica bramek">RB</th>
+                <th title="Czerwone" class="hidden-md">R</th>
+                <th title="Żółte" class="hidden-md">Y</th>
+                <th title="Punkty">Pkt</th>
+            </tr>
+            {% set iterator = 1 %}
+            {% for team in tabela %}
+                <tr>
+                    <td>{{ iterator }}</td>
+                    <td><a href="{{ path('_orlik_show_team', {'id' : team.teamId}) }}">{{ team.teamName }}</a></td>
+                    <td>{{ team.teamMatchesPlayed }}</td>
+                    <td>{{ team.teamWins }}</td>
+                    <td>{{ team.teamLoses }}</td>
+                    <td>{{ team.teamDraws }}</td>
+                    <td>{{ team.teamGoals }}</td>
+                    <td>{{ team.teamLostGoals }}</td>
+                    {% set roznica = team.teamGoals - team.teamLostGoals %}
+                    <td>{{ roznica }}</td>
+                    <td class="hidden-md">{{ team.teamReds }}</td>
+                    <td class="hidden-md">{{ team.teamYellows }}</td>
+                    <td>{{ team.teamPkt }}</td>
+                </tr>
+                {% set iterator = iterator + 1 %}
+            {% endfor %}
+        </table>
+    </div>
+{% endif %}

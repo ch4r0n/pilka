@@ -92,4 +92,91 @@ class MatchesRepository extends EntityRepository
         return $result;
 
     }
+
+    public function getTeamMatchList($teamId = null)
+    {
+        $em = $this->getEntityManager();
+        $gb = $em->createQueryBuilder();
+        $gb->select('m')
+            ->from('SkokiOrlikBundle:Matches', 'm')
+//            ->join('OrlikHomepageBundle:Teams', 't')
+//            ->leftJoin('tc.user', 't')
+//            ->where('m.id = tm.match_id')
+//            ->andWhere('t.id = tm.home')
+            ->orderBy('m.matchDate', 'ASC');
+
+        if ($teamId !== null) {
+            $gb->add('where',$gb->expr()->orX(
+                $gb->expr()->eq('m.home', '?1'),
+                $gb->expr()->eq('m.away', '?1')
+            ));
+            $gb->setParameters(array(1 => $teamId));
+        }
+
+        $query = $gb->getQuery();
+        if ($teamId == null) {
+            $teams = $query->getArrayResult();
+        } else {
+            $teams = $query->getResult();
+        }
+
+        return $teams;
+
+    }
+
+    public function getTeamLasMatchList($teamId = null)
+    {
+        $em = $this->getEntityManager();
+        $gb = $em->createQueryBuilder();
+        $nowDate = new \DateTime();
+        $gb->select('m')
+            ->from('SkokiOrlikBundle:Matches', 'm')
+//            ->join('OrlikHomepageBundle:Teams', 't')
+//            ->leftJoin('tc.user', 't')
+            ->where("m.matchDate<NOW()")
+//            ->andWhere('t.id = tm.home')
+            ->orderBy('m.matchDate', 'DESC');
+
+        if ($teamId !== null) {
+            $gb->add('where',$gb->expr()->andX(
+                $gb->expr()->isNotNull('m.result'),
+                $gb->expr()->orX(
+                    $gb->expr()->eq('m.home', '?1'),
+                    $gb->expr()->eq('m.away', '?1')
+                )));
+            $gb->setParameters(array(1 => $teamId));
+        }
+
+        $query = $gb->getQuery();
+
+        if ($teamId == null) {
+            $teams = $query->getArrayResult();
+        } else {
+            $teams = $query->getResult();
+        }
+
+        return $teams;
+    }
+
+    public function getTeamPlayedMatches($teamId)
+    {
+/*
+ * select * from matches where round in (select id from rounds where tournament = 1) and (home = 5 OR away = 5) and result is not null
+ */
+        $em = $this->getEntityManager();
+        $query = $em->createQueryBuilder();
+        $query->select('m')
+            ->from('SkokiOrlikBundle:Matches', 'm')
+            ->where('m.result IS NOT NULL')
+//            ->andWhere('round IN (:roundsIds)')
+            ->andWhere('m.home = :team OR m.away = :team')
+            ->orderBy('m.matchDate', 'DESC')
+            ->setParameters(array(
+                'team' => $teamId
+            ));
+
+        return $query->getQuery()->getArrayResult();
+
+    }
+
 }

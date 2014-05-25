@@ -11,4 +11,11 @@ class TableController extends Controller
         return $this->render('SkokiOrlikBundle:Table:ShowTable.html.twig');
     }
 
+    public function tabelaAction($tournamentId = 1)
+    {
+        $tabelaGenerator = $this->get('orlik.table.generator');
+        $tabela = $tabelaGenerator->getTable($tournamentId);
+
+        return $this->render('SkokiOrlikBundle:Table:Tabela.html.twig', array('tabela' => $tabela));
+    }
 }

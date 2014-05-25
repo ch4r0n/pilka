@@ -152,8 +152,7 @@ class Matches
      */
     public function getHour()
     {
-        $hour = date('H:i', $this->getMatchDate());
-        return $hour;
+        return $this->getMatchDate()->format('H:i');
     }
 
     /**

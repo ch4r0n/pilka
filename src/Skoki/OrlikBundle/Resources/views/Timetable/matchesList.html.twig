@@ -1,0 +1,43 @@
+<table class="matches">
+    <thead>
+    <tr class="sub-head">
+        <th class="day">Dzień</th>
+        <th class="date">Data</th>
+        <th class="team team-a">Gospodarze</th>
+        <th class="score-time">Bramka/Czas</th>
+        <th class="team team-b">Goście</th>
+        <th class="events-button button">&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for hour, match in matches %}
+        <tr class="even  expanded    match no-date-repetition" data-timestamp="{{ match.matchDate|date('U') }}" id="page_competition_1_block_competition_matches_summary_6_match-1220070" data-competition=72>
+            <td class="day no-repetition"><span class='timestamp' data-value='{{ match.matchDate|date('U') }}' data-format='ddd'>sob</span></td>
+            <td class="date no-repetition"><span class='timestamp' data-value='{{ match.matchDate|date('U') }}' data-format='dd/mm/yy'>{{ match.matchDate|date('d/m/y') }}</span></td>
+            <td class="team team-a ">
+                <a href="{{ path('_orlik_show_team', {'id' : match.home_id}) }}" title="{{ match.home_name }}">{{ match.home_name }}</a>
+            </td>
+            <td class="score-time status">
+                <a href="{{ path('_orlik_show_match', {'id' : match.match_id}) }}">
+                    {% if match.score %}
+                        {{ match.score }}
+                    {% else %}
+                        {{ match.matchDate|date('H:i') }}
+                        {#{{ hour }}#}
+                    {% endif %}
+                </a>
+            </td>
+            <td class="team team-b ">
+                <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}" title="{{ match.away_name }}">{{ match.away_name }}</a>
+            </td>
+            <td class="events-button button first-occur">
+
+            </td>
+            <td class="info-button button">
+                <a href="{{ path('_orlik_show_match', {'id' : match.match_id}) }}" title="Więcej informacji">Więcej informacji</a>
+            </td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>

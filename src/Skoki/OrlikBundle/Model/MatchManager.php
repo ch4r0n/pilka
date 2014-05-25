@@ -17,7 +17,7 @@ class MatchManager {
     protected $home;
     protected $away_id;
     protected $away;
-    protected $match;
+    protected $match = null;
     protected $scoreHome;
     protected $scoreAway;
     protected $redHome;
@@ -26,11 +26,23 @@ class MatchManager {
     protected $yellowAway;
     protected $hour;
 
+    protected $teamsNameArray;
+
     public function __construct($entityManager)
     {
         $this->em = $entityManager;
         $this->matchRepo = $entityManager->getRepository('SkokiOrlikBundle:Matches');
         $this->teamRepo = $entityManager->getRepository('SkokiOrlikBundle:Teams');
+    }
+
+    public function getMatchRepo()
+    {
+        return $this->matchRepo;
+    }
+
+    public function getTeamRepo()
+    {
+        return $this->teamRepo;
     }
 
     public function setMatchData(Matches $match)
@@ -105,11 +117,6 @@ class MatchManager {
             $this->setMatchData($match);
         }
 
-        $kolejka = 'brak';
-        if ($this->match->getRounds()) {
-            $kolejka = $this->match->getRounds()->getTorder();
-        }
-
         $homeName = 'home';
         $awayName = 'away';
         if ($this->home) {
@@ -119,23 +126,29 @@ class MatchManager {
             $awayName = $this->away->getName();
         }
 
+        $kolejka = 'brak';
+        if ($this->match->getRounds()) {
+            $kolejka = $this->match->getRoundOrder();
+        }
+
         return array(
-            'match_id' => $this->match->getId(),
-            'home_id' => $this->match->getHome(),
-            'away_id' => $this->match->getAway(),
+            'match_id' => $match->getId(),
+            'home_id' => $match->getHome(),
+            'away_id' => $match->getAway(),
             'home_name' => $homeName,
             'away_name' => $awayName,
-            'score' => $this->match->getResult(),
+            'score' => $match->getResult(),
             'round' => $kolejka,
-            'round_id' => $this->match->getRoundId(),
-            'round_order' => $this->match->getRoundOrder(),
-            'matchDate' => $this->match->getMatchDate(),
-            'score_home' => $this->scoreHome,
-            'score_away' => $this->scoreAway,
-            'red_home' => $this->redHome,
-            'red_away' => $this->redAway,
-            'yellow_home' => $this->yellowHome,
-            'yellow_away' => $this->yellowAway
+            'round_id' => $match->getRoundId(),
+            'round_order' => $match->getRoundOrder(),
+            'matchDate' => $match->getMatchDate(),
+            'matchHour' => $match->getMatchDate()->format('H:i'),
+            'score_home' => $match->getScoreHome(),
+            'score_away' => $match->getScoreAway(),
+            'red_home' => $match->getRedHome(),
+            'red_away' => $match->getRedAway(),
+            'yellow_home' => $match->getYellowHome(),
+            'yellow_away' => $match->getYellowAway()
         );
     }
 
@@ -151,4 +164,90 @@ class MatchManager {
             return false;
         }
     }
-} 
+
+    /*
+     * Metoda zwraca info o ostatnich meczach druzyny
+     * array (size=3)
+        0 =>
+            array (size=4)
+              'gdzie' => string 'away' (length=4)
+              'stan' => string 'w' (length=1)
+              'przeciwnik' => string 'The Reds' (length=8)
+              'przeciwnikId' => int 7
+        1 =>....
+     */
+    public function getTeamLastMatches($teamId)
+    {
+        $teamPlayedMatches = $this->matchRepo->getTeamPlayedMatches($teamId);
+        $lastStat = array();
+
+        foreach ($teamPlayedMatches as $match) {
+            $result = $match['scoreHome'] - $match['scoreAway'];
+            $whowin = 0;
+            if ($result > 0) {
+                $whowin = 1;
+            } elseif ($result < 0) {
+                $whowin = 2;
+            } elseif ($result == 0) {
+                $whowin = 0;
+            }
+            $where = null;
+            $przeciwnik = null;
+            $stan = null;
+            if ($teamId == $match['home']) {
+                $where = 'home';
+                $przeciwnik = $match['away'];
+                switch($whowin) {
+                    case 1:
+                        $stan = 'w'; //wygrany
+                        break;
+                    case 2:
+                        $stan = 'p'; //przegrany
+                        break;
+                    default:
+                        $stan = 'r';
+                        break;
+                }
+            } elseif ($teamId == $match['away']) {
+                $where = 'away';
+                $przeciwnik = $match['home'];
+                switch($whowin) {
+                    case 1:
+                        $stan = 'p'; //przegrany
+                        break;
+                    case 2:
+                        $stan = 'w'; //wygrany
+                        break;
+                    default:
+                        $stan = 'r';
+                        break;
+                }
+            }
+            $teamsNameArray = $this->getTeamsName();
+            $lastMatchStat = array(
+                'gdzie' => $where,
+                'stan' => $stan,
+                'przeciwnik' => $teamsNameArray[$przeciwnik],
+                'przeciwnikId' => $przeciwnik);
+
+            $lastStat[] = $lastMatchStat;
+        }
+
+        return $lastStat;
+    }
+
+    public function getTeamsName()
+    {
+        if (isset($this->teamsNameArray)) {
+            return $this->teamsNameArray;
+        } else {
+            $teamsList = $this->teamRepo->findAll();
+            $teamsMapArray = array();
+            foreach ($teamsList as $team) {
+                $teamsMapArray[$team->getId()] = $team->getName();
+            }
+        }
+
+        return $teamsMapArray;
+    }
+}
