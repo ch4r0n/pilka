@@ -14,6 +14,8 @@ class TableGenerator extends MatchManager
     protected $tournamentId;
     protected $roundZeroId;
     protected $tabela;
+    protected $tournamentTeams = array();
+    protected $matches = array();
 
     public function __construct($entityManager, $connection)
     {
@@ -53,44 +55,52 @@ class TableGenerator extends MatchManager
 
     protected function getTournamentTeams()
     {
-        $sql = 'SELECT id, name FROM teams WHERE id in (SELECT team_id FROM tournament_teams WHERE tournament_id = :id) ORDER BY name ASC';
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindValue("id", $this->tournamentId);
-        $stmt->execute();
-        $teamsTab = $stmt->fetchAll();
-        $result = array();
-        foreach ($teamsTab as $teamId) {
-            $result[$teamId['name']] = intval($teamId['id']);
+        if (empty($this->tournamentTeams)) {
+            $sql = 'SELECT id, name FROM teams WHERE id in (SELECT team_id FROM tournament_teams WHERE tournament_id = :id) ORDER BY name ASC';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue("id", $this->tournamentId);
+            $stmt->execute();
+            $teamsTab = $stmt->fetchAll();
+            $result = array();
+            foreach ($teamsTab as $teamId) {
+                $result[$teamId['name']] = intval($teamId['id']);
+            }
+            $this->tournamentTeams = $result;
         }
-        return $result;
+
+
+        return $this->tournamentTeams;
     }
 
     public function getTournamentMatches()
     {
-        $sql = 'SELECT home, away, id, result FROM matches';
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute();
-        $matches = $stmt->fetchAll();
-        $teams = $this->getTournamentTeams();
-        $tournamentTeams = array();
+        if (empty($this->matches)) {
+            $sql = 'SELECT home, away, id, result FROM matches';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+            $matches = $stmt->fetchAll();
+            $teams = $this->getTournamentTeams();
+            $tournamentTeams = array();
 
-        foreach ($teams as $teamId) {
-            $tournamentTeams[] = $teamId;
-        }
-
-        $matchTab = array();
-        foreach ($matches as $match) {
-            if (in_array(intval($match['home']), $tournamentTeams) && in_array(intval($match['away']), $tournamentTeams)) {
-                //$matchTab[intval($match['home'])][] = intval($match['away']);
-                if ($match['result'] != '-' && $match['result'] != null) {
-                    $matchModel = $this->matchRepo->findOneById(intval($match['id']));
-                    $matchTab[$match['id']] = $this->getMatchDetails($matchModel);
-                }
-
+            foreach ($teams as $teamId) {
+                $tournamentTeams[] = $teamId;
             }
+
+            $matchTab = array();
+            foreach ($matches as $match) {
+                if (in_array(intval($match['home']), $tournamentTeams) && in_array(intval($match['away']), $tournamentTeams)) {
+                    //$matchTab[intval($match['home'])][] = intval($match['away']);
+                    if ($match['result'] != '-' && $match['result'] != null) {
+                        $matchModel = $this->matchRepo->findOneById(intval($match['id']));
+                        $matchTab[$match['id']] = $this->getMatchDetails($matchModel);
+                    }
+
+                }
+            }
+            $this->matches = $matchTab;
         }
 
-        return $matchTab;
+        return $this->matches;
     }
 
     public function orderTabela($tabela)

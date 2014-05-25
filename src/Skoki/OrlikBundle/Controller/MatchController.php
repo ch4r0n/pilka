@@ -14,9 +14,14 @@ class MatchController extends Controller
             ->findOneById($id);
 
         $matchManager = $this->get('orlik.match.manager');
+        $teamsForm = array(
+            'home' => $matchManager->getTeamLastMatches($match->getHome()),
+            'away' => $matchManager->getTeamLastMatches($match->getAway())
+        );
+
         $match = $matchManager->getMatchDetails($match);
 
-        return $this->render('SkokiOrlikBundle:Match:show.html.twig', array('match' => $match));
+        return $this->render('SkokiOrlikBundle:Match:show.html.twig', array('match' => $match, 'teams_form' => $teamsForm));
     }
 
     public function updateAction($id)

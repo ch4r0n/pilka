@@ -15,6 +15,10 @@ class TableController extends Controller
     {
         $tabelaGenerator = $this->get('orlik.table.generator');
         $tabela = $tabelaGenerator->getTable($tournamentId);
+        $matchManager = $this->get('orlik.match.manager');
+        foreach ($tabela as $key => $teamRaw) {
+            $tabela[$key]->teamForm = $matchManager->getTeamLastMatches($teamRaw->teamId);
+        }
 
         return $this->render('SkokiOrlikBundle:Table:Tabela.html.twig', array('tabela' => $tabela));
     }

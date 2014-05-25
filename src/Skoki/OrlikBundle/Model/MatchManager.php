@@ -194,18 +194,22 @@ class MatchManager {
             $where = null;
             $przeciwnik = null;
             $stan = null;
+            $formClass = '';
             if ($teamId == $match['home']) {
                 $where = 'home';
                 $przeciwnik = $match['away'];
                 switch($whowin) {
                     case 1:
                         $stan = 'w'; //wygrany
+                        $formClass = 'form-win';
                         break;
                     case 2:
                         $stan = 'p'; //przegrany
+                        $formClass = 'form-loss';
                         break;
                     default:
                         $stan = 'r';
+                        $formClass = 'form-draw';
                         break;
                 }
             } elseif ($teamId == $match['away']) {
@@ -214,19 +218,24 @@ class MatchManager {
                 switch($whowin) {
                     case 1:
                         $stan = 'p'; //przegrany
+                        $formClass = 'form-loss';
                         break;
                     case 2:
                         $stan = 'w'; //wygrany
+                        $formClass = 'form-win';
                         break;
                     default:
                         $stan = 'r';
+                        $formClass = 'form-draw';
                         break;
                 }
             }
             $teamsNameArray = $this->getTeamsName();
             $lastMatchStat = array(
+                'id' => $match['id'],
                 'gdzie' => $where,
                 'stan' => $stan,
+                'class' => $formClass,
                 'przeciwnik' => $teamsNameArray[$przeciwnik],
                 'przeciwnikId' => $przeciwnik);
 

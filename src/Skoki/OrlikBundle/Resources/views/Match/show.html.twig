@@ -29,6 +29,7 @@
                     </h3>
 
                     <div class="form clearfix">
+                        {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teams_form.home} %}
                         {#<a href="/matches/2014/03/05/world/friendlies/ireland-republic/serbia/1598481/" class="form-icon form-loss " title="Irlandia - Serbia 1 - 2">L</a>#}
                         {#<a href="/matches/2013/11/19/world/friendlies/poland/ireland-republic/1598648/" class="form-icon form-draw " title="Polska - Irlandia 0 - 0">D</a>#}
                         {#<a href="/matches/2013/11/15/world/friendlies/ireland-republic/latvia/1600669/" class="form-icon form-win " title="Irlandia - Łotwa 3 - 0">W</a>#}
@@ -48,6 +49,8 @@
                         <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}">{{ match.away_name }}</a>
                     </h3>
                     <div class="form clearfix">
+                    {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teams_form.away} %}
+
                         {#<a href="/matches/2014/05/21/world/friendlies/kosovo/turkey/1662385/" class="form-icon form-win " title="Kosovo - Turcja 1 - 6">W</a>#}
                         {#<a href="/matches/2014/03/05/world/friendlies/turkey/sweden/1635679/" class="form-icon form-win " title="Turcja - Szwecja 2 - 1">W</a>#}
                         {#<a href="/matches/2013/11/19/world/friendlies/turkey/belarus/1600670/" class="form-icon form-win " title="Turcja - Białoruś 2 - 1">W</a>#}

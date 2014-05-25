@@ -158,7 +158,7 @@ class MatchesRepository extends EntityRepository
         return $teams;
     }
 
-    public function getTeamPlayedMatches($teamId)
+    public function getTeamPlayedMatches($teamId, $limit = 5)
     {
 /*
  * select * from matches where round in (select id from rounds where tournament = 1) and (home = 5 OR away = 5) and result is not null
@@ -171,6 +171,7 @@ class MatchesRepository extends EntityRepository
 //            ->andWhere('round IN (:roundsIds)')
             ->andWhere('m.home = :team OR m.away = :team')
             ->orderBy('m.matchDate', 'DESC')
+            ->setMaxResults($limit)
             ->setParameters(array(
                 'team' => $teamId
             ));

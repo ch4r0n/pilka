@@ -14,6 +14,7 @@
                 <th title="Czerwone" class="hidden-md">R</th>
                 <th title="Żółte" class="hidden-md">Y</th>
                 <th title="Punkty">Pkt</th>
+                <th title="Forma">Forma</th>
             </tr>
             {% set iterator = 1 %}
             {% for team in tabela %}
@@ -31,6 +32,13 @@
                     <td class="hidden-md">{{ team.teamReds }}</td>
                     <td class="hidden-md">{{ team.teamYellows }}</td>
                     <td>{{ team.teamPkt }}</td>
+                    <td>
+                    {% if team.teamForm|length > 0  %}
+                        {% block teamForm %}
+                            {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': team.teamForm} %}
+                        {% endblock %}
+                    {% endif %}
+                    </td>
                 </tr>
                 {% set iterator = iterator + 1 %}
             {% endfor %}

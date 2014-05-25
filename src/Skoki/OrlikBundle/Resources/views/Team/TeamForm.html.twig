@@ -1,0 +1,7 @@
+<div class="team_form clearfix">
+{% for  form in teamForm %}
+    <a href="{{ path('_orlik_show_match', {'id' : form.id}) }}" class="form-icon {{ form.class }}" title="{{ form.przeciwnik }}">
+        {{ form.stan }}
+    </a>
+{% endfor %}
+</div>
