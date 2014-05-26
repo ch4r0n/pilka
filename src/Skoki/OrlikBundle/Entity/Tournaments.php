@@ -9,7 +9,7 @@ use Skoki\OrlikBundle\Entity\TournamentsTeams;
 /**
  * Tournaments
  *
- * @ORM\Table()
+ * @ORM\Table(name="tournaments")
  * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\TournamentsRepository")
  */
 class Tournaments

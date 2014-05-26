@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Rounds
  *
- * @ORM\Table()
+ * @ORM\Table(name="rounds")
  * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\RoundsRepository")
  */
 class Rounds

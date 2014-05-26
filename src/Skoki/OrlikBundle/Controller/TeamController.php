@@ -42,7 +42,7 @@ class TeamController extends Controller
 
 //        var_dump(array_merge($matchesHome, $matchesAway));die();
 
-        return $this->render('SkokiOrlikBundle:Team:Show.html.twig', array('id' => $id, 'team' => $team, 'matches' => $matches));
+        return $this->render('SkokiOrlikBundle:Team:Show.html.twig', array('id' => $id, 'team' => $team, 'matches' => $matches, 'teamForm' => $last));
     }
 
     public function listAction()

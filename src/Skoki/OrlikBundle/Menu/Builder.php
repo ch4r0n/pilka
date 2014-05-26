@@ -12,9 +12,9 @@ class Builder extends ContainerAware
         $menu = $factory->createItem('root');
 
         $menu->addChild('Home', array('route' => 'orlik_homepage'));
-        $menu->addChild('Table', array('route' => '_show_table'));
-        $menu->addChild('Teams', array('route' => '_show_teams_list'));
-        $menu->addChild('Timetable', array('route' => '_orlik_show_timetable'));
+        $menu->addChild('Tabela', array('route' => '_show_table'));
+        $menu->addChild('Drużyny', array('route' => '_show_teams_list'));
+        $menu->addChild('Mecze/Wyniki', array('route' => '_orlik_show_timetable'));
 
         return $menu;
     }

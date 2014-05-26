@@ -39,9 +39,11 @@ class TimetableManager
     public function getTimetable($list)
     {
         $tempTab = array();
-//var_dump('<pre>',$list,'</pre>');die();
+
         $nowDate = new \DateTime();
         $nowDate = $nowDate->format('U');
+        $flagPrev = true;
+        $lastRoundId = null;
         if (!empty($list)) {
             foreach ($list as $match) {
                 $roundTimestamp = $match->getRounds()->getDate()->format('U');
@@ -50,8 +52,15 @@ class TimetableManager
                 if ($nowDate > $roundTimestamp) {
                     $tempTab[$match->getRoundId()]['status'] = 0;
                 } else {
+                    if ($flagPrev) {
+                        $flagPrev = false;
+                        if ($lastRoundId != null) {
+                            $tempTab[$lastRoundId]['status'] = 2;
+                        }
+                    }
                     $tempTab[$match->getRoundId()]['status'] = 1;
                 }
+                $lastRoundId = $match->getRoundId();
 
                 $tempTab[$match->getRoundId()]['matches'][$match->getMatchDate()->format('H:i')] = $this->matchManager->getMatchDetails($match);
             }

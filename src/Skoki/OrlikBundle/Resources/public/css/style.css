@@ -7,8 +7,9 @@ body {
     background-color: #fff;
 }
 h1.title {
-    font-size: 45px;
+    font-size: 24px;
     padding-bottom: 30px;
+    font-weight: normal;
 }
 
 .top_menu ul li{
@@ -96,8 +97,94 @@ h1.title {
 #tabela_box table tr td {
     padding:5px;
 }
-.a {
+
+.leaguetable table tr {
+    text-align: center;
+}
+.leaguetable .rank {
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    background: url(../images/icons/rank_default.gif) no-repeat center center;
+    background-color: none;
+    background-position: 50% 50%;
+    font-size: 12px;
+    width: 25px;
+    padding: 0px;
+}
+.leaguetable tr.odd {
+    background: none repeat scroll 0% 0% #FFF;
+}
+.leaguetable tr.even {
+    background: none repeat scroll 0% 0% #F4F4F4;
+}
+.leaguetable td.score-time {
+    text-align: center;
+}
+.smalltablebox {
+    display: block;
+    width: 300px;
+    padding: 5px;
+}
+.smalltablebox .td {
+    margin: 3px;
+}
+/*.leaguetable .team {*/
+    /*width: 25%;*/
+/*}*/
+/*.leaguetable .mp {*/
+    /*border-left: medium none;*/
+    /*padding: 0.2em;*/
+/*}*/
+/*.leaguetable .points {*/
+    /*width: 4%;*/
+    /*font-weight: bold;*/
+/*}*/
+/*.leaguetable .gd {*/
+    /*padding: 0.2em;*/
+/*}*/
+
+body div.orlik-content h1, body div.orlik-content h2, body div.orlik-content h3{
+    font-weight: normal;
+}
+body div.orlik-content a {
     text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+body div.orlik-content h1 {
+
+}
+body div.orlik-content h2 {
+    color: #FF3301;
+    text-transform: uppercase;
+}
+body div.orlik-content div.block {
+    float: left;
+    width: 100%;
+}
+#orlik-left-column, #orlik-right-column {
+    float: left;
+}
+#orlik-left-column {
+    width: 30%;
+}
+#orlik-right-column {
+    width: 70%;
+}
+.table-container-matches th.score-time {
+    text-align: center;
+}
+.table-container-matches .matches .sub-head th {
+    font-weight: bold;
+}
+tr.sub-head th {
+    background-color: #4f4f4f;
+    color: #fff;
+    border: 1px solid #ffffff;
+}
+tr.sub-head th.sortasc {
+    text-align: center;
 }
 .form-icon {
     background :url(../images/icons/form-icons.png) no-repeat 50% 50%;
@@ -129,4 +216,57 @@ h1.title {
     height: 0;
     clear: both;
     visibility: hidden;
+}
+div.block_match_info dl {
+    text-align: left;
+}
+div.block_match_info dt {
+    width: 40%;
+}
+dt {
+    width: 30%;
+    clear: left;
+    font-weight: bold;
+}
+dt, dd {
+    float: left;
+}
+div.block_match_info dd {
+    width: 60%;
+}
+dd {
+    width: 70%;
+}
+div.form {
+    width: 90px;
+    margin: 0px auto 0.5em;
+}
+.block_match_info .container {
+    text-align: center;
+}
+
+.timetable.tab-deactive {
+    display: none;
+}
+
+.prev-tab-button, .next-tab-button {
+    width: 120px;
+    float: right;
+    font-size: 85%;
+    text-align: right;
+}
+#match-fixtures {
+    width: 600px;
+}
+#match-fixtures td.score-time {
+    text-align: center;
+}
+.timetable.round {
+    /*width: 720px;*/
+}
+.table-container-matches, table.matches {
+    width: 100%;
+}
+.leaguetable td.team {
+    text-align: left;
 }

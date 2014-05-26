@@ -1,5 +1,5 @@
 {% if tabela|length > 0  %}
-    <div id="tabela_box">
+    <div id="tabela_box" class="leaguetable">
         <table>
             <tr>
                 <th title="Pozycja">Poz</th>
@@ -18,9 +18,13 @@
             </tr>
             {% set iterator = 1 %}
             {% for team in tabela %}
-                <tr>
-                    <td>{{ iterator }}</td>
-                    <td><a href="{{ path('_orlik_show_team', {'id' : team.teamId}) }}">{{ team.teamName }}</a></td>
+                {% if iterator % 2 == 0 %}
+                    <tr class="team_rank even">
+                {% else %}
+                    <tr class="team_rank odd">
+                {% endif %}
+                    <td class="rank">{{ iterator }}</td>
+                    <td class="text team"><a href="{{ path('_orlik_show_team', {'id' : team.teamId}) }}">{{ team.teamName }}</a></td>
                     <td>{{ team.teamMatchesPlayed }}</td>
                     <td>{{ team.teamWins }}</td>
                     <td>{{ team.teamLoses }}</td>

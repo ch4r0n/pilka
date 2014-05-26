@@ -9,7 +9,7 @@
     {% block content %}
         {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
 
-        <h1>Welcome to the Team list</h1>
+        <h2>Lista drużyn:</h2>
         <div id="teams_box">
             {% for team in teamsList %}
                 <div class="team_row">

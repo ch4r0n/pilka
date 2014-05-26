@@ -1,0 +1,31 @@
+{% if tabela|length > 0  %}
+    <table class="smalltable sortable leaguetable table" id="small_table">
+        <thead>
+        <tr class="sub-head">
+            <th title="Ranking" class="sortasc sortdefaultasc sortcol">#</th>
+            <th class="text team sortdefaultasc sortcol">Drużyna</th>
+            <th class="number total mp sortcol"><acronym title="Rozegranych spotkań">RS</acronym></th>
+            <th class="number gd sortcol"><acronym title="Różnica Bramek">RB</acronym></th>
+            <th class="number points sortcol"><acronym title="Punkty">P</acronym></th>
+        </tr>
+        </thead>
+        <tbody>
+            {% set iterator = 1 %}
+            {% for team in tabela %}
+                {% if iterator % 2 == 0 %}
+                    <tr class="team_rank even">
+                {% else %}
+                    <tr class="team_rank odd">
+                {% endif %}
+                    <td class="rank rank-dark-green">{{ iterator }}</td>
+                    <td class="text team large-link"><a href="{{ path('_orlik_show_team', {'id' : team.teamId}) }}" title="{{ team.teamName }}">{{ team.teamName }}</a></td>
+                    <td data-column="mp" data-popup="competition_league_table_popup" class="number total mp">{{ team.teamMatchesPlayed }}</td>
+                    {% set roznica = team.teamGoals - team.teamLostGoals %}
+                    <td class="number gd">{{ roznica }}</td>
+                    <td data-column="points" data-popup="competition_league_table_popup" class="number points">{{ team.teamPkt }}</td>
+                </tr>
+            {% set iterator = iterator + 1 %}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}

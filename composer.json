@@ -10,7 +10,7 @@
         "php": ">=5.3.3",
         "symfony/symfony": "v2.4.4",
         "doctrine/orm": "~2.2,>=2.2.3",
-        "doctrine/doctrine-bundle": "~1.2",
+        "doctrine/doctrine-bundle": "dev-master",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
@@ -28,7 +28,13 @@
         "friendsofsymfony/rest-bundle": "@dev",
         "jms/serializer-bundle": "@dev",
         "nelmio/api-doc-bundle": "@dev",
-        "symfony/serializer": "2.5.*@dev"
+        "symfony/serializer": "2.5.*@dev",
+        "friendsofsymfony/comment-bundle": "dev-master",
+        "fsi/news-bundle": "1.0.*@dev",
+        "kunstmaan/article-bundle": "2.3.*@dev",
+        "kunstmaan/node-bundle": "2.3.*",
+        "kunstmaan/adminlist-bundle": "2.3.*",
+        "kunstmaan/admin-bundle": "2.3.*"
     },
     "scripts": {
         "post-install-cmd": [

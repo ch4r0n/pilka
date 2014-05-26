@@ -9,18 +9,8 @@
     {% endblock %}
 
     {% block content %}
-    <h1 class="title">Witamy - dane meczu!</h1>
-    {#{% for te in team %}#}
-    {#<p>ID: </p>{{ match.match_id }}</p>#}
-    {#<p>Home:  <a href="{{ path('_orlik_show_team', {'id' : match.home_id}) }}">{{ match.home_name }}</a></p>#}
-    {#<p>Away:  <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}">{{ match.away_name }}</a></p>#}
-    {#<p>Score: {{ match.score }}</p>#}
-    {#<p>Kolejka: {{ match.round }}</p>#}
-    {#<p>Data: {{ match.matchDate|date('Y-m-d') }}</p>#}
-    {#<p>Godzina: {{ match.matchDate|date('H:m') }}</p>#}
-    {#{% endfor %}#}
-    {#<a href="{{ path('_match_update', {'id' : match.match_id }) }}">Edytuj mecz</a>#}
-        <div class="block_match_info real-content clearfix " id="page_match_1_block_match_info_4">
+    <h2 class="title">Szczegóły meczu:</h2>
+        <div class="block_match_info real-content clearfix " id="">
 
             <div class="clearfix" style="display: block;">
                 <div class="container left" style="width: 30%; float: left;">
@@ -30,11 +20,6 @@
 
                     <div class="form clearfix">
                         {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teams_form.home} %}
-                        {#<a href="/matches/2014/03/05/world/friendlies/ireland-republic/serbia/1598481/" class="form-icon form-loss " title="Irlandia - Serbia 1 - 2">L</a>#}
-                        {#<a href="/matches/2013/11/19/world/friendlies/poland/ireland-republic/1598648/" class="form-icon form-draw " title="Polska - Irlandia 0 - 0">D</a>#}
-                        {#<a href="/matches/2013/11/15/world/friendlies/ireland-republic/latvia/1600669/" class="form-icon form-win " title="Irlandia - Łotwa 3 - 0">W</a>#}
-                        {#<a href="/matches/2013/10/15/europe/wc-qualifying-europe/ireland-republic/kazakhstan/1227456/" class="form-icon form-win " title="Irlandia - Kazachstan 3 - 1">W</a>#}
-                        {#<a href="/matches/2013/10/11/europe/wc-qualifying-europe/germany/ireland-republic/1227458/" class="form-icon form-loss last" title="Niemcy - Irlandia 3 - 0">L</a>#}
                     </div>
                 </div>
 
@@ -49,13 +34,7 @@
                         <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}">{{ match.away_name }}</a>
                     </h3>
                     <div class="form clearfix">
-                    {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teams_form.away} %}
-
-                        {#<a href="/matches/2014/05/21/world/friendlies/kosovo/turkey/1662385/" class="form-icon form-win " title="Kosovo - Turcja 1 - 6">W</a>#}
-                        {#<a href="/matches/2014/03/05/world/friendlies/turkey/sweden/1635679/" class="form-icon form-win " title="Turcja - Szwecja 2 - 1">W</a>#}
-                        {#<a href="/matches/2013/11/19/world/friendlies/turkey/belarus/1600670/" class="form-icon form-win " title="Turcja - Białoruś 2 - 1">W</a>#}
-                        {#<a href="/matches/2013/11/15/world/friendlies/turkey/northern-ireland/1600094/" class="form-icon form-win " title="Turcja - Irlandia Północna 1 - 0">W</a>#}
-                        {#<a href="/matches/2013/10/15/europe/wc-qualifying-europe/turkey/netherlands/1239738/" class="form-icon form-loss last" title="Turcja - Holandia 0 - 2">L</a>#}
+                        {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teams_form.away} %}
                     </div>
                 </div>
             </div>
@@ -63,8 +42,8 @@
             <div class="clearfix"  style="display: block;">
                 <div class="container left" style="width: 30%; float: left;">
                     <div class="logo">
-                        <a href="/teams/ireland-republic/ireland-republic/1202/">
-                            <img src="http://cache.images.globalsportsmedia.com/soccer/teams/150x150/1202.png" alt="Republic of Ireland">
+                        <a href="{{ path('_orlik_show_team', {'id' : match.home_id}) }}" title="{{ match.home_name }}">
+                            <img src="{{ asset('bundles/skokiorlik/images/noHerb.png') }}" alt="{{ match.home_name }}"/>
                         </a>
                     </div>
                 </div>
@@ -90,7 +69,6 @@
                         <dl>
                             <dt>Kolejka</dt>
                             <dd>{{ match.round }}</dd>
-
                         </dl>
                     </div>
 
@@ -98,8 +76,8 @@
 
                 <div class="container right" style="width: 30%; float: right;">
                     <div class="logo">
-                        <a href="/teams/turkey/turkey/2248/">
-                            <img src="http://cache.images.globalsportsmedia.com/soccer/teams/150x150/2248.png" alt="Turkey">
+                        <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}" title="{{ match.away_name }}">
+                            <img src="{{ asset('bundles/skokiorlik/images/noHerb.png') }}" alt="{{ match.away_name }}">
                         </a>
                     </div>
                 </div>

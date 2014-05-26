@@ -24,6 +24,7 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    translator: ~
 
 # Twig Configuration
 twig:
@@ -39,7 +40,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ "SkokiOrlikBundle" ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -81,6 +82,18 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Skoki\UserBundle\Entity\User
+
+fos_comment:
+    db_driver: orm
+    class:
+        model:
+            comment: Skoki\OrlikBundle\Entity\Comment
+            thread: Skoki\OrlikBundle\Entity\Thread
+
+fsi_news:
+    db_driver: orm
+    news_class: Skoki\OrlikBundle\Entity\News
+    news_per_page: 5
 #    db_driver:              orm
 #    firewall_name:          aronfirewall
 #    user_class:             SkokiUserBundle:User

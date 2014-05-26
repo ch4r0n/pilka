@@ -1,5 +1,6 @@
 {#{% extends "OrlikHomepageBundle::main_layout.html.twig" %}#}
-{% extends "TwigBundle::layout.html.twig" %}
+{#{% extends "TwigBundle::layout.html.twig" %}#}
+{% extends 'SkokiOrlikBundle::layout2.html.twig' %}
 {#{% extends 'MopaBootstrapBundle::layout.html.twig' %}#}
 {#{% extends 'MopaBootstrapBundle::base.html.twig' %}#}
 
@@ -7,25 +8,60 @@
 {% block head %}
     <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/skokiorlik/css/style.css') }}" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" href="{{ asset('bundles/skokiorlik/js/form_script.js') }}"></script>
+    {#<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>#}
+    {#<script type="text/javascript" href="{{ asset('bundles/skokiorlik/js/form_script.js') }}"></script>#}
+    {#<script type="text/javascript" href="{{ asset('bundles/skokiorlik/js/jquery-2.1.1.min.js') }}"></script>#}
+    {#<script type="text/javascript" href="{{ asset('bundles/skokiorlik/js/ajax-manager.js') }}"></script>#}
+    {#<script type="text/javascript" href="{{ asset('bundles/skokiorlik/js/jquery.form.js') }}"></script>#}
+
     {#{% stylesheets filter='cssrewrite,?yui_css'#}
     {#'@MopaBootstrapBundle/Resources/public/bootstrap/bootstrap.css'#}
     {#'@OrlikHomepageBundle/Resources/public/css/*'#}
     {#%}#}
     {#<link href="{{ asset('bundles/orlikhomepage/css/style.css') }}" type="text/css" rel="stylesheet"#}
     {#media="screen" />#}
-
-{% endblock %}
+    {#{% javascripts#}
+    {#'bundles/skokiorlik/js/form_script.js'#}
+    {#'bundles/skokiorlik/js/ajax-manager.js'#}
+    {#'bundles/skokiorlik/js/jquery.form.js'#}
+    {#'bundles/skokiorlik/js/jquery-1.7.1.min.js '%}#}
+    {#<script src="{{ asset_url }}"></script>#}
+    {#{% endjavascripts %}#}
+    {% javascripts '@SkokiOrlikBundle/Resources/public/js/*' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock head %}
 
 {% block title 'Orlik Skoki' %}
 
 {% block body %}
-    {% for flashMessage in app.session.flashbag.get('notice') %}
-        <div class="flash-message">
-            <em>Notice</em>: {{ flashMessage }}
-        </div>
-    {% endfor %}
+    {#<div>#}
+        {#{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}#}
+            {#{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |#}
+            {#<a href="{{ path('fos_user_security_logout') }}">#}
+                {#{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}#}
+            {#</a>#}
+        {#{% else %}#}
+            {#<a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>#}
+        {#{% endif %}#}
+    {#</div>#}
+    {#{% for type, messages in app.session.flashbag.all() %}#}
+        {#{% for key, message in messages %}#}
+            {#<div class="flash-{{ type }}">#}
+                {#{{ message|trans({}, 'FOSUserBundle') }}#}
+            {#</div>#}
+        {#{% endfor %}#}
+    {#{% endfor %}#}
+    {#<div>#}
+        {#{% block fos_user_content %}#}
+        {#{% endblock fos_user_content %}#}
+    {#</div>#}
+
+    {#{% for flashMessage in app.session.flashbag.get('notice') %}#}
+        {#<div class="flash-message">#}
+            {#<em>Notice</em>: {{ flashMessage }}#}
+        {#</div>#}
+    {#{% endfor %}#}
 
     <div class="top_menu">
         {% block menu_header %}{% endblock %}

@@ -8,7 +8,7 @@ use Skoki\OrlikBundle\Entity\Teams;
 /**
  * StatTable
  *
- * @ORM\Table()
+ * @ORM\Table(name="stattable")
  * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Entity\StatTableRepository")
  */
 class StatTable

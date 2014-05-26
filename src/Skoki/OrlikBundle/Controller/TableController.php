@@ -22,4 +22,12 @@ class TableController extends Controller
 
         return $this->render('SkokiOrlikBundle:Table:Tabela.html.twig', array('tabela' => $tabela));
     }
+
+    public function showSmallTableAction()
+    {
+        $tabelaGenerator = $this->get('orlik.table.generator');
+        $tabela = $tabelaGenerator->getTable(1);
+
+        return $this->render('SkokiOrlikBundle:Table:SmallTable.html.twig', array('tabela' => $tabela));
+    }
 }

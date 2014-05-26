@@ -2,6 +2,7 @@
 
 {% block title %}SkokiOrlikBundle:Table:ShowTable{% endblock %}
 
+{#<script type="text/javascript" href="{{ asset('bundles/skokiorlik/js/jquery-2.1.1.min.js') }}"></script>#}
 
     {% block menu_header %}
         {{ knp_menu_render('SkokiOrlikBundle:Builder:mainMenu') }}
@@ -9,6 +10,6 @@
     {% block content %}
         {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
 
-        <h1>Welcome to the Show Timetable view</h1>
+        <h2>Spotkania:</h2>
         {{ render(controller('SkokiOrlikBundle:Timetable:matchList', { 'matches': matches })) }}
     {% endblock %}

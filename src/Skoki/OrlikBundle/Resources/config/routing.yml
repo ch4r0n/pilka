@@ -39,3 +39,7 @@ _match_update_process:
     pattern: /match/{id}/update
     defaults: { _controller: SkokiOrlikBundle:Match:update }
     methods: POST
+
+_orlik_add_news:
+    pattern: /news/add
+    defaults: { _controller: SkokiOrlikBundle:Default:addNews}

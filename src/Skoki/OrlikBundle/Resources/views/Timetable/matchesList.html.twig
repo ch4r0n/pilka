@@ -10,8 +10,13 @@
     </tr>
     </thead>
     <tbody>
+    {% set iterator = 1 %}
     {% for hour, match in matches %}
-        <tr class="even  expanded    match no-date-repetition" data-timestamp="{{ match.matchDate|date('U') }}" id="page_competition_1_block_competition_matches_summary_6_match-1220070" data-competition=72>
+        {% if iterator % 2 == 0 %}
+            <tr class="even expanded match no-date-repetition" data-timestamp="{{ match.matchDate|date('U') }}">
+        {% else %}
+            <tr class="odd expanded match no-date-repetition" data-timestamp="{{ match.matchDate|date('U') }}">
+        {% endif %}
             <td class="day no-repetition"><span class='timestamp' data-value='{{ match.matchDate|date('U') }}' data-format='ddd'>sob</span></td>
             <td class="date no-repetition"><span class='timestamp' data-value='{{ match.matchDate|date('U') }}' data-format='dd/mm/yy'>{{ match.matchDate|date('d/m/y') }}</span></td>
             <td class="team team-a ">
@@ -34,9 +39,10 @@
 
             </td>
             <td class="info-button button">
-                <a href="{{ path('_orlik_show_match', {'id' : match.match_id}) }}" title="Więcej informacji">Więcej informacji</a>
+                <a href="{{ path('_orlik_show_match', {'id' : match.match_id}) }}" title="Szczegóły meczu">Info</a>
             </td>
         </tr>
+        {% set iterator = iterator + 1 %}
     {% endfor %}
 
     </tbody>
