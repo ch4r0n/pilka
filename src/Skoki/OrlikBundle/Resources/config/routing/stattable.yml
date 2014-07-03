@@ -1,0 +1,30 @@
+stats:
+    pattern:  /
+    defaults: { _controller: "SkokiOrlikBundle:StatTable:index" }
+
+stats_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SkokiOrlikBundle:StatTable:show" }
+
+stats_new:
+    pattern:  /new
+    defaults: { _controller: "SkokiOrlikBundle:StatTable:new" }
+
+stats_create:
+    pattern:  /create
+    defaults: { _controller: "SkokiOrlikBundle:StatTable:create" }
+    requirements: { _method: post }
+
+stats_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SkokiOrlikBundle:StatTable:edit" }
+
+stats_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SkokiOrlikBundle:StatTable:update" }
+    requirements: { _method: post|put }
+
+stats_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SkokiOrlikBundle:StatTable:delete" }
+    requirements: { _method: post|delete }

@@ -21,11 +21,13 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Skoki\UserBundle\SkokiUserBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle($this),
-            new FOS\RestBundle\FOSRestBundle(),
+//            new JMS\SerializerBundle\JMSSerializerBundle($this),
+//            new FOS\RestBundle\FOSRestBundle(),
             new FOS\CommentBundle\FOSCommentBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new FSi\Bundle\NewsBundle\FSiNewsBundle(),
+//            new Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
+            new Cup\HomeBundle\CupHomeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

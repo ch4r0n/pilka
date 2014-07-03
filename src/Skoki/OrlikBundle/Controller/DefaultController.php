@@ -18,8 +18,12 @@ class DefaultController extends Controller
     {
         $currentUserTime = new \DateTime();
 
+        $matchManager = $this->get('orlik.match.manager');
+        $matchList = $matchManager->getMatchRepo()->findAll();
+
         return $this->render('SkokiOrlikBundle:Default:homepage.html.twig', array(
-            'currentDatatime' => $currentUserTime->format('Y-m-d H:i:s')
+            'currentDatatime' => $currentUserTime->format('Y-m-d H:i:s'),
+            'matches' => $matchList
         ));
     }
 

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Players
  *
- * @ORM\Table()
+ * @ORM\Table(name="players")
  * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\PlayersRepository")
  */
 class Players
@@ -24,21 +24,21 @@ class Players
     /**
      * @var string
      *
-     * @ORM\Column(name="firstname", type="string", length=100)
+     * @ORM\Column(name="firstname", type="string", length=100, nullable=true)
      */
     private $firstname;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="lastname", type="string", length=100)
+     * @ORM\Column(name="lastname", type="string", length=100, nullable=true)
      */
     private $lastname;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="user_id", type="integer")
+     * @ORM\Column(name="user_id", type="integer", nullable=true)
      */
     private $userId;
 
@@ -53,31 +53,52 @@ class Players
     /**
      * @var integer
      *
-     * @ORM\Column(name="age", type="integer")
+     * @ORM\Column(name="age", type="integer", nullable=true)
      */
     private $age;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="height", type="integer")
+     * @ORM\Column(name="height", type="integer", nullable=true)
      */
     private $height;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="numer", type="integer", nullable=true)
+     */
+    private $numer;
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=100)
+     * @ORM\Column(name="country", type="string", length=100, nullable=true)
      */
     private $country;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="other", type="text")
+     * @ORM\Column(name="pozycja", type="string", length=100, nullable=true)
+     */
+    private $pozycja;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="other", type="text", nullable=true)
      */
     private $other;
 
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->firstname . ' ' .$this->lastname;
+    }
 
     /**
      * Get id
@@ -205,6 +226,29 @@ class Players
     }
 
     /**
+     * Set numer
+     *
+     * @param integer $numer
+     * @return Players
+     */
+    public function setNumer($numer)
+    {
+        $this->numer = $numer;
+
+        return $this;
+    }
+
+    /**
+     * Get numer
+     *
+     * @return integer
+     */
+    public function getNumer()
+    {
+        return $this->numer;
+    }
+
+    /**
      * Set country
      *
      * @param string $country
@@ -294,5 +338,28 @@ class Players
     public function getTeam()
     {
         return $this->team;
+    }
+
+    /**
+     * Set pozycja
+     *
+     * @param string $pozycja
+     * @return Players
+     */
+    public function setPozycja($pozycja)
+    {
+        $this->pozycja = $pozycja;
+
+        return $this;
+    }
+
+    /**
+     * Get pozycja
+     *
+     * @return string 
+     */
+    public function getPozycja()
+    {
+        return $this->pozycja;
     }
 }

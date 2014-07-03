@@ -1,0 +1,30 @@
+cup_group:
+    pattern:  /
+    defaults: { _controller: "CupHomeBundle:CupGroup:index" }
+
+cup_group_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CupHomeBundle:CupGroup:show" }
+
+cup_group_new:
+    pattern:  /new
+    defaults: { _controller: "CupHomeBundle:CupGroup:new" }
+
+cup_group_create:
+    pattern:  /create
+    defaults: { _controller: "CupHomeBundle:CupGroup:create" }
+    requirements: { _method: post }
+
+cup_group_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CupHomeBundle:CupGroup:edit" }
+
+cup_group_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CupHomeBundle:CupGroup:update" }
+    requirements: { _method: post|put }
+
+cup_group_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CupHomeBundle:CupGroup:delete" }
+    requirements: { _method: post|delete }

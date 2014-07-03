@@ -6,12 +6,15 @@
     {% endblock %}
     {% block content %}
         {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
-
+<div class="block-data">
         <h1>{{ team.name }}</h1>
         {% block teamForm %}
             {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teamForm} %}
         {% endblock %}
+    </div>
+<div class="block-data">
         {% block teamMatches %}
-            {% include 'SkokiOrlikBundle:Timetable:matchesList.html.twig' with {'matches': matches} %}
+            {% include 'SkokiOrlikBundle:Timetable:matchesList.html.twig' with {'matches': matches, 'nowDate': nowDate} %}
         {% endblock %}
+    </div>
 {% endblock %}

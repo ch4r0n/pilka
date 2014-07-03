@@ -84,16 +84,26 @@ class Tournaments
     /**
      * @var ArrayCollection<TournamentTeams> $teamTournament
      *
-     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TournamentTeams", mappedBy="tournament_id", cascade={"all"}, orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TournamentTeams", mappedBy="tournament", cascade={"all"}, orphanRemoval=true)
      */
     private $tournamentTeams;
 
     /**
-     * @var ArrayCollection $rounds
-     * @ORM\OneToMany(targetEntity="Rounds", mappedBy="tournament")
-     */
+ * @var ArrayCollection $rounds
+ * @ORM\OneToMany(targetEntity="Rounds", mappedBy="tournament")
+ */
     protected $rounds;
 
+    /**
+     * @var ArrayCollection<StatTable> $stattable
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\StatTable", mappedBy="tournament")
+     */
+    protected $stattable;
+
+    public function __toString()
+    {
+        return $this->name;
+    }
     /**
      * Get id
      *
@@ -286,6 +296,7 @@ class Tournaments
         $this->teams = new \Doctrine\Common\Collections\ArrayCollection();
         $this->tournament = new \Doctrine\Common\Collections\ArrayCollection();
         $this->rounds = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->stattable = new \Doctrine\Common\Collections\ArrayCollection();
         $this->rematch = true;
     }
     

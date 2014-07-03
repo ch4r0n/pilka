@@ -1,0 +1,52 @@
+{% extends 'CupHomeBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>UserBeats list</h1>
+
+    <table class="records_list">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Home</th>
+            <th>Away</th>
+            <th>Result</th>
+            <th>Zakład</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td><a href="{{ path('userbeats_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cup_user_show', { 'id': user.id }) }}">show</a>
+                        </li>
+                        <li>
+                            {#<a href="{{ path('userbeats_edit', { 'id': entity.id }) }}">edit</a>#}
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('userbeats_new') }}">
+                Create a new entry
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('userbeats') }}">
+                Back to the list
+            </a>
+        </li>
+    </ul>
+{% endblock %}

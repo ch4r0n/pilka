@@ -19,10 +19,10 @@ class TeamsRepository extends EntityRepository
         $teams = $query->getResult();
         $result = array();
 
-//        foreach ($teams as $t) {
-//            $result[$t['id']] = $t['name'];
-//        }
-
-        return $teams;
+        foreach ($teams as $t) {
+            $result[$t['id']] = $t['name'];
+        }
+//var_dump($result);die();
+        return $result;
     }
 } 

@@ -1,0 +1,61 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block content -%}
+    <h1>StatTable list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Teamid</th>
+                <th>Teamname</th>
+                <th>Rs</th>
+                <th>Z</th>
+                <th>R</th>
+                <th>P</th>
+                <th>Bz</th>
+                <th>Bs</th>
+                <th>Rb</th>
+                <th>Pkt</th>
+                <th>Poz</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('stats_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.teamId }}</td>
+                <td>{{ entity.teamName }}</td>
+                <td>{{ entity.rs }}</td>
+                <td>{{ entity.z }}</td>
+                <td>{{ entity.r }}</td>
+                <td>{{ entity.p }}</td>
+                <td>{{ entity.bz }}</td>
+                <td>{{ entity.bs }}</td>
+                <td>{{ entity.rb }}</td>
+                <td>{{ entity.pkt }}</td>
+                <td>{{ entity.poz }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('stats_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('stats_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('stats_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

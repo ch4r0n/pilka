@@ -72,7 +72,7 @@ class Teams
     /**
      * @var ArrayCollection<TournamentTeams> $teamTournament
      *
-     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TournamentTeams", mappedBy="team_id", cascade={"all"}, orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TournamentTeams", mappedBy="team", cascade={"all"}, orphanRemoval=true)
      */
     private $teamTournament;
 
@@ -85,7 +85,7 @@ class Teams
     /**
      * @var ArrayCollection<teamMatches> $teamMatches
      *
-     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TeamMatches", mappedBy="team")
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TeamMatches", mappedBy="team", cascade={"all"}, orphanRemoval=true)
      */
     private $teamMatches;
 //    /**
@@ -96,6 +96,13 @@ class Teams
 //     */
 //    private $awayMatches;
 
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
 
     /**
      * Set id

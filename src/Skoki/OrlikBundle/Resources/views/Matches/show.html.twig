@@ -1,0 +1,68 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block content -%}
+    <h1>Matches</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Home</th>
+                <td>{{ entity.home }}</td>
+            </tr>
+            <tr>
+                <th>Away</th>
+                <td>{{ entity.away }}</td>
+            </tr>
+            <tr>
+                <th>Matchdate</th>
+                <td>{{ entity.matchDate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Result</th>
+                <td>{{ entity.result }}</td>
+            </tr>
+            <tr>
+                <th>Scorehome</th>
+                <td>{{ entity.scoreHome }}</td>
+            </tr>
+            <tr>
+                <th>Scoreaway</th>
+                <td>{{ entity.scoreAway }}</td>
+            </tr>
+            <tr>
+                <th>Redhome</th>
+                <td>{{ entity.redHome }}</td>
+            </tr>
+            <tr>
+                <th>Redaway</th>
+                <td>{{ entity.redAway }}</td>
+            </tr>
+            <tr>
+                <th>Yellowhome</th>
+                <td>{{ entity.yellowHome }}</td>
+            </tr>
+            <tr>
+                <th>Yellowaway</th>
+                <td>{{ entity.yellowAway }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('mecz') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('mecz_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

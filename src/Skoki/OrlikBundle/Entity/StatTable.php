@@ -9,7 +9,7 @@ use Skoki\OrlikBundle\Entity\Teams;
  * StatTable
  *
  * @ORM\Table(name="stattable")
- * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Entity\StatTableRepository")
+ * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\StatTableRepository")
  */
 class StatTable
 {
@@ -25,8 +25,8 @@ class StatTable
     /**
      * @var integer
      *
-     * @ORM\OneToOne(targetEntity="Teams")
-     * @ORM\JoinColumn(name="team_id", referencedColumnName="id")
+     * @ORM\Column(name="team_id", type="integer", nullable=true)
+     *
      */
     private $teamId;
 
@@ -110,6 +110,23 @@ class StatTable
     private $pkt;
 
     /**
+     * Pozycja
+     *
+     * @var integer
+     *
+     * @ORM\Column(name="poz", type="integer", nullable=true)
+     */
+    private $poz;
+
+    /**
+     * @var integer
+     *
+     * @ORM\ManyToOne(targetEntity="\Skoki\OrlikBundle\Entity\Tournaments", inversedBy="stattable" ,cascade={"persist"}, fetch="EAGER")
+     * @ORM\JoinColumn(name="tournament", referencedColumnName="id")
+     */
+    private $tournament;
+
+    /**
      * Konstruktor
      */
     public function __construct()
@@ -121,6 +138,7 @@ class StatTable
         $this->p = 0;
         $this->rb = 0;
         $this->rs = 0;
+        $this->pkt = 0;
     }
 
     /**
@@ -361,5 +379,51 @@ class StatTable
     public function getPkt()
     {
         return $this->pkt;
+    }
+
+    /**
+     * Set poz
+     *
+     * @param integer $poz
+     * @return StatTable
+     */
+    public function setPoz($poz)
+    {
+        $this->poz = $poz;
+
+        return $this;
+    }
+
+    /**
+     * Get poz
+     *
+     * @return integer
+     */
+    public function getPoz()
+    {
+        return $this->poz;
+    }
+
+    /**
+     * Set tournament
+     *
+     * @param \Skoki\OrlikBundle\Entity\Tournaments $tournament
+     * @return StatTable
+     */
+    public function setTournament(\Skoki\OrlikBundle\Entity\Tournaments $tournament = null)
+    {
+        $this->tournament = $tournament;
+
+        return $this;
+    }
+
+    /**
+     * Get tournament
+     *
+     * @return \Skoki\OrlikBundle\Entity\Tournaments 
+     */
+    public function getTournament()
+    {
+        return $this->tournament;
     }
 }

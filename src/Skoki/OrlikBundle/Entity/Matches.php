@@ -109,7 +109,9 @@ class Matches
     private $hour;
 
     /**
-     * @var array
+     * @var ArrayCollection<teamMatches> $teamMatches
+     *
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\TeamMatches", mappedBy="match", cascade={"all"}, orphanRemoval=true)
      */
     private $teamMatches;
 

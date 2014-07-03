@@ -1,0 +1,14 @@
+.imgCenter {
+    vertical-align: middle;
+}
+.match-list .match-beat .team-name {
+    display: inline-block;
+}
+img {
+    width: 35px;
+    height: 35px;
+}
+
+.match-beat td.cup-home-list {
+    text-align: right;
+}

@@ -1,0 +1,75 @@
+{% extends 'CupHomeBundle::layout.html.twig' %}
+
+{% block title %}World Cup 2014 - Brazil{% endblock %}
+
+
+{% block body -%}
+
+        {#{% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}#}
+        {#{% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': 'foo'} %}#}
+        {#<a href="{{ path('_orlik_login') }}">Zaloguj</a>#}
+
+
+            <table class="match-list records_list">
+                <thead>
+                <tr>
+                    <th>Grupa</th>
+                    <th>Data | Godzina</th>
+                    <th>Drużyna A</th>
+                    <th>Result</th>
+                    <th>Drużyna B</th>
+                    {#<th>Homescore</th>#}
+                    {#<th>Awayscore</th>#}
+                    {#<th>Twój typ</th>#}
+                </tr>
+                </thead>
+                <tbody>
+                {% for entity in matches %}
+                    {%  if entity.result %}
+                        <tr class="match-beat byl">
+                    {% else %}
+                        <tr class="match-beat bedzie">
+                    {% endif %}
+                    <td>{{ entity.cupGroup.name }}</td>
+                    <td>
+                        <a href="{{ path('cup_match_show', { 'id': entity.id }) }}">
+                            {% if entity.matchDate %}
+                                {{ entity.matchDate|date('d/m') }} | {{ entity.matchDate|date('H:i') }}
+                            {% endif %}
+                        </a>
+                    </td>
+                    <td class="cup-home-list">
+                        <div class="team-name home" style="text-align: right;">
+                            <span>{{ entity.teamHome.name }}</span>
+                            <img class="imgCenter" src="{{ entity.teamHome.logo }}" width="35" height="35">
+                        </div>
+                    </td>
+                    <td>
+                        {#<td>{{ entity.result }}#}
+                        {{ entity.homeScore }} : {{ entity.awayScore }}
+                    </td>
+                    <td class="cup-away-list">
+                        <div class="team-name away">
+                            <img class="imgCenter" src="{{ entity.teamAway.logo }}" width="35" height="35">
+                            <span>{{ entity.teamAway.name }}</span>
+
+                        </div>
+                    </td>
+                    <td>
+                        {#{%  if not entity.result %}#}
+                            {#<div class="match-beat">#}
+                                {#<input type="text" name="match[{{ entity.id }}]" size="1" value="" class="textCenter text14 inputBet radius border bw1">#}
+                            {#</div>#}
+                        {#{% else %}#}
+                            {#{% if userBeats[entity.id] is defined %}#}
+                                {#{{ userBeats[entity.id].cupBeat }}#}
+                            {#{% endif %}#}
+                        {#{% endif %}#}
+
+                    </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endblock %}
+

@@ -2,6 +2,7 @@ parameters:
   orlik.match.manager.class: Skoki\OrlikBundle\Model\MatchManager
   orlik.table.generator.class: Skoki\OrlikBundle\Generator\TableGenerator
   orlik.timetable.manager.class: Skoki\OrlikBundle\Generator\TimetableManager
+  orlik.tournament.manager.class: Skoki\OrlikBundle\Model\TournamentManager
 #    skoki_orlik.example.class: Skoki\OrlikBundle\Example
 
 services:
@@ -19,6 +20,10 @@ services:
       class: %orlik.match.manager.class%
       arguments:
         em : "@doctrine.orm.default_entity_manager"
+  orlik.tournament.manager:
+      class: %orlik.tournament.manager.class%
+      arguments:
+        em: "@doctrine.orm.default_entity_manager"
 
 #    skoki_orlik.example:
 #        class: %skoki_orlik.example.class%

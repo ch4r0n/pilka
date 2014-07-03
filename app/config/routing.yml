@@ -1,15 +1,20 @@
+cup_home:
+    resource: "@CupHomeBundle/Resources/config/routing.yml"
+    prefix:   /cup
+
 skoki_user:
     resource: "@SkokiUserBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /user
 
 skoki_orlik:
     resource: "@SkokiOrlikBundle/Resources/config/routing.yml"
-    prefix:   /orlik
+    prefix:   /
+#    prefix:   /orlik
 
-orlik_blog:
-    type: rest
-    prefix: /api
-    resource: "@SkokiOrlikBundle/Resources/config/routes.yml"
+#orlik_blog:
+#    type: rest
+#    prefix: /api
+#    resource: "@SkokiOrlikBundle/Resources/config/routes.yml"
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
@@ -30,12 +35,12 @@ fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
 
-fos_comment_api:
-    type: rest
-    resource: "@FOSCommentBundle/Resources/config/routing.yml"
-    prefix: /api
-    defaults: { _format: html }
+#fos_comment_api:
+#    type: rest
+#    resource: "@FOSCommentBundle/Resources/config/routing.yml"
+#    prefix: /api
+#    defaults: { _format: html }
 
 news:
     resource: "@FSiNewsBundle/Resources/config/routing/news.yml"
-    prefix: /orlik
+    prefix: /orlik/news

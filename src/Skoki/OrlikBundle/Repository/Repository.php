@@ -8,4 +8,7 @@ final class Repository
     const MATCHES = 'SkokiOrlikBundle:Matches';
     const ROUNDS = 'SkokiOrlikBundle:Rounds';
     const TEAM_MATCHES = 'SkokiOrlikBundle:TeamMatches';
+    const STATTABLE = 'SkokiOrlikBundle:StatTable';
+    const TOURNAMENTS = 'SkokiOrlikBundle:Tournaments';
+    const PLAYERS = 'SkokiOrlikBundle:Players';
 }

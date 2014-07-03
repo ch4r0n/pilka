@@ -1,0 +1,4 @@
+#  Skoki\OrlikBundle\Entity\Players:
+#      properties:
+#          firstname:
+#              - MinLength: 3

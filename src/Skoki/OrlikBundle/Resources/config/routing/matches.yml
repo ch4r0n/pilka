@@ -1,0 +1,30 @@
+mecz:
+    pattern:  /
+    defaults: { _controller: "SkokiOrlikBundle:Matches:index" }
+
+mecz_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SkokiOrlikBundle:Matches:show" }
+
+mecz_new:
+    pattern:  /new
+    defaults: { _controller: "SkokiOrlikBundle:Matches:new" }
+
+mecz_create:
+    pattern:  /create
+    defaults: { _controller: "SkokiOrlikBundle:Matches:create" }
+    requirements: { _method: post }
+
+mecz_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SkokiOrlikBundle:Matches:edit" }
+
+mecz_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SkokiOrlikBundle:Matches:update" }
+    requirements: { _method: post|put }
+
+mecz_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SkokiOrlikBundle:Matches:delete" }
+    requirements: { _method: post|delete }

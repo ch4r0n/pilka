@@ -1,0 +1,30 @@
+cup_team:
+    pattern:  /
+    defaults: { _controller: "CupHomeBundle:CupTeam:index" }
+
+cup_team_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CupHomeBundle:CupTeam:show" }
+
+cup_team_new:
+    pattern:  /new
+    defaults: { _controller: "CupHomeBundle:CupTeam:new" }
+
+cup_team_create:
+    pattern:  /create
+    defaults: { _controller: "CupHomeBundle:CupTeam:create" }
+    requirements: { _method: post }
+
+cup_team_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CupHomeBundle:CupTeam:edit" }
+
+cup_team_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CupHomeBundle:CupTeam:update" }
+    requirements: { _method: post|put }
+
+cup_team_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CupHomeBundle:CupTeam:delete" }
+    requirements: { _method: post|delete }

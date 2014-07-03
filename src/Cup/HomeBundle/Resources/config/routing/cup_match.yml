@@ -1,0 +1,30 @@
+cup_match:
+    pattern:  /
+    defaults: { _controller: "CupHomeBundle:CupMatch:index" }
+
+cup_match_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CupHomeBundle:CupMatch:show" }
+
+cup_match_new:
+    pattern:  /new
+    defaults: { _controller: "CupHomeBundle:CupMatch:new" }
+
+cup_match_create:
+    pattern:  /create
+    defaults: { _controller: "CupHomeBundle:CupMatch:create" }
+    requirements: { _method: post }
+
+cup_match_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CupHomeBundle:CupMatch:edit" }
+
+cup_match_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CupHomeBundle:CupMatch:update" }
+    requirements: { _method: post|put }
+
+cup_match_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CupHomeBundle:CupMatch:delete" }
+    requirements: { _method: post|delete }

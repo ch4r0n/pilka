@@ -1,3 +1,19 @@
+SkokiOrlikBundle_stats:
+    prefix:   /stats
+    resource: "@SkokiOrlikBundle/Resources/config/routing/stattable.yml"
+
+SkokiOrlikBundle_news:
+    resource: "@SkokiOrlikBundle/Resources/config/routing/news.yml"
+    prefix:   /news
+
+SkokiOrlikBundle_mecz:
+    resource: "@SkokiOrlikBundle/Resources/config/routing/matches.yml"
+    prefix:   /mecz
+
+SkokiOrlikBundle_player:
+    resource: "@SkokiOrlikBundle/Resources/config/routing/players.yml"
+    prefix:   /player
+
 skoki_orlik_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: SkokiOrlikBundle:Default:index }
@@ -8,7 +24,12 @@ orlik_homepage:
 
 _show_table:
     pattern: /table
+#    defaults: { _controller: SkokiOrlikBundle:Table:tabela }
     defaults: { _controller: SkokiOrlikBundle:Table:showTable }
+
+_table_stat_update:
+    pattern: /table/update-stat
+    defaults: { _controller: SkokiOrlikBundle:Table:update }
 
 _orlik_show_team:
     path: /team/show/{id}
@@ -40,6 +61,6 @@ _match_update_process:
     defaults: { _controller: SkokiOrlikBundle:Match:update }
     methods: POST
 
-_orlik_add_news:
-    pattern: /news/add
-    defaults: { _controller: SkokiOrlikBundle:Default:addNews}
+#_orlik_add_news:
+#    pattern: /news/add
+#    defaults: { _controller: SkokiOrlikBundle:Default:addNews}

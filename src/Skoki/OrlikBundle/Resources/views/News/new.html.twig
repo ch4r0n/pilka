@@ -1,0 +1,15 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block content -%}
+    <h1>News creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('news') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

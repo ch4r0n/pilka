@@ -1,0 +1,69 @@
+{% extends 'CupHomeBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>cup_team</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Logo</th>
+                <td>{{ entity.logo }}</td>
+            </tr>
+            <tr>
+                <th>Cup</th>
+                <td>{{ entity.cup }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('cup_team') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('cup_team_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+    <h2>MEcze</h2>
+    <table class="records_list">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Cupgroup</th>
+            <th>Matchdate</th>
+            <th>Teamhome</th>
+            <th>Teamaway</th>
+            <th>Homescore</th>
+            <th>Awayscore</th>
+            <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in matches %}
+            <tr>
+                <td><a href="{{ path('cup_match_show', { 'id': entity.cupMatch.id }) }}">{{ entity.cupMatch.id }}</a></td>
+                <td>{{ entity.cupMatch.cupGroup.name }}</td>
+                <td>{% if entity.cupMatch.matchDate %}{{ entity.cupMatch.matchDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.cupMatch.teamHome.name }}</td>
+                <td>{{ entity.cupMatch.teamAway.name }}</td>
+                <td>{{ entity.cupMatch.homeScore }}</td>
+                <td>{{ entity.cupMatch.awayScore }}</td>
+                <td>{{ entity.cupMatch.result }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,30 @@
+player:
+    pattern:  /
+    defaults: { _controller: "SkokiOrlikBundle:Players:index" }
+
+player_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SkokiOrlikBundle:Players:show" }
+
+player_new:
+    pattern:  /new
+    defaults: { _controller: "SkokiOrlikBundle:Players:new" }
+
+player_create:
+    pattern:  /create
+    defaults: { _controller: "SkokiOrlikBundle:Players:create" }
+    requirements: { _method: post }
+
+player_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SkokiOrlikBundle:Players:edit" }
+
+player_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SkokiOrlikBundle:Players:update" }
+    requirements: { _method: post|put }
+
+player_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SkokiOrlikBundle:Players:delete" }
+    requirements: { _method: post|delete }

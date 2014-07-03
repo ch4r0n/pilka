@@ -1,0 +1,56 @@
+{% extends 'CupHomeBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>cup_match</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Cupgroup</th>
+                <td>{{ entity.cupGroup.name }}</td>
+            </tr>
+            <tr>
+                <th>Matchdate</th>
+                <td>{{ entity.matchDate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Teamhome</th>
+                <td>{{ entity.teamHome.name }}</td>
+            </tr>
+            <tr>
+                <th>Teamaway</th>
+                <td>{{ entity.teamAway.name }}</td>
+            </tr>
+            <tr>
+                <th>Homescore</th>
+                <td>{{ entity.homeScore }}</td>
+            </tr>
+            <tr>
+                <th>Awayscore</th>
+                <td>{{ entity.awayScore }}</td>
+            </tr>
+            <tr>
+                <th>Result</th>
+                <td>{{ entity.result }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('cup_match') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('cup_match_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

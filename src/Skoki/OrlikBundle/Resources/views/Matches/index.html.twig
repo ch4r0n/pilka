@@ -1,0 +1,59 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block content -%}
+    <h1>Matches list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Home</th>
+                <th>Away</th>
+                <th>Matchdate</th>
+                <th>Result</th>
+                <th>Scorehome</th>
+                <th>Scoreaway</th>
+                {#<th>Redhome</th>#}
+                {#<th>Redaway</th>#}
+                {#<th>Yellowhome</th>#}
+                {#<th>Yellowaway</th>#}
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('mecz_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ teams[entity.home].getName }}</td>
+                <td>{{ teams[entity.away].getName }}</td>
+                <td>{% if entity.matchDate %}{{ entity.matchDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.result }}</td>
+                <td>{{ entity.scoreHome }}</td>
+                <td>{{ entity.scoreAway }}</td>
+                {#<td>{{ entity.redHome }}</td>#}
+                {#<td>{{ entity.redAway }}</td>#}
+                {#<td>{{ entity.yellowHome }}</td>#}
+                {#<td>{{ entity.yellowAway }}</td>#}
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('mecz_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('mecz_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('mecz_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

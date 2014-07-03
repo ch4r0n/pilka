@@ -18,6 +18,7 @@ class TournamentTableManager {
     public $teamReds;
     public $teamYellows;
     public $teamForm;
+    public $pozycja;
 
     public function __construct($teamName = '', $teamId = null)
     {
@@ -33,6 +34,7 @@ class TournamentTableManager {
         $this->teamReds = 0;
         $this->teamYellows = 0;
         $this->teamForm = array();
+        $this->pozycja = 0;
     }
 
     public function addWin($score = 0, $lost = 0, $red = 0, $yellow = 0)

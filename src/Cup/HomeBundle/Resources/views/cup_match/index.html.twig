@@ -1,0 +1,91 @@
+{% extends 'CupHomeBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Typuje mecze: </h1>
+    <form name="cup_homebundle_cup_match" method="post" action="{{ path('cup_beat') }}">
+        <input type="submit" class="textWhite bgRedGradient buttonPadding radius textCenter text11 f-r pointer" id="typeAll" value="Typuj">
+    <table class="match-list records_list">
+        <thead>
+            <tr>
+                <th>Grupa</th>
+                <th>Data | Godzina</th>
+                <th>Drużyna A</th>
+                <th>Result</th>
+                <th>Drużyna B</th>
+                {#<th>Homescore</th>#}
+                {#<th>Awayscore</th>#}
+                <th>Twój typ</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            {%  if entity.result %}
+            <tr class="match-beat byl">
+            {% else %}
+            <tr class="match-beat bedzie">
+            {% endif %}
+                <td>{{ entity.cupGroup.name }}</td>
+                <td>
+                    <a href="{{ path('cup_match_show', { 'id': entity.id }) }}">
+                    {% if entity.matchDate %}
+                        {{ entity.matchDate|date('d/m') }} | {{ entity.matchDate|date('H:i') }}
+                    {% endif %}
+                    </a>
+                </td>
+                <td class="cup-home-list">
+                    <div class="team-name home">
+                        <span>{{ entity.teamHome.name }}</span>
+                        <img class="imgCenter" src="{{ entity.teamHome.logo }}" width="35" height="35">
+                    </div>
+                </td>
+                <td>
+                {#<td>{{ entity.result }}#}
+                {{ entity.homeScore }} : {{ entity.awayScore }}
+                </td>
+                <td class="cup-away-list">
+                    <div class="team-name away">
+                        <img class="imgCenter" src="{{ entity.teamAway.logo }}" width="35" height="35">
+                        <span>{{ entity.teamAway.name }}</span>
+
+                    </div>
+                </td>
+                {#<td>{{ entity.homeScore }}</td>#}
+                {#<td>{{ entity.awayScore }}</td>#}
+                {#<td>#}
+                {#<ul>#}
+                    {#<li>#}
+                        {#<a href="{{ path('cup_match_show', { 'id': entity.id }) }}">show</a>#}
+                    {#</li>#}
+                    {#<li>#}
+                        {#<a href="{{ path('cup_match_edit', { 'id': entity.id }) }}">edit</a>#}
+                    {#</li>#}
+                {#</ul>#}
+                {#</td>#}
+                <td>
+                    {%  if not entity.result %}
+                        <div class="match-beat">
+                            <input type="text" name="match[{{ entity.id }}]" size="1" value="" class="textCenter text14 inputBet radius border bw1">
+                        </div>
+                        {% else %}
+                            {% if userBeats[entity.id] is defined %}
+                                {{ userBeats[entity.id].cupBeat }}
+                            {% endif %}
+                        {% endif %}
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <input type="submit" class="textWhite bgRedGradient buttonPadding radius textCenter text11 f-r pointer" id="typeAll" value="Typuj">
+    </form>
+        <ul>
+
+        <li>
+            <a href="{{ path('cup_match_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

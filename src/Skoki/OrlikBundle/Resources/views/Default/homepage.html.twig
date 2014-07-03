@@ -2,26 +2,25 @@
 
 {% block title %}Orlik News{% endblock %}
 
-    {% block menu_header %}
-        {{ knp_menu_render('SkokiOrlikBundle:Builder:mainMenu') }}
-    {% endblock %}
-
 {% block content_header '' %}
 
-    {% block content %}
+
         {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
         {#{% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': 'foo'} %}#}
         {#<a href="{{ path('_orlik_login') }}">Zaloguj</a>#}
-        <div id="orlik-left-column">
-            <div class="smalltablebox">
-                {{ render(controller('SkokiOrlikBundle:Table:showSmallTable')) }}
+        {% block content %}
+
+            <div class="homepage block-data">
+                <h2>Spotkania:</h2>
+                {{ render(controller('SkokiOrlikBundle:Timetable:shortMatchList', { 'matches': matches })) }}
+            </div>
+            <div class="homepage block-data">
+                <h2 class="title">Aktualności</h2>
+                {% block fsi_news_content %}
+                    {{ render(controller('fsi_news.controller.news:latestNewsAction', {'count' : 5})) }}
+                {% endblock fsi_news_content %}
             </div>
         </div>
-        <div id="orlik-right-column">
-            <h1 class="title">Aktualności</h1>
-        {% block fsi_news_content %}
-            {{ render(controller('fsi_news.controller.news:latestNewsAction', {'count' : 5})) }}
-        {% endblock fsi_news_content %}
-        </div>
-    {% endblock %}
+        {% endblock %}
+
 

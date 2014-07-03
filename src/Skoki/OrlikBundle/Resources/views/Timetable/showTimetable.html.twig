@@ -10,6 +10,8 @@
     {% block content %}
         {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
 
-        <h2>Spotkania:</h2>
+<div class="block-data">
+        <h2>Kalendarz / Wyniki</h2>
         {{ render(controller('SkokiOrlikBundle:Timetable:matchList', { 'matches': matches })) }}
+    </div>
     {% endblock %}

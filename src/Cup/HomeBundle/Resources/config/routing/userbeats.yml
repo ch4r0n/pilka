@@ -1,0 +1,43 @@
+userbeats_list:
+    pattern:  /
+    defaults: { _controller: "CupHomeBundle:UserBeats:index" }
+
+userbeats_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CupHomeBundle:UserBeats:show" }
+
+userbeats_new:
+    pattern:  /new
+    defaults: { _controller: "CupHomeBundle:UserBeats:new" }
+
+userbeats_create:
+    pattern:  /create
+    defaults: { _controller: "CupHomeBundle:UserBeats:create" }
+    requirements: { _method: post }
+
+userbeats_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CupHomeBundle:UserBeats:edit" }
+
+userbeats_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CupHomeBundle:UserBeats:update" }
+    requirements: { _method: post|put }
+
+userbeats_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CupHomeBundle:UserBeats:delete" }
+    requirements: { _method: post|delete }
+
+cup_user_list:
+    pattern:  /users
+    defaults: { _controller: "CupHomeBundle:UserBeats:userList" }
+
+cup_user_show:
+    pattern:  /{id}/user
+    defaults: { _controller: "CupHomeBundle:UserBeats:showUser" }
+
+cup_beat:
+    pattern:  /beat
+    defaults: { _controller: "CupHomeBundle:UserBeats:beat" }
+    requirements: { _method: post }

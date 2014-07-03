@@ -1,0 +1,60 @@
+{% extends 'CupHomeBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>UserBeats list</h1>
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Home</th>
+                <th>Away</th>
+                <th>Result</th>
+                <th>Zakład</th>
+                {#<th>Actions</th>#}
+                {#<th>TYP</th>#}
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>
+                    {#<a href="{{ path('userbeats_show', { 'id': entity.id }) }}">{{ entity.id }}</a>#}
+                    {% if entity.cupMatch.matchDate %}
+                        {{ entity.cupMatch.matchDate|date('d/m') }} | {{ entity.cupMatch.matchDate|date('H:i') }}
+                    {% endif %}
+                </td>
+                <td>{{ entity.cupMatch.teamHome.name }}</td>
+                <td>{{ entity.cupMatch.teamAway.name }}</td>
+                <td>
+                    {#{{ entity.cupMatch.result }}#}
+                    {{ entity.cupMatch.homeScore }} : {{ entity.cupMatch.awayScore }}
+
+                </td>
+                <td>{{ entity.cupBeat }}</td>
+                <td>
+                {#<ul>#}
+                    {#<li>#}
+                        {#<a href="{{ path('userbeats_show', { 'id': entity.id }) }}">show</a>#}
+                    {#</li>#}
+                    {#<li>#}
+                        {#<a href="{{ path('userbeats_edit', { 'id': entity.id }) }}">edit</a>#}
+                    {#</li>#}
+                {#</ul>#}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        <ul>
+        <li>
+            <a href="{{ path('userbeats_new') }}">
+                Create a new entry
+            </a>
+        </li>
+            <li>
+                <a href="{{ path('userbeats') }}">
+                    Powrót do listy meczów
+                </a>
+            </li>
+    </ul>
+    {% endblock %}

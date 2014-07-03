@@ -11,7 +11,42 @@ h1.title {
     padding-bottom: 30px;
     font-weight: normal;
 }
+.orlik-content {
+    width: 1180px;
+    margin: 0 auto;
+}
+#responsive-web-design .section {
+    float: left;
+}
+#responsive-web-design .aside {
+    float: right;
+}
+#flexible-grid .section {
+    float: left;
+    margin: 1.51515151%  0px; /* 10px ÷ 660px = .01515151 */
+    width: 63.63636363%; /* 420px ÷ 660px = .63636363 */
+}
 
+#flexible-grid .aside {
+    margin: 1.51515% 0px;
+    width: 30.303%;
+}
+.container {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.section {
+    float: left;
+    margin: 1.51515151%; /* 10px ÷ 660px = .01515151 */
+    width: 63.63636363%; /* 420px ÷ 660px = .63636363 */
+}
+
+.aside {
+    margin: 1.51515%;
+    width: 30.303%;
+}
 .top_menu ul li{
     display: inline-block;
     width: auto;
@@ -29,7 +64,7 @@ h1.title {
     margin: 0px;
 }
 .top_menu ul li ul.menu_level_1 li:hover{
-    background-color: #fcf8e3;
+    /*background-color: #fcf8e3;*/
     font-weight: bold;
 }
 
@@ -37,19 +72,21 @@ h1.title {
     display: none;
 }
 .top_menu ul li:hover {
-    background-color: #fbeed5;
+    cursor: pointer;
+    /*background-color: #fbeed5;*/
 }
 .top_menu ul li:hover > .menu_level_1 {
     display: block;
-    background-color: #fbeed5;
+    /*background-color: #fbeed5;*/
 }
 
 .top_menu ul li a {
     font-weight: bold;
     color: #000000;
 }
-.top_menu ul li a:hover {
-    text-decoration: none;
+.top_menu ul li:hover a {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .middle_menu {
@@ -112,10 +149,18 @@ h1.title {
     width: 25px;
     padding: 0px;
 }
-.leaguetable tr.odd {
+th.day { width: 10%; }
+th.date { width: 15%; }
+th.team { width: 20%; }
+.orlik-content table.table tr:hover {
+    cursor: pointer;
+    background: none repeat scroll 0% 0% #F89177;
+}
+
+.orlik-content table tr.odd {
     background: none repeat scroll 0% 0% #FFF;
 }
-.leaguetable tr.even {
+.orlik-content table tr.even {
     background: none repeat scroll 0% 0% #F4F4F4;
 }
 .leaguetable td.score-time {
@@ -123,11 +168,16 @@ h1.title {
 }
 .smalltablebox {
     display: block;
-    width: 300px;
     padding: 5px;
 }
 .smalltablebox .td {
     margin: 3px;
+}
+table.smalltable td.points, table.smalltable td.total {
+    text-align: center;
+}
+table.smalltable td.gd {
+    text-align: center;
 }
 /*.leaguetable .team {*/
     /*width: 25%;*/
@@ -151,6 +201,16 @@ body div.orlik-content a {
     text-decoration: none;
     cursor: pointer;
     color: #000;
+    /*text-indent: -5000px;*/
+    font-weight: normal;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.25);
+}
+body div.orlik-content a:hover {
+    text-decoration: none;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.25);
+}
+body div.orlik-content .top_menu a {
+    color: #fff;
 }
 body div.orlik-content h1 {
 
@@ -166,25 +226,40 @@ body div.orlik-content div.block {
 #orlik-left-column, #orlik-right-column {
     float: left;
 }
-#orlik-left-column {
-    width: 30%;
-}
-#orlik-right-column {
-    width: 70%;
-}
+/*#orlik-left-column {*/
+    /*width: 30%;*/
+/*}*/
+/*#orlik-right-column {*/
+    /*width: 70%;*/
+/*}*/
 .table-container-matches th.score-time {
     text-align: center;
 }
 .table-container-matches .matches .sub-head th {
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 16px;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.25);
 }
 tr.sub-head th {
     background-color: #4f4f4f;
     color: #fff;
     border: 1px solid #ffffff;
+    padding: 1%;
+    font-weight: normal;
+    font-size: 16px;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.25);
 }
 tr.sub-head th.sortasc {
     text-align: center;
+}
+tr.sub-head th.gd, tr.sub-head th.total {
+    width: 10%;
+}
+tr.sub-head th.points {
+    width: 20%;
+}
+tr.sub-head th.pozition {
+    width: 5%;
 }
 .form-icon {
     background :url(../images/icons/form-icons.png) no-repeat 50% 50%;
@@ -250,23 +325,134 @@ div.form {
 }
 
 .prev-tab-button, .next-tab-button {
-    width: 120px;
+    width: auto;
+    margin: 0px 2px;
     float: right;
     font-size: 85%;
-    text-align: right;
+    text-align: center;
 }
 #match-fixtures {
     width: 600px;
 }
-#match-fixtures td.score-time {
+table.matches td.score-time {
     text-align: center;
 }
 .timetable.round {
+    float: left;
+    position: relative;
+    width: 100%;
     /*width: 720px;*/
+}
+div#match-fixtures .timetable h3 {
+    margin: 5px;
+    font-weight: bold;
+}
+.timetable.nextone {
+    border: 1px solid #FF3301;
+    margin-top: 5px;
 }
 .table-container-matches, table.matches {
     width: 100%;
 }
+.timetable .najblizsza {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: red;
+}
 .leaguetable td.team {
     text-align: left;
 }
+
+.top_menu ul {
+    display: block;
+    background-color: #494949;
+    clear: both;
+}
+
+.block-data {
+    float: left;
+    /*margin: 1.51515151%;*/
+    width: 95%;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #dfdfdf;
+    padding: 1.51515151%;
+}
+.block-data .news {
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #dfdfdf;
+    padding:1.51515151%;
+    width: 95%;
+    height: auto;
+    float: left;
+}
+.block-data .news h2.title {
+    font-size: 16px;
+    margin: 5px;
+    font-weight: bold;
+    color: #000;
+}
+.news div.date {
+    font-size: 10px;
+}
+.news a { float: left; font-size: 12px;}
+.news .date, .news .introduction, .news .more {
+    font-size: 14px;
+    margin: 5px;
+}
+.orlik-content .sf-reset .block {
+    padding: 10px;
+}
+.block-data table.smalltable {
+    width: 100%;
+}
+.nextone table.matches { border: none;}
+table.matches { width: 100%; border: 1px solid #000;}
+table.matches .day { width: 5%; text-align: center;  }
+table.matches .date { width: 10%; }
+table.matches .team { width: 20%; }
+table.matches .team-a { text-align: right;}
+table.matches .team-b { text-align: left; }
+table.matches .score-time { width: auto;}
+table.matches .info { width: 5%;}
+
+body div.orlik-content a.button {
+    color: #fff;
+}
+.button, .button:visited, .button:active, button, input[type="submit"], .buttonImport, .buttonImport:visited, .buttonImport:active {
+    background: -moz-linear-gradient(top, #5c5c5c 0%, #383838 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5c5c5c), color-stop(100%, #383838));
+    background: -webkit-linear-gradient(top, #5c5c5c 0%, #383838 100%);
+    background: -o-linear-gradient(top, #5c5c5c 0%, #383838 100%);
+    background: -ms-linear-gradient(top, #5c5c5c 0%, #383838 100%);
+    background: linear-gradient(top, #5c5c5c 0%, #383838 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5c5c5c', endColorstr='#383838');
+    display: inline-block;
+    height: 25px;
+    cursor: pointer;
+    line-height: 25px;
+    vertical-align: top;
+    padding: 2px 8px;
+    margin: 5px;
+    background-color: #efefef;
+    border: 1px solid black;
+    color: #fff;
+    text-decoration: none;
+}
+.button:hover, .button:visited:hover, .button:active:hover, button:hover, input[type="submit"]:hover, .buttonImport:hover, .buttonImport:visited:hover, .buttonImport:active:hover {
+    background: -moz-linear-gradient(top, #383838 0%, #5c5c5c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #383838), color-stop(100%, #5c5c5c));
+    background: -webkit-linear-gradient(top, #383838 0%, #5c5c5c 100%);
+    background: -o-linear-gradient(top, #383838 0%, #5c5c5c 100%);
+    background: -ms-linear-gradient(top, #383838 0%, #5c5c5c 100%);
+    background: linear-gradient(top, #383838 0%, #5c5c5c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#383838', endColorstr='#5c5c5c');
+    color: #fff; }

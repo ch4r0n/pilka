@@ -39,6 +39,20 @@ class LoadTeamsData implements FixtureInterface
         }
         $manager->flush();
 
+        /*
+         * StatTable Update
+         ALTER TABLE stattable DROP FOREIGN KEY FK_C974A9AE296CD8AE; DROP INDEX UNIQ_C974A9AE296CD8AE ON stattable;
+         *
+         *
+         *  update stat table and tournaments
+         * ALTER TABLE stattable ADD tournament INT DEFAULT NULL, ADD poz INT DEFAULT NULL;
+         * ALTER TABLE stattable ADD CONSTRAINT FK_8A440409BD5FB8D9 FOREIGN KEY (tournament) REFERENCES tournaments (id);
+         * CREATE INDEX IDX_8A440409BD5FB8D9 ON stattable (tournament);
+         *
+         * ALTER TABLE comment DROP body, DROP ancestors, DROP depth, DROP created_at, DROP state;
+ALTER TABLE players ADD pozycja VARCHAR(100) DEFAULT NULL, CHANGE firstname firstname VARCHAR(100) DEFAULT NULL, CHANGE lastname lastname VARCHAR(100) DEFAULT NULL, CHANGE age age INT DEFAULT NULL, CHANGE height height INT DEFAULT NULL, CHANGE country country VARCHAR(100) DEFAULT NULL, CHANGE other other LONGTEXT DEFAULT NULL;
+ALTER TABLE thread DROP permalink, DROP is_commentable, DROP num_comments, DROP last_comment_at;
+         */
         //        INSERT INTO `pilka`.`tournament_teams` (`id`, `tournament_id`, `team_id`) VALUES (NULL, '1', '1'),(NULL, '1', '2'),(NULL, '1', '3'),(NULL, '1', '4'),(NULL, '1', '5'),(NULL, '1', '6'),(NULL, '1', '7'),(NULL, '1', '8'),(NULL, '1', '9'),(NULL, '1', '10'),(NULL, '1', '11'),(NULL, '1', '12')
 
         //ROUNDS
@@ -134,6 +148,21 @@ INSERT INTO `aronet_orlik`.`matches` (`id`, `round`, `home`, `away`, `matchDate`
 (NULL, '11', '4', '8', '2014-07-19 17:10:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (NULL, '11', '11', '5', '2014-07-19 18:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (NULL, '11', '6', '9', '2014-07-19 18:50:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+         */
+
+
+        /*
+         * CREATE TABLE cup_group (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB;
+CREATE TABLE cup_group_team (id INT AUTO_INCREMENT NOT NULL, cup_group INT DEFAULT NULL, cup_team INT DEFAULT NULL, place INT NOT NULL, INDEX IDX_47E021ADDD05EFEA (cup_group), INDEX IDX_47E021ADD1D3AB65 (cup_team), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB;
+CREATE TABLE cup_match (id INT AUTO_INCREMENT NOT NULL, cup_group INT NOT NULL, match_date DATETIME NOT NULL, team_home INT NOT NULL, team_away INT NOT NULL, home_score INT NOT NULL, away_score INT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB;
+CREATE TABLE cup_team (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, logo LONGTEXT DEFAULT NULL, cup INT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB;
+ALTER TABLE cup_group_team ADD CONSTRAINT FK_47E021ADDD05EFEA FOREIGN KEY (cup_group) REFERENCES cup_group (id);
+ALTER TABLE cup_group_team ADD CONSTRAINT FK_47E021ADD1D3AB65 FOREIGN KEY (cup_team) REFERENCES cup_team (id);
+
+
+        ALTER TABLE cup_group_team CHANGE place place INT DEFAULT NULL;
+ALTER TABLE cup_match ADD result VARCHAR(255) DEFAULT NULL, CHANGE home_score home_score INT DEFAULT NULL, CHANGE away_score away_score INT DEFAULT NULL;
+ALTER TABLE cup_team CHANGE cup cup INT DEFAULT NULL;
          */
     }
 }

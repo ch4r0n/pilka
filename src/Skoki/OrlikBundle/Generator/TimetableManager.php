@@ -46,19 +46,24 @@ class TimetableManager
         $lastRoundId = null;
         if (!empty($list)) {
             foreach ($list as $match) {
+                //var_dump($match->getRoundOrder(), $match->getRounds()->getDate()->format('d/m/Y'), $match->getId());
                 $roundTimestamp = $match->getRounds()->getDate()->format('U');
                 $tempTab[$match->getRoundId()]['roundNumber'] = $match->getRoundOrder();
-                $tempTab[$match->getRoundId()]['roundDate'] = $roundTimestamp;
+                $tempTab[$match->getRoundId()]['roundDate'] = intval($roundTimestamp);
                 if ($nowDate > $roundTimestamp) {
-                    $tempTab[$match->getRoundId()]['status'] = 0;
+                    $tempTab[$match->getRoundId()]['status'] = 0; //prev
                 } else {
                     if ($flagPrev) {
                         $flagPrev = false;
+                        $tempTab[$match->getRoundId()]['status'] = 3; //nextone
                         if ($lastRoundId != null) {
-                            $tempTab[$lastRoundId]['status'] = 2;
+                            $tempTab[$lastRoundId]['status'] = 2; //lastone
                         }
+
                     }
-                    $tempTab[$match->getRoundId()]['status'] = 1;
+                    if (!isset($tempTab[$lastRoundId]['status'])) {
+                        $tempTab[$match->getRoundId()]['status'] = 1; //next
+                    }
                 }
                 $lastRoundId = $match->getRoundId();
 

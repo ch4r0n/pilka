@@ -1,0 +1,34 @@
+cup_home_homepage:
+    pattern:  /
+    defaults: { _controller: CupHomeBundle:Default:index }
+cup_home:
+    pattern:  /home
+    defaults: { _controller: CupHomeBundle:Default:index }
+
+cup_type:
+    pattern:  /type/
+    defaults: { _controller: CupHomeBundle:Default:index }
+
+_cup_home_cup_match:
+    resource: "@CupHomeBundle/Resources/config/routing/cup_match.yml"
+    prefix:   /match
+
+CupHomeBundle_cup_group:
+    resource: "@CupHomeBundle/Resources/config/routing/cup_group.yml"
+    prefix:   /group
+
+CupHomeBundle_cup_team:
+    resource: "@CupHomeBundle/Resources/config/routing/cup_team.yml"
+    prefix:   /team
+
+CupHomeBundle_cup_team_match:
+    resource: "@CupHomeBundle/Resources/config/routing/cup_team_match.yml"
+    prefix:   /team/match
+
+CupHomeBundle_cup_group_team:
+    resource: "@CupHomeBundle/Resources/config/routing/cup_group_team.yml"
+    prefix:   /group/team
+
+_cup_home_userbeats:
+    resource: "@CupHomeBundle/Resources/config/routing/userbeats.yml"
+    prefix:   /userbeats

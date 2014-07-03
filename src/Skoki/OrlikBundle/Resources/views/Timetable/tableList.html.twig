@@ -1,17 +1,22 @@
 {% if matches|length > 0  %}
 <div id="match-fixtures" class="table-container" number="{{ matches|length }}">
-    <div class="next-tab-button"><a href="#" onclick="nextRound();">Następne »</a></div>
-    <div class="prev-tab-button"><a href="#" onclick="prevRound();">« Poprzednie</a></div>
+    {#<div class="next-tab-button"><a href="#" onclick="nextRound();">Następne »</a></div>#}
+    {#<div class="prev-tab-button"><a href="#" onclick="prevRound();">« Poprzednie</a></div>#}
 
 {% for round_id, roundData in matches %}
     {% if roundData.status == 0 %}
-    <div class="timetable round tab-deactive prev">
+    <div class="timetable round prev">
     {% elseif roundData.status == 2 %}
-    <div class="timetable round tab-active lastone">
+    <div class="timetable round lastone">
+    {% elseif roundData.status == 3 %}
+    <div class="timetable round nextone">
     {% else %}
-    <div class="timetable round tab-deactive next">
+    <div class="timetable round next">
     {% endif %}
-    <h3>Kolejka {{ roundData.roundNumber }}:</h3>
+    <h3 id="{{ roundData.status }}">Kolejka {{ roundData.roundNumber }}:</h3>
+        {% if  roundData.status == 3 %}
+            <span class="najblizsza">--== NAJBLIŻSZA!!! ==--</span>
+        {% endif %}
         {% block roundMatches %}
             <div class="table-container-matches round-{{ roundData.roundNumber }}">
             {% include 'SkokiOrlikBundle:Timetable:matchesList.html.twig' with {'matches': roundData.matches} %}

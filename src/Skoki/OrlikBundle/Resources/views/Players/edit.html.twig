@@ -1,0 +1,16 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block content -%}
+    <h1>Players edit</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('player') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -6,10 +6,17 @@
     <title>{% block title %}{% endblock %}</title>
     <link href="{{ asset('bundles/framework/css/structure.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('bundles/framework/css/body.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../public/css/cup.css" rel="stylesheet" type="text/css" media="all" />
     {% block head %}{% endblock %}
+    <script>
+        $(document).ready(function () {
+            $("#league-table").tablesorter( {sortList: [[11,0], [8,0]]} );
+            {% block documentReady %}{% endblock documentReady %}
+        });
+    </script>
 </head>
 <body>
-<div id="content" class="orlik-content">
+<div id="responsive-web-design" class="orlik-content">
     <div class="header clear-fix">
         <div class="header-logo">
             <img src="{{ asset('bundles/skokiorlik/images/logoOrlikLeagueSkoki.png') }}" alt="Orlik-Skoki"/>
@@ -36,7 +43,7 @@
         {#</div>#}
     </div>
 
-    <div class="sf-reset">
+    <div id="flexible-grid" class="">
         {% block body %}{% endblock %}
     </div>
 </div>

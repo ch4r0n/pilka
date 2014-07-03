@@ -39,10 +39,11 @@ class TeamController extends Controller
         $rozegraneMecze = $this->getDoctrine()
             ->getRepository(Repository::MATCHES)
             ->getTeamLasMatchList($id);
-
+        $nowDate = new \DateTime();
+        $timestamp = intval($nowDate->getTimestamp());
 //        var_dump(array_merge($matchesHome, $matchesAway));die();
 
-        return $this->render('SkokiOrlikBundle:Team:Show.html.twig', array('id' => $id, 'team' => $team, 'matches' => $matches, 'teamForm' => $last));
+        return $this->render('SkokiOrlikBundle:Team:Show.html.twig', array('id' => $id, 'team' => $team, 'matches' => $matches, 'teamForm' => $last, 'nowDate' => $timestamp));
     }
 
     public function listAction()

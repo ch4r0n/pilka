@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Alternatorserwis - elektromechanika pojazdowa, kompleksowa naprawa układów klimatyzacji, turbosprężarek, alternatorów i rozruszników</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-style-type" content="text/css" />
+		<meta name="Description" content="Alternatorserwis - elektromechanika, elektronika samochodowa, kompleksowa naprawa turbospreżarek, alternatorów, rozruszników i klimatyzacji" />
+		<meta name="Author" content="Aron Becker" />
+		<meta name="keywords" content="Kompresory klimatyzacji, turbosprężarki, alternatory, rozruszniki, kompleksowy serwis, kompleksowa naprawa, poznan, Poznań, Murowana Goślina, Murowana goslina, Wielkopolska" />
+		<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
+		<script type="text/javascript" src="js/showhidearona.js"/></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28926553-2']);
+  _gaq.push(['_setDomainName', 'alternatorserwis.pl']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+	</head>
+
+	<body>
+		<script type='text/javascript'>
+
+			var mapa;
+			var dymek = new google.maps.InfoWindow();
+
+			function calcRoute() {
+				  var start = document.getElementById("start").value;
+				  var end = "Murowana Goslina, ul. Rzemieslnicza 25";
+				  var request = {
+					    origin: start,
+					    destination: end,
+					    travelMode: google.maps.DirectionsTravelMode.DRIVING
+				  };
+				  directionsService.route(request, function(result, status) {
+					    if (status == google.maps.DirectionsStatus.OK) {
+						      directionsDisplay.setDirections(result);
+					    }
+				  });
+			}
+
+			function mapaStart()
+			{
+
+				var wspolrzedne = new google.maps.LatLng(52.4447656780619, 16.940948484116234);
+				var opcjeMapy = {
+					zoom: 12,
+					center: wspolrzedne,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					disableDefaultUI: true,
+					scaleControl: true,
+					navigationControl: true,
+					mapTypeControl: true,
+					mapTypeControlOptions:
+							{
+								position: google.maps.ControlPosition.TOP_RIGHT,
+								mapTypeIds: [
+									google.maps.MapTypeId.ROADMAP,
+									google.maps.MapTypeId.SATELLITE
+											//			  google.maps.MapTypeId.TERRAIN
+								]
+							},
+					navigationControlOptions:
+							{
+								position: google.maps.ControlPosition.LEFT,
+								style: google.maps.NavigationControlStyle.ZOOM_PAN // w stylu ANDROID
+							},
+					scaleControlOptions:
+							{
+								position: google.maps.ControlPosition.TOP_LEFT // kontrolka skali w lewym górnym rogu
+							}
+				};
+				mapa = new google.maps.Map(document.getElementById("mapka"), opcjeMapy);
+				var punkt = new google.maps.LatLng(52.4447656780619, 16.940948484116234); // definiujemy punkt o współrzędnych 53.400,14.400
+				var marker = dodajMarker(punkt);
+				mapa.setCenter(new google.maps.LatLng(52.4447656780619, 16.940948484116234));
+				dymek.setContent('<div id="dymek" style="font-size:12px;"></div>');
+				dymek.setPosition(new google.maps.LatLng(52.4447656780619, 16.940948484116234));
+				dymek.open(mapa);
+				//google.maps.event.addListener(marker, 'click', function(zdarzenie)
+				{
+//				dymek.setContent('<strong>Kliknąłeś na marker!</strong><br />Współrzędne GPS markera:<br />' + marker.getPosition());
+//				dymek.setPosition(marker.getPosition());
+//				dymek.open(mapa);
+					if ($("#mapka").hasClass("zoom_out")) {
+						$("#mapka").removeClass("zoom_out");
+						$("#mapka").addClass("zoom_in");
+						mapa.setZoom(16);
+						mapa.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+					} else {
+						$("#mapka").removeClass("zoom_in");
+						$("#mapka").addClass("zoom_out");
+						mapa.setZoom(8);
+						mapa.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+					}
+					mapa.setCenter(new google.maps.LatLng(52.588195092293056, 17.021663188934326));
+				});
+
+				//	google.maps.event.addListener(mapa,'click',function(zdarzenie)
+				//	{
+				//		mapZoom = mapa.getZoom();
+				//		mapType = mapa.getMapTypeId();
+				//		if (mapZoom > 11) {
+				//		  if (mapType == 'roadmap') {
+				//			mapa.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+				//		  }
+				//		} else {
+				//		  if (mapType == 'satellite') {
+				//			mapa.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+				//		  }
+				//		}
+				//		if (mapZoom > 7) {
+				//		  mapa.setZoom(mapZoom+1);
+				//		} else {
+				//		  mapa.setZoom(mapZoom-1);
+				//		}
+				//		if(zdarzenie.latLng)
+				//		{
+				//		dymek.setContent('<strong>Kliknąłeś na mapę!</strong><br />Współrzędne GPS klikniętego punktu:<br />'+zdarzenie.latLng);
+				//		dymek.setPosition(zdarzenie.latLng);
+				//		dymek.open(mapa);
+				//		}
+				//	});
+				//	google.maps.eve
+
+				//	dodajMarker({position: punkt, title: 'Kliknij - aby wyznaczyć trasę dojazdu'});
+			}
+			function dodajMarker(wspolrzedne)
+			{
+				var ikona = new google.maps.MarkerImage("http://www.google.com/intl/en_ALL/mapfiles/dd-start.png");
+				var marker = new google.maps.Marker({
+					position: wspolrzedne,
+					icon: ikona,
+					map: mapa
+				});
+				return marker;
+			}
+		</script>
+<div class="content">
+							<div id="mapka" style="margin:20px auto 5px auto;width: 690px; height: 600px; border: 1px solid black; background: gray;">
+							</div>
+							<button class="button orange" onclick="location.href = 'mapa.html'">Sprawdź jak dojechać</button>
+</div>
+
+
+	</body>
+</html>

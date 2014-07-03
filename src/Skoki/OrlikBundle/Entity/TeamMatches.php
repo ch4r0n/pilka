@@ -31,7 +31,7 @@ class TeamMatches
     /**
      * @var \Skoki\OrlikBundle\Entity\Teams $team
      *
-     * @ORM\ManyToOne(targetEntity="\Skoki\OrlikBundle\Entity\Teams", inversedBy="teamMatches")
+     * @ORM\ManyToOne(targetEntity="\Skoki\OrlikBundle\Entity\Teams", inversedBy="teamMatches", cascade={"persist"},  fetch="EAGER")
      * @ORM\JoinColumn(name="team_id", referencedColumnName="id")
      */
     protected $team;
@@ -48,7 +48,7 @@ class TeamMatches
     /**
      * @var \Skoki\OrlikBundle\Entity\Matches $match
      *
-     * @ORM\ManyToOne(targetEntity="\Skoki\OrlikBundle\Entity\Matches", inversedBy="rounds")
+     * @ORM\ManyToOne(targetEntity="\Skoki\OrlikBundle\Entity\Matches", inversedBy="teamMatches", cascade={"persist"},  fetch="EAGER")
      * @ORM\JoinColumn(name="match_id", referencedColumnName="id")
      */
     protected $match;

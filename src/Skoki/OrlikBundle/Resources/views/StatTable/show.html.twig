@@ -1,0 +1,72 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block content -%}
+    <h1>StatTable</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Teamid</th>
+                <td>{{ entity.teamId }}</td>
+            </tr>
+            <tr>
+                <th>Teamname</th>
+                <td>{{ entity.teamName }}</td>
+            </tr>
+            <tr>
+                <th>Rs</th>
+                <td>{{ entity.rs }}</td>
+            </tr>
+            <tr>
+                <th>Z</th>
+                <td>{{ entity.z }}</td>
+            </tr>
+            <tr>
+                <th>R</th>
+                <td>{{ entity.r }}</td>
+            </tr>
+            <tr>
+                <th>P</th>
+                <td>{{ entity.p }}</td>
+            </tr>
+            <tr>
+                <th>Bz</th>
+                <td>{{ entity.bz }}</td>
+            </tr>
+            <tr>
+                <th>Bs</th>
+                <td>{{ entity.bs }}</td>
+            </tr>
+            <tr>
+                <th>Rb</th>
+                <td>{{ entity.rb }}</td>
+            </tr>
+            <tr>
+                <th>Pkt</th>
+                <td>{{ entity.pkt }}</td>
+            </tr>
+            <tr>
+                <th>Poz</th>
+                <td>{{ entity.poz }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('stats') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('stats_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
