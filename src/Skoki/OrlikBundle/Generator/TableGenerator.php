@@ -64,6 +64,7 @@ class TableGenerator extends MatchManager
     {
         $this->tournamentId = $tournamentId;
         $tourRep = $this->em->getRepository('SkokiOrlikBundle:Tournaments');
+        $teams = $this->em->getRepository('SkokiOrlikBundle:Teams')->getListById();
         $tournament = $tourRep->findOneById($tournamentId);
 //        $matches = $this->getTournamentMatches();
 //        $teams = $this->getTournamentTeams();
@@ -101,6 +102,7 @@ class TableGenerator extends MatchManager
             $eamStat->teamYellows = 0;
             $eamStat->teamForm = array();
             $eamStat->pozycja = $poz;
+            $eamStat->logo = $teams[$row->getTeamId()]->getPicture();
             $table[$row->getTeamId()] = $eamStat;
             $poz++;
         }

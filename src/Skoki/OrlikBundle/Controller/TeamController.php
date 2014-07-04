@@ -50,8 +50,8 @@ class TeamController extends Controller
     {
         $teamsList = $this->getDoctrine()
             ->getRepository(Repository::TEAMS)
-            ->getListForForm();
-//        var_dump($teamsList);die();
+            ->findAll();
+//var_dump($teamsList[0]->getPicture());die();
         return $this->render('SkokiOrlikBundle:Team:TeamList.html.twig', array('teamsList' => $teamsList));
     }
 }

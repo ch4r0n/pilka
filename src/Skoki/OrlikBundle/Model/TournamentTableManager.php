@@ -19,6 +19,7 @@ class TournamentTableManager {
     public $teamYellows;
     public $teamForm;
     public $pozycja;
+    public $logo = 'noHerb.png';
 
     public function __construct($teamName = '', $teamId = null)
     {

@@ -10,12 +10,18 @@
         {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
         <div class="block-data">
         <h2>Lista drużyn:</h2>
-        <div id="teams_box">
+            <ul id="teams_box" class="team-list">
             {% for id, team in teamsList %}
-                <div class="team_row">
-                    <h2><a href="{{ path('_orlik_show_team', {'id' : id}) }}">{{ team }}</a></h2>
-                </div>
+                    <li class="team-row">
+                        {% if team.picture is not null %}
+                            {% set logo = 'bundles/skokiorlik/images/teams/small/' ~ team.picture %}
+                        {% else %}
+                            {% set logo = 'bundles/skokiorlik/images/teams/noHerb.png'%}
+                        {% endif %}
+                        <img src="{{ asset(logo) }}" class="team-logo small" />
+                        <a href="{{ path('_orlik_show_team', {'id' : team.id}) }}">{{ team.name }}</a>
+                    </li>
             {% endfor %}
-        </div>
+            </ul>
         </div>
     {% endblock %}

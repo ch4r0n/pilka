@@ -24,7 +24,11 @@
                     <tr class="team_rank odd">
                 {% endif %}
                     <td class="rank">{{ iterator }}</td>
-                    <td class="text team"><a href="{{ path('_orlik_show_team', {'id' : team.teamId}) }}">{{ team.teamName }}</a></td>
+                    <td class="text team">
+                        {% set logo = 'bundles/skokiorlik/images/teams/small/' ~ team.logo %}
+                        <img src="{{ asset(logo) }}" class="team-logo icon-small" alt="{{ team.teamName }}"/>
+                        <a href="{{ path('_orlik_show_team', {'id' : team.teamId}) }}">{{ team.teamName }}</a>
+                    </td>
                     <td>{{ team.teamMatchesPlayed }}</td>
                     <td>{{ team.teamWins }}</td>
                     <td>{{ team.teamLoses }}</td>

@@ -34,7 +34,7 @@
 {% block title 'Orlik Skoki' %}
 
 {% block body %}
-    <div>
+    <div id="user-login box">
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
             {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
             <a href="{{ path('fos_user_security_logout') }}">

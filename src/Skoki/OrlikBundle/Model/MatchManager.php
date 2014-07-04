@@ -121,9 +121,11 @@ class MatchManager {
         $awayName = 'away';
         if ($this->home) {
             $homeName = $this->home->getName();
+            $homeLogo = $this->home->getPicture();
         }
         if ($this->away) {
             $awayName = $this->away->getName();
+            $awayLogo = $this->away->getPicture();
         }
 
         $kolejka = 'brak';
@@ -135,6 +137,8 @@ class MatchManager {
             'match_id' => $match->getId(),
             'home_id' => $match->getHome(),
             'away_id' => $match->getAway(),
+            'home_logo' => $homeLogo,
+            'away_logo' => $awayLogo,
             'home_name' => $homeName,
             'away_name' => $awayName,
             'score' => $match->getResult(),

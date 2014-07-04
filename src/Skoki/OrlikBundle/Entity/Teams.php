@@ -240,6 +240,10 @@ class Teams
      */
     public function getPicture()
     {
+        if (!$this->picture) {
+            return 'noHerb.png';
+        }
+
         return $this->picture;
     }
 

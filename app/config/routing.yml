@@ -8,7 +8,7 @@ skoki_user:
 
 skoki_orlik:
     resource: "@SkokiOrlikBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /orlik
 #    prefix:   /orlik
 
 #orlik_blog:

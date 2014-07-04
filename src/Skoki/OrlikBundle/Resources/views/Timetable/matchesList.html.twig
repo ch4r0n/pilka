@@ -20,7 +20,9 @@
             {#<td class="day no-repetition"><span class='timestamp' data-value='{{ match.matchDate|date('U') }}' data-format='ddd'>sob</span></td>#}
             <td class="date no-repetition"><span class='timestamp' data-value='{{ match.matchDate|date('U') }}' data-format='dd/mm/yy'>{{ match.matchDate|date('d/m/y') }}</span></td>
             <td class="team team-a ">
+                {% set logo = 'bundles/skokiorlik/images/teams/small/' ~ match.home_logo %}
                 <a href="{{ path('_orlik_show_team', {'id' : match.home_id}) }}" title="{{ match.home_name }}">{{ match.home_name }}</a>
+                <img src="{{ asset(logo) }}" class="team-logo icon" alt="logo-{{ match.home_name }}"/>
             </td>
         {% set diff = match.matchDate|date('U') - nowDate %}
             <td class="score-time status {{ diff }}">
@@ -34,6 +36,8 @@
                 </a>
             </td>
             <td class="team team-b ">
+                {% set logo2 = 'bundles/skokiorlik/images/teams/small/' ~ match.away_logo %}
+                <img src="{{ asset(logo2) }}" class="team-logo icon" alt="logo-{{ match.away_name }}"/>
                 <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}" title="{{ match.away_name }}">{{ match.away_name }}</a>
             </td>
             <td class="info-button">

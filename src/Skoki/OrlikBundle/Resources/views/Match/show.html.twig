@@ -39,12 +39,12 @@
                     </div>
                 </div>
             </div>
-
+                {% set logo = 'bundles/skokiorlik/images/teams/' ~ match.home_logo %}
             <div class="clearfix"  style="display: block;">
                 <div class="container left" style="width: 30%; float: left;">
                     <div class="logo">
                         <a href="{{ path('_orlik_show_team', {'id' : match.home_id}) }}" title="{{ match.home_name }}">
-                            <img src="{{ asset('bundles/skokiorlik/images/noHerb.png') }}" alt="{{ match.home_name }}"/>
+                            <img src="{{ asset(logo) }}" class="team-logo normal" alt="{{ match.home_name }}"/>
                         </a>
                     </div>
                 </div>
@@ -74,11 +74,11 @@
                     </div>
 
                 </div>
-
+                    {% set logo2 = 'bundles/skokiorlik/images/teams/' ~ match.away_logo %}
                 <div class="container right" style="width: 30%; float: right;">
                     <div class="logo">
                         <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}" title="{{ match.away_name }}">
-                            <img src="{{ asset('bundles/skokiorlik/images/noHerb.png') }}" alt="{{ match.away_name }}">
+                            <img src="{{ asset(logo2) }}" class="team-logo normal" alt="{{ match.away_name }}"/>
                         </a>
                     </div>
                 </div>

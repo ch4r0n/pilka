@@ -22,7 +22,25 @@ class TeamsRepository extends EntityRepository
         foreach ($teams as $t) {
             $result[$t['id']] = $t['name'];
         }
-//var_dump($result);die();
+
+        return $result;
+    }
+
+    public function getListById()
+    {
+        $em = $this->getEntityManager();
+        $gb = $em->createQueryBuilder();
+        $gb->select('t')
+            ->from('SkokiOrlikBundle:Teams', 't')
+            ->orderBy('t.name', 'ASC');
+        $query = $gb->getQuery();
+        $teams = $query->getResult();
+        $result = array();
+
+        foreach ($teams as $t) {
+            $result[$t->getId()] = $t;
+        }
+
         return $result;
     }
 } 

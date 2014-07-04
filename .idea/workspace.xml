@@ -5,46 +5,21 @@
       <change type="DELETED" beforePath="C:\wamp\www\skoki24\composer.lock" afterPath="" />
       <change type="DELETED" beforePath="C:\wamp\www\skoki24\src\Skoki\OrlikBundle\Entity\StatTableRepository.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Menu/Builder.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Menu/Builder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/UserBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Skoki/UserBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/DataFixtures/ORM/LoadTeamsData.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/DataFixtures/ORM/LoadTeamsData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Matches.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Matches.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Players.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Players.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/Repository.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/Repository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/MatchManager.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/MatchManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Team/Show.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Team/Show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/ShowTable.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/ShowTable.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/SmallTable.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/SmallTable.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/StatTable.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/StatTable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/Tabela.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/Tabela.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TableController.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TableController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TableGenerator.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TableGenerator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TeamController.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TeamController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Team/TeamList.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Team/TeamList.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/TeamMatches.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/TeamMatches.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Teams.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Teams.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/TeamsRepository.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/TeamsRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TimetableController.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TimetableController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TimetableManager.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TimetableManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/TournamentTableManager.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/TournamentTableManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Tournaments.php" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Tournaments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/js/form_script.js" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/js/form_script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Default/homepage.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Default/homepage.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout2.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout2.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/matchesList.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/matchesList.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/UserBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Skoki/UserBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing_dev.yml" afterPath="$PROJECT_DIR$/app/config/routing_dev.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Match/show.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Match/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/showTimetable.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/showTimetable.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/tableList.html.twig" afterPath="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/tableList.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="skoki24.iws" />
@@ -68,40 +43,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bundles/skokiorlik/css/style.css">
+      <file leaf-file-name="MatchManager.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/MatchManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="22" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.0" vertical-offset="2925" max-vertical-offset="7905">
+            <state line="120" column="27" selection-start="3522" selection-end="3522" vertical-scroll-proportion="-10.384615" vertical-offset="1736" max-vertical-offset="4573">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeamController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TeamController.php">
+      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/routing.yml">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="61" selection-start="823" selection-end="832" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="986">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TableController.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="63" selection-start="443" selection-end="443" vertical-scroll-proportion="-5.037037" vertical-offset="0" max-vertical-offset="833">
-              <folding>
-                <element signature="e#48#105#0" expanded="true" />
-              </folding>
+            <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="119">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,93 +82,52 @@
       <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="17" selection-start="650" selection-end="654" vertical-scroll-proportion="19.428572" vertical-offset="918" max-vertical-offset="2788">
+            <state line="22" column="17" selection-start="650" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2788">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadTeamsData.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/DataFixtures/ORM/LoadTeamsData.php">
+      <file leaf-file-name="homepage.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Default/homepage.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="16" selection-start="2386" selection-end="2386" vertical-scroll-proportion="-16.346153" vertical-offset="459" max-vertical-offset="2856">
+            <state line="23" column="22" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="544">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Repository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/Repository.php">
+      <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="19" selection-start="278" selection-end="287" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="323">
+            <state line="17" column="46" selection-start="535" selection-end="535" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TournamentManager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/TournamentManager.php">
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="731">
+            <state line="44" column="26" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableGenerator.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TableGenerator.php">
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="25" selection-start="5299" selection-end="5299" vertical-scroll-proportion="-21.574074" vertical-offset="807" max-vertical-offset="4165">
-              <folding>
-                <element signature="e#47#88#0" expanded="true" />
-                <marker date="1404426919149" expanded="true" signature="6448:6569" placeholder="SELECT id, n..teams..." />
-                <marker date="1404426919149" expanded="true" signature="6488:6550" placeholder="SELECT team_..tournament_teams..." />
-                <marker date="1404426919149" expanded="true" signature="7116:7158" placeholder="SELECT home,..matches..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatTableRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/StatTableRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="67" selection-start="661" selection-end="661" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="544">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="986">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Teams.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Teams.php">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="36" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-11.115385" vertical-offset="1020" max-vertical-offset="9333">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tournaments.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Tournaments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="95" selection-start="2253" selection-end="2253" vertical-scroll-proportion="-19.615385" vertical-offset="1122" max-vertical-offset="7497">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="42" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters.yml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/parameters.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="31" selection-start="127" selection-end="127" vertical-scroll-proportion="0.103343464" vertical-offset="0" max-vertical-offset="658">
+            <state line="365" column="0" selection-start="6922" selection-end="7029" vertical-scroll-proportion="-11.714286" vertical-offset="5877" max-vertical-offset="8925">
               <folding />
             </state>
           </provider>
@@ -204,74 +136,25 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="37.26923" vertical-offset="969" max-vertical-offset="1751">
-              <folding>
-                <marker date="1402624680797" expanded="true" signature="1705:2170" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="1926:2008" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="2315:2391" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="2439:2527" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="2629:2692" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="2737:2865" placeholder="..." />
-                <marker date="1402624680797" expanded="false" signature="2918:2929" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="2984:3516" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="3035:3330" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="3127:3287" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="3384:3450" placeholder="..." />
-                <marker date="1402624680797" expanded="true" signature="3613:3690" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout2.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout2.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="13.461538" vertical-offset="350" max-vertical-offset="969">
+            <state line="55" column="39" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-35.96154" vertical-offset="0" max-vertical-offset="1751">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatTable.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/StatTable.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/UserBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="73" selection-start="2176" selection-end="2176" vertical-scroll-proportion="-11.115385" vertical-offset="1785" max-vertical-offset="7378">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="119">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchManager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/MatchManager.php">
+      <file leaf-file-name="Builder.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Menu/Builder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="38" selection-start="5335" selection-end="5353" vertical-scroll-proportion="-5.230769" vertical-offset="2856" max-vertical-offset="4505">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Matches.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Matches.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="74" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-22.23077" vertical-offset="255" max-vertical-offset="9486">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TournamentTeams.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/TournamentTeams.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="36" selection-start="782" selection-end="819" vertical-scroll-proportion="-15.038462" vertical-offset="102" max-vertical-offset="2890">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowTable.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/ShowTable.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="61" selection-start="564" selection-end="564" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="391">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -280,23 +163,93 @@
       <file leaf-file-name="Tabela.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/Tabela.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="952">
+            <state line="26" column="42" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-11.115385" vertical-offset="153" max-vertical-offset="1020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableGenerator.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TableGenerator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="69" selection-start="5170" selection-end="5170" vertical-scroll-proportion="-17.0" vertical-offset="1326" max-vertical-offset="4199">
               <folding>
-                <marker date="1401406285906" expanded="true" signature="72:2338" placeholder="..." />
-                <marker date="1401406285906" expanded="true" signature="127:2327" placeholder="..." />
-                <marker date="1401406285906" expanded="true" signature="144:802" placeholder="..." />
-                <marker date="1401406285906" expanded="true" signature="965:1013" placeholder="..." />
-                <marker date="1401406285906" expanded="true" signature="1039:2235" placeholder="..." />
-                <marker date="1401406285906" expanded="true" signature="1898:2213" placeholder="..." />
+                <element signature="e#47#88#0" expanded="true" />
+                <marker date="1404436467682" expanded="true" signature="6602:6723" placeholder="SELECT id, n..teams..." />
+                <marker date="1404436467682" expanded="true" signature="6642:6704" placeholder="SELECT team_..tournament_teams..." />
+                <marker date="1404436467682" expanded="true" signature="7270:7312" placeholder="SELECT home,..matches..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchesController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/MatchesController.php">
+      <file leaf-file-name="Teams.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Teams.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="451" selection-end="580" vertical-scroll-proportion="-8.076923" vertical-offset="113" max-vertical-offset="3961">
+            <state line="245" column="0" selection-start="4519" selection-end="4519" vertical-scroll-proportion="-18.423077" vertical-offset="3652" max-vertical-offset="9401">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CupGroupController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Controller/CupGroupController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3859">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/cup_group/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="799">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="64" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="17" selection-start="351" selection-end="351" vertical-scroll-proportion="0.387538" vertical-offset="0" max-vertical-offset="867">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing_dev.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout2.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout2.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="32" selection-start="1085" selection-end="1085" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="969">
               <folding />
             </state>
           </provider>
@@ -315,24 +268,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Controller/CupTeamMatchController.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Repository/CupTeamRepository.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Repository/CupGroupRepository.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Form/CupMatchType.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Entity/CupTeam.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Form/CupTeamType.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Entity/CupGroupTeam.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Entity/CupMatch.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/UserBeats/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Controller/CupTeamController.php" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/cup_group/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/Cup/HomeBundle/DataProvider/MyBeatProvider.php" />
         <option value="$PROJECT_DIR$/web/bundles/skokiorlik/css/cup.css" />
         <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout2.html.twig" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/cup_match/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/public/css/cup.css" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Entity/UserBeats.php" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/cup_match/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/cup_team/index.html.twig" />
@@ -347,7 +286,6 @@
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Form/UserBeatsType.php" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/config/routing/userbeats.yml" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Menu/Builder.php" />
         <option value="$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/layout.html.twig" />
@@ -356,16 +294,31 @@
         <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/MatchesController.php" />
         <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Matches/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/SmallTable.html.twig" />
-        <option value="$PROJECT_DIR$/web/bundles/skokiorlik/css/style.css" />
-        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/DataFixtures/ORM/LoadTeamsData.php" />
         <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/TournamentTeams.php" />
-        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Teams.php" />
         <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/StatTable.php" />
         <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Tournaments.php" />
-        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TableGenerator.php" />
-        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TableController.php" />
         <option value="$PROJECT_DIR$/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TeamController.php" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Team/Show.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/skokiorlik/css/style.css" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/matchesList.html.twig" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Team/TeamList.html.twig" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/MatchController.php" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/TournamentTableManager.php" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/TeamsRepository.php" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TableGenerator.php" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Match/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TableController.php" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Teams.php" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/MatchManager.php" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/Tabela.html.twig" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/.htaccess" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
       </list>
     </option>
   </component>
@@ -448,103 +401,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skokiorlik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skokiorlik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cuphome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cuphome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -629,74 +486,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skoki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrlikBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Table" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skoki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrlikBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Matches" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -782,134 +571,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skoki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrlikBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skoki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrlikBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skoki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrlikBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skoki24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skoki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrlikBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Repository" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -937,6 +598,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skoki24" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skoki24" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Skoki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OrlikBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1145,8 +832,9 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960325" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960325" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23047516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1158,7 +846,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1184,253 +871,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Form/CupMatchType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Form/UserBeatsType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="10" selection-start="17" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/config/routing/userbeats.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Controller/UserBeatsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="81" selection-start="3113" selection-end="3113" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="5627">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/cup_match/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="49" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1649">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="61" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/config/routing/cup_match.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="90" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Menu/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="25" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/routing/security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/routing/registration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="5" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="1411">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Controller/ResettingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="7" selection-start="3327" selection-end="3327" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="2941">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="38" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/confirmed.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="102" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/cuphome/css/cup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="1" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="14" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="79" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="605" selection-end="605" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="595">
-          <folding>
-            <element signature="e#7#56#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="21" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/routing/matches.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/MatchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Matches/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="391" selection-end="542" vertical-scroll-proportion="-3.9230769" vertical-offset="153" max-vertical-offset="1105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/routing/stattable.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/SmallTable.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="55" selection-start="196" selection-end="204" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="22" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.0" vertical-offset="2789" max-vertical-offset="7871">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/skokiorlik/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="22" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.0" vertical-offset="2925" max-vertical-offset="7905">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="61" selection-start="823" selection-end="832" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/Tabela.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-          <folding>
-            <marker date="1401406285906" expanded="true" signature="72:2338" placeholder="..." />
-            <marker date="1401406285906" expanded="true" signature="127:2327" placeholder="..." />
-            <marker date="1401406285906" expanded="true" signature="144:802" placeholder="..." />
-            <marker date="1401406285906" expanded="true" signature="965:1013" placeholder="..." />
-            <marker date="1401406285906" expanded="true" signature="1039:2235" placeholder="..." />
-            <marker date="1401406285906" expanded="true" signature="1898:2213" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/ShowTable.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="61" selection-start="564" selection-end="564" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/TournamentManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/Repository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="278" selection-end="287" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/DataFixtures/ORM/LoadTeamsData.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="16" selection-start="2386" selection-end="2386" vertical-scroll-proportion="-16.346153" vertical-offset="459" max-vertical-offset="2856">
@@ -1441,61 +881,6 @@
     <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Matches.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="74" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-22.23077" vertical-offset="255" max-vertical-offset="9486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout2.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="13.461538" vertical-offset="350" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="37.26923" vertical-offset="969" max-vertical-offset="1751">
-          <folding>
-            <marker date="1402624680797" expanded="true" signature="1705:2170" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="1926:2008" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="2315:2391" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="2439:2527" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="2629:2692" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="2737:2865" placeholder="..." />
-            <marker date="1402624680797" expanded="false" signature="2918:2929" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="2984:3516" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="3035:3330" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="3127:3287" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="3384:3450" placeholder="..." />
-            <marker date="1402624680797" expanded="true" signature="3613:3690" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/MatchManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="38" selection-start="5335" selection-end="5353" vertical-scroll-proportion="-5.230769" vertical-offset="2856" max-vertical-offset="4505">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/MatchesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="451" selection-end="580" vertical-scroll-proportion="-8.076923" vertical-offset="113" max-vertical-offset="3961">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TeamController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/StatTableRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="67" selection-start="661" selection-end="661" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="544">
           <folding />
         </state>
       </provider>
@@ -1521,41 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Teams.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="36" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-11.115385" vertical-offset="1020" max-vertical-offset="9333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TableGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="25" selection-start="5299" selection-end="5299" vertical-scroll-proportion="-21.574074" vertical-offset="807" max-vertical-offset="4165">
-          <folding>
-            <element signature="e#47#88#0" expanded="true" />
-            <marker date="1404426919149" expanded="true" signature="6448:6569" placeholder="SELECT id, n..teams..." />
-            <marker date="1404426919149" expanded="true" signature="6488:6550" placeholder="SELECT team_..tournament_teams..." />
-            <marker date="1404426919149" expanded="true" signature="7116:7158" placeholder="SELECT home,..matches..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TableController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="63" selection-start="443" selection-end="443" vertical-scroll-proportion="-5.037037" vertical-offset="0" max-vertical-offset="833">
-          <folding>
-            <element signature="e#48#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="650" selection-end="654" vertical-scroll-proportion="19.428572" vertical-offset="918" max-vertical-offset="2788">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="42" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
@@ -1565,7 +915,352 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="31" selection-start="127" selection-end="127" vertical-scroll-proportion="0.103343464" vertical-offset="0" max-vertical-offset="658">
+        <state line="4" column="31" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/StatTableRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="35" selection-start="539" selection-end="539" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="578">
+          <folding>
+            <element signature="e#48#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/SmallTable.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="55" selection-start="196" selection-end="204" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Matches/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
+          <folding>
+            <marker date="1401748971741" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401748971741" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401748971741" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Matches/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="391" selection-end="542" vertical-scroll-proportion="-3.9230769" vertical-offset="153" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Matches/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="15.692307" vertical-offset="408" max-vertical-offset="1258">
+          <folding>
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401415340666" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TimetableManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="128" selection-start="2553" selection-end="2553" vertical-scroll-proportion="-18.961538" vertical-offset="663" max-vertical-offset="1377">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/shortTableList.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="43" selection-start="1919" selection-end="1919" vertical-scroll-proportion="-18.961538" vertical-offset="102" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/tableList.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="35" selection-start="1135" selection-end="1135" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="578">
+          <folding>
+            <marker date="1401812833220" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401812833220" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TimetableController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="71" selection-start="1848" selection-end="1862" vertical-scroll-proportion="-23.538462" vertical-offset="204" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TeamController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="2" selection-start="1921" selection-end="1921" vertical-scroll-proportion="-27.076923" vertical-offset="146" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Timetable/matchesList.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="20" selection-start="1903" selection-end="1903" vertical-scroll-proportion="-17.653847" vertical-offset="136" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Team/TeamList.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="18" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="544">
+          <folding>
+            <marker date="1404434649898" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1404434649898" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1404434649898" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="14" selection-start="1529" selection-end="1529" vertical-scroll-proportion="-17.0" vertical-offset="102" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Team/Show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="781" selection-end="781" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/TournamentTableManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="32" selection-start="446" selection-end="446" vertical-scroll-proportion="-9.807693" vertical-offset="102" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/MatchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/MatchesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="8" selection-start="2684" selection-end="2725" vertical-scroll-proportion="-7.423077" vertical-offset="1490" max-vertical-offset="3961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Repository/TeamsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="31" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-20.384615" vertical-offset="116" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/ShowTable.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="53" selection-start="556" selection-end="556" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Match/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="111" selection-start="3518" selection-end="3518" vertical-scroll-proportion="-32.807693" vertical-offset="507" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/TableController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="492" selection-end="492" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Generator/TableGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="69" selection-start="5170" selection-end="5170" vertical-scroll-proportion="-17.0" vertical-offset="1326" max-vertical-offset="4199">
+          <folding>
+            <element signature="e#47#88#0" expanded="true" />
+            <marker date="1404436467682" expanded="true" signature="6602:6723" placeholder="SELECT id, n..teams..." />
+            <marker date="1404436467682" expanded="true" signature="6642:6704" placeholder="SELECT team_..tournament_teams..." />
+            <marker date="1404436467682" expanded="true" signature="7270:7312" placeholder="SELECT home,..matches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Entity/Teams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="0" selection-start="4519" selection-end="4519" vertical-scroll-proportion="-18.423077" vertical-offset="3652" max-vertical-offset="9401">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Model/MatchManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="27" selection-start="3522" selection-end="3522" vertical-scroll-proportion="-10.384615" vertical-offset="1736" max-vertical-offset="4573">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Table/Tabela.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="42" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-11.115385" vertical-offset="153" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="365" column="0" selection-start="6922" selection-end="7029" vertical-scroll-proportion="-11.714286" vertical-offset="5877" max-vertical-offset="8925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Menu/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="46" selection-start="535" selection-end="535" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="26" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="64" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Controller/CupGroupController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3859">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/cup_group/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cup/HomeBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Default/homepage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="22" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="17" selection-start="650" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2788">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout2.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="32" selection-start="1085" selection-end="1085" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="39" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-35.96154" vertical-offset="0" max-vertical-offset="1751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/UserBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="119">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skoki/OrlikBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="17" selection-start="351" selection-end="351" vertical-scroll-proportion="0.387538" vertical-offset="0" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
