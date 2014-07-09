@@ -39,6 +39,7 @@ class PlayersController extends Controller
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
+//        var_dump($form->getData()-getFile());die();
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
@@ -86,6 +87,29 @@ class PlayersController extends Controller
         return $this->render('SkokiOrlikBundle:Players:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
+        ));
+    }
+
+    /**
+     * Displays a form to create a new Players entity.
+     *
+     */
+    public function newTeamPlayersAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('SkokiOrlikBundle:Teams')->findOneById($id);
+//        $entity = new Players();
+//        $form   = $this->createCreateForm($entity);
+//        var_dump($request->getMethod());die();
+//        if ($request->getMethod() == 'POST') {
+//            var_dump($request->request->get());die();
+//        }
+
+        $validator = $this->get('validator');
+
+        return $this->render('SkokiOrlikBundle:Players:teamPlayers.html.twig', array(
+            'team' => $entity,
         ));
     }
 

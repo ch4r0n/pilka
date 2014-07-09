@@ -28,8 +28,7 @@
         "friendsofsymfony/comment-bundle": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "1.1.5",
         "symfony/serializer": "2.5.*@dev",
-        "fsi/news-bundle": "1.0.*@dev",
-        "symfony-cmf/media-bundle": "1.1.*@dev"
+        "fsi/news-bundle": "1.0.*@dev"
     },
     "scripts": {
         "post-install-cmd": [

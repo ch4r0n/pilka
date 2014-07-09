@@ -2,7 +2,7 @@ html {
     background: #fff;
 }
 body {
-    font-size: 14px;
+    /*font-size: 120%;*/
     font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
     background-color: #fff;
 }
@@ -11,9 +11,15 @@ h1.title {
     padding-bottom: 30px;
     font-weight: normal;
 }
+body div.container {
+    font-size: 110%;
+}
+
 .orlik-content {
     width: 1180px;
+    /*width: 600px;*/
     margin: 0 auto;
+    position: relative;
 }
 #responsive-web-design .section {
     float: left;
@@ -47,11 +53,77 @@ h1.title {
     margin: 1.51515%;
     width: 30.303%;
 }
+.top_menu ul {
+    background: #242424;
+    box-shadow: 0px 2px 0px #494949 inset;
+    border-bottom: 3px solid #ff7d03;
+    border-radius: 5px 5px 0 0;
+    height:40px;
+    display: block;
+    clear: both;
+    padding-left: 0;
+}
+.top_menu ul > li:before {
+    content: '';
+    background: #404040;
+    background: -webkit-linear-gradient(top, #595959, #404040);
+    background: -moz-linear-gradient(top, #595959, #404040);
+    background: -ms-linear-gradient(top, #595959, #404040);
+    background: -o-linear-gradient(top, #595959, #404040);
+    background: linear-gradient(top, #595959, #404040);
+    height:40px;
+    width:1px;
+    display: block;
+    float: right;
+}
 .top_menu ul li{
-    display: inline-block;
+    display: list-item;
     width: auto;
-    /*height: 40px;*/
-    margin: 10px;
+    height: 40px;
+    margin: 0px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    float: left;
+    /*position: relative;*/
+    list-style: none;
+}
+
+.top_menu ul li:hover {
+    background: #525252;
+    background: -webkit-linear-gradient(top, #656464, #333);
+    background: -moz-linear-gradient(top, #656464, #333);
+    background: -ms-linear-gradient(top, #656464, #333);
+    background: -o-linear-gradient(top, #656464, #333);
+    background: linear-gradient(top, #656464, #333);
+}
+
+.top_menu ul li:first-child {
+    border-top-left-radius: 3px;
+}
+.top_menu ul li:last-child {
+    border-right: none!important;
+}
+.top_menu ul li a {
+
+    font-family: 'RobotoRegular', sans-serif;
+    line-height: 40px;
+    vertical-align: middle;
+    display: block;
+    /*height: 45px;*/
+    padding: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    /*
+    font-family: 'RobotoRegular', sans-serif;
+    line-height: 30pt;
+    vertical-align: middle;
+    display: block;
+    height: auto;
+    padding: 0 5%;
+    font-size: 13pt;
+    cursor: pointer;
+*/
 }
 .top_menu ul li ul.menu_level_1 {
     margin-top: 10px;
@@ -135,6 +207,13 @@ h1.title {
     padding:5px;
 }
 
+.leaguetable table {
+    border-spacing: 0;
+    margin: 2%;
+    font-size: 150%;
+    width: 90%;
+}
+
 .leaguetable table tr {
     text-align: center;
 }
@@ -142,12 +221,24 @@ h1.title {
     text-align: center;
     font-weight: bold;
     color: #FFF;
-    background: url(../images/icons/rank_default.gif) no-repeat center center;
+    background: url(../images/icons/rank_big.gif) no-repeat center center;
     background-color: none;
     background-position: 50% 50%;
-    font-size: 12px;
+    /*font-size: 12px;*/
     width: 25px;
     padding: 0px;
+}
+.smalltable.leaguetable .rank {
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    background: url(../images/icons/rank_mid.gif) no-repeat center center;
+    background-color: none;
+    background-position: 50% 50%;
+    /*font-size: 12px;*/
+    width: 25px;
+    padding: 0px;
+    letter-spacing: 0;
 }
 th.day { width: 10%; }
 th.date { width: 15%; }
@@ -205,6 +296,14 @@ body div.orlik-content a {
     font-weight: normal;
     text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.25);
 }
+.top_menu ul li a:hover {
+    background: #525252;
+    background: -webkit-linear-gradient(top, #656464, #333);
+    background: -moz-linear-gradient(top, #656464, #333);
+    background: -ms-linear-gradient(top, #656464, #333);
+    background: -o-linear-gradient(top, #656464, #333);
+    background: linear-gradient(top, #656464, #333);
+}
 body div.orlik-content a:hover {
     text-decoration: none;
     text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.25);
@@ -237,11 +336,15 @@ body div.orlik-content div.block {
 }
 .table-container-matches .matches .sub-head th {
     font-weight: normal;
-    font-size: 16px;
+    font-size: 100%;
     text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.25);
 }
+tr.sub-head {
+    background-color: #494949 ;
+    border-spacing: 0;
+}
 tr.sub-head th {
-    background-color: #4f4f4f;
+    background-color: #494949 ;
     color: #fff;
     border: 1px solid #ffffff;
     padding: 1%;
@@ -292,6 +395,12 @@ tr.sub-head th.pozition {
     clear: both;
     visibility: hidden;
 }
+.block-data .block_match_info h3.thick {
+    font-size: 20px;
+}
+.block-data .block_match_info h3.thick.scoretime {
+    font-weight: bold;
+}
 div.block_match_info dl {
     text-align: left;
 }
@@ -307,10 +416,10 @@ dt, dd {
     float: left;
 }
 div.block_match_info dd {
-    width: 60%;
+    width: 55%;
 }
 dd {
-    width: 70%;
+    /*width: 70%;*/
 }
 div.form {
     width: 90px;
@@ -338,18 +447,70 @@ table.matches td.score-time {
     text-align: center;
 }
 .timetable.round {
-    float: left;
+    /*float: left;*/
     position: relative;
     width: 100%;
     /*width: 720px;*/
 }
 div#match-fixtures .timetable h3 {
     margin: 5px;
-    font-weight: bold;
 }
 .timetable.nextone {
-    border: 1px solid #FF3301;
-    margin-top: 5px;
+    /*border: 1px solid #FF3301;*/
+    /*margin-top: 5px;*/
+}
+.timetable.nextone h3 {
+    color: #FF3301;
+}
+ul.rounds-list {
+    list-style: none;
+    display: block;
+    padding: 0px;
+}
+ul.rounds-list li {
+    display: inline;
+    /*padding: 1%;*/
+}
+ul.rounds-list li:hover {
+    cursor: pointer;
+}
+ul.rounds-list li:hover a {
+    background-color: #FF3301;
+    color: #fff;
+    font-weight: bold;
+}
+ul.rounds-list li a {
+    font-size: 16px;
+    padding: 1%;
+}
+ul.rounds-list li:first-child {
+
+}
+span.rounds-menu {
+    width: 100%;
+    display: block;
+    background-color: #dddcdc;
+    background-image: -webkit-linear-gradient(top, #f4f4f4, #cac8c8);
+    background-image: linear-gradient(to bottom, #f4f4f4, #cac8c8);
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+    height: auto;
+    padding: 1% 0;
+    margin: 0px;
+}
+span.rounds-menu b, span.rounds-menu ul {
+    display: inline;
+    margin: 0 0 0 1%;
+    padding: 0px;
+    vertical-align: middle;
+}
+.timetable.round {
+    margin-top: 3%;
+}
+#match-fixtures.all .timetable.nextone {
+    /*border: 1px solid #FF3301;*/
 }
 .table-container-matches, table.matches {
     width: 100%;
@@ -367,41 +528,64 @@ div#match-fixtures .timetable h3 {
     display: inline-block;
     vertical-align: middle;
 }
-.top_menu ul {
-    display: block;
-    background-color: #494949;
-    clear: both;
-}
 
 .block-data {
     float: left;
     /*margin: 1.51515151%;*/
-    width: 95%;
-    -moz-border-radius: 16px;
-    -webkit-border-radius: 16px;
-    border-radius: 16px;
-    margin-bottom: 20px;
+    width: 100%;
+    /*-moz-border-radius: 16px;*/
+    /*-webkit-border-radius: 16px;*/
+    /*border-radius: 16px;*/
+    /*margin-bottom: 20px;*/
+    /*border-top: 1px solid #d5d3d6;*/
     background-color: #FFFFFF;
-    border: 1px solid #dfdfdf;
-    padding: 1.51515151%;
+    position: relative;
+    /*border: 1px solid #dfdfdf;*/
+    /*padding: 1.51515151%;*/
+}
+.block-data div.content {
+    border-top: 1px solid #d5d3d6;
+    background: #f4f4f4;
+    padding: 0.7em 0 0.7em 0;
+    width:100%;
+    height: auto;
+}
+.block-data div.content-home {
+    border-top: 1px solid #d5d3d6;
+    background: #f4f4f4;
+    padding: 0;
+    width:100%;
+    height: auto;
+}
+.block-data #latest-news {
+    position: relative;
 }
 .block-data .news {
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     background-color: #FFFFFF;
     border: 1px solid #dfdfdf;
     padding:1.51515151%;
     width: 95%;
     height: auto;
-    float: left;
+    margin:1%;
+    /*float: left;*/
 }
 .block-data .news h2.title {
     font-size: 16px;
     margin: 5px;
     font-weight: bold;
     color: #000;
+}
+.block-data .more a {
+    background :url(../images/icons/more_gray.gif) no-repeat center right;
+    display: block;
+}
+.block-data .more a:hover {
+    font-weight: bold;
+    background :url(../images/icons/more.gif) no-repeat center right;
 }
 .block-data.team-details h1, .block-data.team-details img {
     display: inline-block;
@@ -410,7 +594,7 @@ div#match-fixtures .timetable h3 {
 .news div.date {
     font-size: 10px;
 }
-.news a { float: left; font-size: 12px;}
+.news a { font-size: 12px;}
 .news .date, .news .introduction, .news .more {
     font-size: 14px;
     margin: 5px;
@@ -420,9 +604,11 @@ div#match-fixtures .timetable h3 {
 }
 .block-data table.smalltable {
     width: 100%;
+    border-spacing: 0;
+    font-size: 120%;
 }
-.nextone table.matches { border: none;}
-table.matches { width: 100%; border: 1px solid #000;}
+.nextone table.matches { border: 1px solid #FF3301; border-spacing: 0;font-size: 120%;}
+table.matches { width: 100%; border: 1px solid #000; border-spacing: 0; }
 table.matches .day { width: 5%; text-align: center;  }
 table.matches .date { width: 10%; }
 table.matches .team { width: 30%; }
@@ -462,7 +648,7 @@ body div.orlik-content a.button {
     vertical-align: top;
     padding: 2px 8px;
     margin: 5px;
-    background-color: #efefef;
+    background-color: #494949;
     border: 1px solid black;
     color: #fff;
     text-decoration: none;
@@ -515,6 +701,43 @@ img.team-logo.mid {
 }
 img.team-logo.normal {
     border: 4px solid #FFF;
-    max-height: 200px;
-    max-width: 300px;
+    /*max-height: 200px;*/
+    /*max-width: 300px;*/
+    max-height: 60%;
+    max-width: 80%;
+}
+#logujform {
+    display: table-row;
+    display: block;
+    width: 70%;
+}
+#logujform form label {
+    float: left;
+}
+#logujform form input {
+    float: right;
+}
+#userlogin {
+    display: block;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+#rejestracjaform form div, #logujform div {
+    display: table-row;
+    width: 100%;
+}
+#rejestracjaform form {
+    width: 70%;
+}
+#rejestracjaform input {
+    float: right;
+}
+
+.team-details .team_form {
+    width: auto;
+    padding-left: 1%;
+}
+.top_menu {
+    font-size: 110%;
 }

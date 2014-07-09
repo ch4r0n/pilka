@@ -3,7 +3,24 @@
 {% block content -%}
     <h1>News creation</h1>
 
-    {{ form(form) }}
+    {{ form_errors(form) }}
+<p>
+    {{ form_label(form.title) }}
+    {{ form_widget(form.title) }}
+</p>
+    <p>
+    {{ form_label(form.introduction) }}
+        </br>
+    {{ form_widget(form.introduction) }}
+    </p>
+    <p>
+    {{ form_label(form.content) }}
+        </br>
+    {{ form_widget(form.content, { 'attr': {'class': 'tinymce' }} ) }}
+    </p>
+    {{ form_rest(form) }}
+
+    {#<input type="submit" />#}
 
         <ul class="record_actions">
     <li>

@@ -1,47 +1,71 @@
 {% extends 'SkokiOrlikBundle::layout.html.twig' %}
 
 {% block content -%}
-    <h1>News list</h1>
+    <h1>Aktualności</h1>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Date</th>
-                <th>Introduction</th>
-                <th>Content</th>
-                <th>Id</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('news_show', { 'id': entity.id }) }}">{{ entity.title }}</a></td>
-                <td>{% if entity.date %}{{ entity.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.introduction }}</td>
-                <td>{{ entity.content }}</td>
-                <td>{{ entity.id }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('news_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('news_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
+    <div id="news-list" class="block-data">
+        {% for news in entities %}
+            <div class="news">
+                <div class="date">{{ news.date|date("Y-m-d H:i:s") }}</div>
+                <h2 class="title">{{ news.title }}</h2>
+                <div class="introduction">{{ news.introduction }}</div>
+                {#<div class="more"><a href="{{ path('fsi_news', {'id': news.id}) }}">Czytaj więcej </a></div>#}
+                <div class="more"><a href="{{ path('news_show', {'id': news.id}) }}">Czytaj więcej </a></div>
+            </div>
         {% endfor %}
-        </tbody>
-    </table>
+    </div>
+    {#<table class="records_list">#}
+        {#<thead>#}
+            {#<tr>#}
+                {#<th>Tytuł</th>#}
+                {#<th>Data dodania</th>#}
+                {#<th>Wprowadzenie</th>#}
+                {#<th>Treść</th>#}
+                {#<th></th>#}
+                {#&#123;&#35;<th>Id</th>&#35;&#125;#}
+                {#&#123;&#35;<th>Actions</th>&#35;&#125;#}
+            {#</tr>#}
+        {#</thead>#}
+        {#<tbody>#}
+        {#{% for entity in entities %}#}
+            {#<tr>#}
+                {#<td>#}
+                    {#{% if entity.date %}{{ entity.date|date('Y-m-d H:i') }}{% endif %}#}
+                    {#<br/>#}
+                    {#<a href="{{ path('news_show', { 'id': entity.id }) }}">{{ entity.title }}</a>#}
+                    {#<br/>#}
+                    {#<p>#}
+                        {#{{ entity.introduction }}#}
+                    {#</p>#}
+                    {#<p><a href="{{ path('news_show', { 'id': entity.id }) }}">show</a></p>#}
 
-        <ul>
-        <li>
-            <a href="{{ path('news_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+                    {#&#123;&#35;<a href="{{ path('news_show', { 'id': entity.id }) }}">{{ entity.title }}</a></td>&#35;&#125;#}
+                {#&#123;&#35;<td>{% if entity.date %}{{ entity.date|date('Y-m-d H:i') }}{% endif %}</td>&#35;&#125;#}
+                {#&#123;&#35;<td>{{ entity.introduction }}</td>&#35;&#125;#}
+                {#&#123;&#35;<td>{{ entity.content }}</td>&#35;&#125;#}
+                {#&#123;&#35;&#123;&#35;<td>{{ entity.id }}</td>&#35;&#125;&#35;&#125;#}
+                {#&#123;&#35;<td>&#35;&#125;#}
+                    {#&#123;&#35;<a href="{{ path('news_show', { 'id': entity.id }) }}">show</a>&#35;&#125;#}
+                    {##}
+                {#&#123;&#35;<ul>&#35;&#125;#}
+                    {#&#123;&#35;<li>&#35;&#125;#}
+                        {#&#123;&#35;<a href="{{ path('news_show', { 'id': entity.id }) }}">show</a>&#35;&#125;#}
+                    {#&#123;&#35;</li>&#35;&#125;#}
+                    {#&#123;&#35;<li>&#35;&#125;#}
+                        {#&#123;&#35;<a href="{{ path('news_edit', { 'id': entity.id }) }}">edit</a>&#35;&#125;#}
+                    {#&#123;&#35;</li>&#35;&#125;#}
+                {#&#123;&#35;</ul>&#35;&#125;#}
+                {#</td>#}
+            {#</tr>#}
+        {#{% endfor %}#}
+        {#</tbody>#}
+    {#</table>#}
+
+        {#<ul>#}
+        {#<li>#}
+            {#<a href="{{ path('news_new') }}">#}
+                {#Create a new entry#}
+            {#</a>#}
+        {#</li>#}
+    {#</ul>#}
     {% endblock %}

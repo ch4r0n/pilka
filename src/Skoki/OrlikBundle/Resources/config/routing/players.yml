@@ -10,6 +10,10 @@ player_new:
     pattern:  /new
     defaults: { _controller: "SkokiOrlikBundle:Players:new" }
 
+team_players_new:
+    pattern:  /team/{id}/new
+    defaults: { _controller: "SkokiOrlikBundle:Players:newTeamPlayers" }
+
 player_create:
     pattern:  /create
     defaults: { _controller: "SkokiOrlikBundle:Players:create" }

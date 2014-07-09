@@ -34,7 +34,8 @@
 {% block title 'Orlik Skoki' %}
 
 {% block body %}
-    <div id="user-login box">
+    <div  id="userlogin">
+    <div>
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
             {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
             <a href="{{ path('fos_user_security_logout') }}">
@@ -44,27 +45,12 @@
             <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
         {% endif %}
     </div>
-    {% for type, messages in app.session.flashbag.all() %}
-        {% for key, message in messages %}
-            <div class="flash-{{ type }}">
-                {{ message|trans({}, 'FOSUserBundle') }}
-            </div>
-        {% endfor %}
-    {% endfor %}
-    <div>
-        {% block fos_user_content %}
-        {% endblock fos_user_content %}
     </div>
-
-    {% for flashMessage in app.session.flashbag.get('notice') %}
-        <div class="flash-message">
-            <em>Notice</em>: {{ flashMessage }}
-        </div>
-    {% endfor %}
 
     <div class="top_menu">
         {% block menu_header %}
-            {{ knp_menu_render('SkokiOrlikBundle:Builder:mainMenu') }}{% endblock %}
+            {{ knp_menu_render('SkokiOrlikBundle:Builder:mainMenu') }}
+        {% endblock %}
     </div>
     {% block content_header %}
         <div style="clear: both"></div>
@@ -73,14 +59,26 @@
     <div class="container">
         <div id="orlik-left-column" class="aside">
             {% block left_content %}
+
                 <div class="block-data smalltablebox">
                     <h2 class="title">Tabela:</h2>
+                    <div class="content">
                     {{ render(controller('SkokiOrlikBundle:Table:showSmallTable')) }}
+                    </div>
                 </div>
             {%  endblock %}
         </div>
         <div id="orlik-right-column" class="section">
         {% block content %}
+                {% block fos_user_content %}
+                {% endblock fos_user_content %}
+
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash-message">
+                    <em>Notice</em>: {{ flashMessage }}
+                </div>
+            {% endfor %}
+
         {% endblock %}
         </div>
         {% block middle_menu_header %}{% endblock %}

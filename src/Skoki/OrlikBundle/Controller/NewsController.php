@@ -102,7 +102,7 @@ class NewsController extends Controller
         }
 
         $deleteForm = $this->createDeleteForm($id);
-
+//var_dump($entity);die();
         return $this->render('SkokiOrlikBundle:News:show.html.twig', array(
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),        ));

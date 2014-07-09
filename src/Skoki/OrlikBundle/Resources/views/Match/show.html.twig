@@ -11,10 +11,11 @@
     {% block content %}
     <div class="block-data">
     <h2 class="title">Szczegóły meczu:</h2>
+        <div class="content">
         <div class="block_match_info real-content clearfix " id="">
 
             <div class="clearfix" style="display: block;">
-                <div class="container left" style="width: 30%; float: left;">
+                <div class="container left" style="width: 35%; float: left;">
                     <h3 class="thick">
                         <a href="{{ path('_orlik_show_team', {'id' : match.home_id}) }}">{{ match.home_name }}</a>
                     </h3>
@@ -24,13 +25,13 @@
                     </div>
                 </div>
 
-                <div class="container middle" style="width: 40%; float: left;">
+                <div class="container middle" style="width: 30%; float: left;">
                     <h3 class="thick scoretime ">
                         {{ match.score }}
                     </h3>
                 </div>
 
-                <div class="container right" style="width: 30%; float: right;">
+                <div class="container right" style="width: 35%; float: right;">
                     <h3 class="thick">
                         <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}">{{ match.away_name }}</a>
                     </h3>
@@ -41,7 +42,7 @@
             </div>
                 {% set logo = 'bundles/skokiorlik/images/teams/' ~ match.home_logo %}
             <div class="clearfix"  style="display: block;">
-                <div class="container left" style="width: 30%; float: left;">
+                <div class="container left" style="width: 35%; float: left;">
                     <div class="logo">
                         <a href="{{ path('_orlik_show_team', {'id' : match.home_id}) }}" title="{{ match.home_name }}">
                             <img src="{{ asset(logo) }}" class="team-logo normal" alt="{{ match.home_name }}"/>
@@ -49,24 +50,20 @@
                     </div>
                 </div>
 
-                <div class="container middle" style="width: 40%; float: left;">
+                <div class="container middle" style="width: 30%; float: left;">
                     <div class="details clearfix">
                         <dl>
-                            <dt>Rozgrywki</dt>
-                            <dd></dd>
-
                             <dt>Data</dt>
                             <dd>{{ match.matchDate|date('Y-m-d') }}</dd>
 
-
                             <dt>Start</dt>
-                            <dd>
-                                19:00
-                            </dd>
+                            <dd>{{ match.matchDate|date('H:s') }}</dd>
+
                         </dl>
                     </div>
 
                     <div class="details clearfix">
+                        <dl>Liga Orlika Skoki</dl>
                         <dl>
                             <dt>Kolejka</dt>
                             <dd>{{ match.round }}</dd>
@@ -75,7 +72,7 @@
 
                 </div>
                     {% set logo2 = 'bundles/skokiorlik/images/teams/' ~ match.away_logo %}
-                <div class="container right" style="width: 30%; float: right;">
+                <div class="container right" style="width: 35%; float: right;">
                     <div class="logo">
                         <a href="{{ path('_orlik_show_team', {'id' : match.away_id}) }}" title="{{ match.away_name }}">
                             <img src="{{ asset(logo2) }}" class="team-logo normal" alt="{{ match.away_name }}"/>
@@ -83,6 +80,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         </div>
 {% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block content -%}
+<h1>Dodaj zawodnikó do drużyny: {{ team.getName }}</h1>
+
+<form  method="post" action="{{ path('team_players_new', {'id' : team.getId }) }}" id="join_a_course_form">
+    <div class="box">
+        <p>
+            <label>Zaqodnik 1</label>
+            <input type="text" name="firstname1" value="">
+            <input type="text" name="lastname1" value="">
+        </p>
+        <p>
+            <label>Zaqodnik 2</label>
+            <input type="text" name="firstname2" value="">
+            <input type="text" name="lastname2" value="">
+        </p>
+    </div><p>
+        <label>Zaqodnik 3</label>
+        <input type="text" name="firstname3" value="">
+        <input type="text" name="lastname3" value="">
+    </p>
+    <input type="hidden" name="team" value="{{ team.getId }}">
+    <input type="submit" value="Dodaj zawodników" name = "submit_course_join"/>
+    <input type="hidden" name="_method" value="POST">
+</form>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 {% if matches|length > 0  %}
-<div id="match-fixtures" class="table-container" number="{{ matches|length }}">
+<div id="match-fixtures" class="all table-container" number="{{ matches|length }}">
     {#<div class="next-tab-button"><a href="#" onclick="nextRound();">Następne »</a></div>#}
     {#<div class="prev-tab-button"><a href="#" onclick="prevRound();">« Poprzednie</a></div>#}
 
@@ -9,11 +9,11 @@
     {% elseif roundData.status == 2 %}
     <div class="timetable round lastone">
     {% elseif roundData.status == 3 %}
-    <div class="timetable round nextone">
+    <div  id="round-next" class="timetable round nextone">
     {% else %}
     <div class="timetable round next">
     {% endif %}
-    <h3 id="{{ roundData.status }}">Kolejka {{ roundData.roundNumber }}:</h3>
+    <h3 id="round-{{ roundData.roundNumber }}" class="{{ roundData.status }} ">Kolejka {{ roundData.roundNumber }}:</h3>
         {% if  roundData.status == 3 %}
             <span class="najblizsza">--== NAJBLIŻSZA!!! ==--</span>
         {% endif %}

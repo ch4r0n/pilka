@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Skoki\OrlikBundle\Entity\News;
 use Skoki\OrlikBundle\Form\Type\NewsType;
+use Symfony\Bundle\FrameworkBundle\Routing\Router;
 
 class DefaultController extends Controller
 {
@@ -17,7 +18,8 @@ class DefaultController extends Controller
     public function homepageAction()
     {
         $currentUserTime = new \DateTime();
-
+//        $fs = $this->get('router');
+//var_dump($fs->getRouteCollection());die();
         $matchManager = $this->get('orlik.match.manager');
         $matchList = $matchManager->getMatchRepo()->findAll();
 
@@ -25,6 +27,11 @@ class DefaultController extends Controller
             'currentDatatime' => $currentUserTime->format('Y-m-d H:i:s'),
             'matches' => $matchList
         ));
+    }
+
+    public function regulaminAction()
+    {
+        return $this->render('SkokiOrlikBundle:Default:regulamin.html.twig');
     }
 
     /**

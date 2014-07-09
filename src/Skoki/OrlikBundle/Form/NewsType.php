@@ -15,10 +15,14 @@ class NewsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('date')
-            ->add('introduction')
-            ->add('content')
+            ->add('title', "text",array('required' => false, 'label' => 'Tytuł'))
+            ->add('introduction', "textarea", array('required' => false, 'label' => 'Streszczenie'))
+            ->add('content', "textarea", array('label' => 'Treść', 'attr' => array(
+                'class' => 'tinymce',
+                'data-theme' => 'bbcode' // Skip it if you want to use default theme
+            )
+            ))
+            ->add('Dodaj', 'submit');
         ;
     }
     

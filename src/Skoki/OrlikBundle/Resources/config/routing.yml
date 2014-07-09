@@ -22,6 +22,10 @@ orlik_homepage:
     pattern:  /
     defaults: { _controller: SkokiOrlikBundle:Default:homepage }
 
+orlik_regulamin:
+    pattern:  /regulamin
+    defaults: { _controller: SkokiOrlikBundle:Default:regulamin }
+
 _show_table:
     pattern: /table
 #    defaults: { _controller: SkokiOrlikBundle:Table:tabela }

@@ -13,11 +13,11 @@
         {% endif %}
 
 <div class="block-data team-details">
+    {% block teamForm %}
+        {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teamForm} %}
+    {% endblock %}
         <img src="{{ asset(logo) }}" class="team-logo mid" />
         <h1>{{ team.name }}</h1>
-        {% block teamForm %}
-            {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teamForm} %}
-        {% endblock %}
     </div>
 <div class="block-data">
         {% block teamMatches %}

@@ -24,7 +24,7 @@ class TimetableController extends Controller
         $tManager->setRounds(1);
         $matchList = $matchManager->getMatchRepo()->findBy(array('rounds' => $tManager->getRounds()));
 
-        return $this->render('SkokiOrlikBundle:Timetable:showTimetable.html.twig', array('matches' => $matchList));
+        return $this->render('SkokiOrlikBundle:Timetable:showTimetable.html.twig', array('matches' => $matchList, 'rounds' =>  $tManager->getRounds()));
     }
 
     public function matchListAction($matches)

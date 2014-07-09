@@ -1,6 +1,6 @@
-cup_home:
-    resource: "@CupHomeBundle/Resources/config/routing.yml"
-    prefix:   /cup
+#cup_home:
+#    resource: "@CupHomeBundle/Resources/config/routing.yml"
+#    prefix:   /cup
 
 skoki_user:
     resource: "@SkokiUserBundle/Resources/config/routing.yml"
@@ -8,7 +8,7 @@ skoki_user:
 
 skoki_orlik:
     resource: "@SkokiOrlikBundle/Resources/config/routing.yml"
-    prefix:   /orlik
+    prefix:   /
 #    prefix:   /orlik
 
 #orlik_blog:
@@ -41,6 +41,12 @@ fos_user_change_password:
 #    prefix: /api
 #    defaults: { _format: html }
 
-news:
+orlik_news:
     resource: "@FSiNewsBundle/Resources/config/routing/news.yml"
     prefix: /orlik/news
+
+#cmf_media_file:
+#    resource: "@CmfMediaBundle/Resources/config/routing/file.xml"
+#
+#cmf_media_image:
+#    resource: "@CmfMediaBundle/Resources/config/routing/image.xml"

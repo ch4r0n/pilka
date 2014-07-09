@@ -2,11 +2,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
-    <meta name="robots" content="noindex,nofollow" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>{% block title %}{% endblock %}</title>
     <link href="{{ asset('bundles/framework/css/structure.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('bundles/framework/css/body.css') }}" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../public/css/cup.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    {#<link href="../../public/css/cup.css" rel="stylesheet" type="text/css" media="all" />#}
     {% block head %}{% endblock %}
     <script>
         $(document).ready(function () {
@@ -46,6 +48,7 @@
     <div id="flexible-grid" class="">
         {% block body %}{% endblock %}
     </div>
+    {{ tinymce_init() }}
 </div>
 </body>
 </html>

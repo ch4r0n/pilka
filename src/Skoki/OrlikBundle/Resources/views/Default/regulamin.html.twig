@@ -1,0 +1,134 @@
+{% extends 'SkokiOrlikBundle::layout.html.twig' %}
+
+{% block title %}Orlik News{% endblock %}
+
+{% block content_header '' %}
+
+
+    {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
+    {#{% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': 'foo'} %}#}
+    {#<a href="{{ path('_orlik_login') }}">Zaloguj</a>#}
+    {% block content %}
+        <div class="regulamin block-data">
+            {#<p></p><p style="text-align: center;">R<strong>EGULAMIN ROZGRYWEK SKOCKIEJ LIGI ORLIK</strong></p>#}
+            <p><strong><h2  style="text-align: center;">EGULAMIN ROZGRYWEK SKOCKIEJ LIGI ORLIK</h2></strong></p>
+            <p style="text-align: center;">1. ORGANIZACJA</p>
+
+            <p>Art. 1.1. Organizatorami rozgrywek są Marcin Bejma, Krzysztof Sznajder.</p>
+
+            <p>Art. 1.2. Celem rozgrywek jest popularyzacja piłki nożnej na terenie gminy Skoki oraz wyłonienie najlepszej drużyny, której zostanie przyznany tytuł mistrza rozgrywek Skockiej Ligi Orlik 2014.</p>
+
+            <p>Art. 1.3. Rozgrywki Skockiej Ligi Orlik 2014 prowadzone są na podstawie niniejszego regulaminu i przepisów gry w piłkę nożną.</p>
+
+            <p>Art. 1.4. Zgłoszenie zespołu do rozgrywek następuje poprzez dokonanie wpłaty wpisowego i zgłoszenia listy zawodników. Wpłata wpisowego jest jednoznaczna z deklaracją przestrzegania regulaminu i zasad gry w Skockiej Lidze Orlik 2014 przez wszystkich członków zgłoszonych drużyn.</p>
+
+            <p>Art. 1.5. Nie można zgłaszać zawodników po wyznaczonym przez organizatorów terminie.</p>
+
+            <p>Art. 1.6. Drużyna może liczyć maksymalnie 15 zawodników <strong>(wyjątkiem jest drużyna Proaction)</strong>.</p>
+
+            <p>Art. 1.7. W rozgrywkach mogą brać udział zawodnicy nie mający przeciwwskazań zdrowotnych.</p>
+
+            <p>Art. 1.8. Obowiązuje całkowity zakaz udziału w rozgrywkach zawodników, którzy w okresie:</p>
+
+            <p><strong>- 6 miesięcy (dla zawodników, którzy nie ukończyli 33 roku życia)</strong></p>
+
+            <p><strong>- 3 miesięcy (dla zawodników, którzy skończyli 33 lat)</strong></p>
+
+            <p><strong>poprzedzających mecz Skockiej </strong><strong>Ligi Orlik w sezonie 2014 wystąpili w drużynie zrzeszonej w dowolnym Okręgowym Związku Piłki Nożnej lub zespole I i II Polskiej Ligi Futsalu. Żeby zawodnik zrzeszony mógł wystąpić w meczu Skockiej Ligi Orlik musi upłynąć 6 miesięcy (nie ukończone 33 lata) lub 3 miesiące (skończone 33 lat) od ostatniego rozegranego w zawodowym zespole meczu (liczą się tylko oficjalne mecze, nie wlicza się spotkań towarzyskich/sparingowych). Ponowny powrót do występów zawodnika w Okręgowym Związku Piłki Nożnej lub zespole I i II Polskiej Ligi Futsalu skutkuje 12 miesięczną karencją bez względu na wiek zawodnika. </strong></p>
+
+            <p>Art. 1.9. W rozgrywkach Skockiej Ligi Orlik 2014 nie mogą brać udziału zawodnicy, którzy nie ukończyli 15 roku życia. Zawodnicy niepełnoletni muszą dostarczyć zgodę rodziców na formularzu dostarczonym przez organizatorów.</p>
+
+            <p>Art. 1.10. Każdy zespół w terminie wyznaczonym przez organizatorów jest zobowiązany do wpłaty ustalonej kwoty wpisowego, dostarczenia listy zawodników wraz z wymaganymi danymi. Nie dotrzymanie ustalonych terminów może skutkować wykluczeniem drużyny z rozgrywek.</p>
+
+            <p>Art. 1.11. Organizatorzy nie ponoszą odpowiedzialności za następstwa nieszczęśliwych wypadków. Każda drużyna zobowiązuje się do ubezpieczenia (we własnym zakresie) swoich zawodników od następstw nieszczęśliwych wypadków.</p>
+
+            <p style="text-align: center;">2. ZASADY GRY</p>
+
+            <p>Art. 2.1. Drużyny zobowiązane są występować w jednolitych i ponumerowanych strojach oraz odpowiednim do gry obuwiu sportowym. Bramkarz powinien posiadać strój kolorystycznie odmienny od reszty drużyny.</p>
+
+            <p>Art. 2.2. Obsługę sędziowską zapewniają organizatorzy.</p>
+
+            <p>Art. 2.3. Zawody sędziuję dwóch sędziów (w szczególnych przypadkach dopuszcza się, aby zawody prowadził jeden sędzia). W sędziowaniu może pomagać sędzia stolikowy ustalony przez organizatorów.</p>
+
+            <p>Art. 2.4. Zawody będą rozgrywane według systemu ustalonego przez organizatorów.</p>
+
+            <p>Art. 2.5. Czas gry wynosi 2x20 min. z 5 min. przerwą. Przed rozpoczęciem meczu kapitanowie obydwu drużyn zobowiązani są do czytelnego wypełnienia protokołu. Po zakończeniu meczu kapitan lub kierownik drużyny zobowiązany jest do zatwierdzenia własnoręcznym podpisem protokołu meczowego lub ewentualnego wniesienia uwag. Brak uwag oznacza akceptację danych zawartych w protokole.</p>
+
+            <p>Art. 2.6. Mecze odbywają się tylko piłką dostarczoną przez organizatorów.</p>
+
+            <p>Art. 2.7. W czasie meczu prawo zwrócenia się do sędziego ma tylko i wyłącznie kapitan drużyny.</p>
+
+            <p>Art. 2.8. Kapitan drużyny w celu łatwej identyfikacji przez sędziego, powinien mieć na ramieniu opaskę kapitańską.</p>
+
+            <p>Art. 2.9. W uzasadnionych przypadkach kapitan lub kierownik zespołu może zwrócić się do sędziego o sprawdzenie tożsamości zawodników drużyny przeciwnej. Powyższy wniosek musi być zgłoszony sędziemu przed gwizdkiem kończącym spotkanie.</p>
+
+            <p>Art. 2.10. W przerwie między rundami (w przypadku takiego systemu rozgrywek) zespoły mogą z listy swoich zawodników skreślić do dwóch graczy i powołać w ich miejsce nowych pod warunkiem spełnienia przez nowo zapisanego wymogów regulaminowych.</p>
+
+            <p>Art. 2.11. W przerwie między rundami (w przypadku takiego systemu rozgrywek) dopuszcza się przejście tylko jednego zawodnika z zespołu do zespołu. Do każdej drużyny może w ten sposób przejść do dwóch zawodników lecz nie z tej samej drużyny. Warunkiem jest zgodność z Art. 1.6.</p>
+
+            <p>Art. 2.12. W przerwie między rundami ( w przypadku takiego systemu rozgrywek) do drużyny może być zgłoszony max dwóch zawodników. Warunkiem jest zgodność z Art. 1.6.</p>
+
+            <p>Art. 2.13. W uzasadnionych przypadkach, kiedy zespół traci bramkarza z przyczyn losowych lub zdrowotnych i nie ma rezerwowego może zgłosić nowego bramkarza z poza ligi. Zgłoszony w ten sposób bramkarz może grać tylko i wyłącznie na swojej pozycji. Jeżeli zgłaszany awaryjnie bramkarz byłby 16 zawodnikiem to zespół musi wykreślić ze swojej listy jednego zawodnika. <strong>Nowy zawodnik może wystąpić w meczu jeśli został zgłoszony najpóźniej dwa dni przed jego rozegraniem.</strong></p>
+
+            <p>Art. 2.14. Nadzwyczajne uzupełnienie składu w trakcie sezonu może nastąpić w przypadku, gdy drużynie z przyczyn od siebie niezależnych (nie dotyczy kar i wykluczeń) pozostaje do gry mniej niż sześciu zawodników. Wtedy zespół musi podać do wykreślenia z listy te osoby, które nie będą już mogły zagrać do końca sezonu. Zarząd Ligi może w ten sposób wyrazić zgodę na max dwóch nowych zawodników (licząc z bramkarzem). <strong>Nowi zawodnicy mogą wystąpić w meczu jeśli zostaną zgłoszeni najpóźniej dwa dni przed jego rozegraniem.</strong></p>
+
+            <p>Art. 2.15. O ostatecznej kolejności w tabeli decyduje:</p>
+
+            <p>1) Większa ilość zdobytych punktów</p>
+
+            <p>2) Korzystniejszy bilans bezpośrednich spotkań pomiędzy zainteresowanymi drużynami</p>
+
+            <p>3) Korzystniejsza różnica bramek</p>
+
+            <p>4) Większa ilość zdobytych bramek</p>
+
+            <p>5) Dodatkowy mecz</p>
+
+            <p>Art. 2.16. Zasady gry nie wymienione w regulaminie regulują przepisy gry w piłkę nożną powszechnie znane. W przypadku powstania kwestii spornych rozstrzygają organizatorzy po porozumieniu z przedstawicielami innych drużyn.</p>
+
+            <p style="text-align: center;">3. KARY</p>
+
+            <p>Art. 3.1. Sędzia prowadzący zawody może ukarać zawodnika żółtą (5zł kary) lub czerwoną kartką (20zł kary). Okazanie zawodnikowi czerwonej kartki jest równoznaczne z wykluczeniem go z dalszej części spotkania <strong>(nie może również zasiadać na ławce rezerwowych) </strong>oraz automatyczną dyskwalifikacją w dwóch następnych meczach. Wykluczenie zawodnika z gry za czerwoną kartkę powoduje dwuminutowe osłabienie drużyny. Wyjątek stanowi gol zdobyty przez przeciwnika w czasie kary, w takiej sytuacji osłabiona drużyna może już grać z kompletem graczy. Przy otrzymaniu przez zawodnika w tym samym meczu drugiej żółtej kartki, a tym samym czerwonej zostanie on usunięty z boiska. Drużyna, której zawodnik został usunięty z boiska gra dwie minuty w osłabieniu.</p>
+
+            <p>Art. 3.2. Osoba ukarana czerwoną kartką jest zobowiązana niezwłocznie udać się do szatni. <strong>Wulgarne wyzwiska i groźby pod adresem sędziego lub osób trzecich &nbsp;po otrzymaniu czerwonej kartki skutkują dyskwalifikacją zawodnika na określoną przez Zarząd ilość spotkań. Zarówno wybitnie niesportowe i niekulturalne zachowanie jak i spożywanie alkoholu przez zawodników lub kierowników drużyn (widniejących w listach zgłoszeniowych) na obiektach rozgrywek, skutkują karami finansowymi w wysokości 50-500zł nakładanymi przez organizatorów indywidualnie na zawodników lub na całe drużyny (dotyczy spożywania alkoholu na obiektach sportowych). Indywidualną i drużynową karę finansową należy uiścić najpóźniej w dniu następnego spotkania (przed jego rozpoczęciem). </strong></p>
+
+            <p>Art. 3.3. <strong>Nie uiszczenie indywidualnej lub drużynowej kary finansowej w wyznaczonym terminie powoduje nie dopuszczenie zawodnika lub drużyny do kolejnych meczy aż do chwili jej opłacenia. Niedopuszczenie drużyny do rozgrywek skutkuje walkowerem 5-0 na korzyść drużyny przeciwnej. </strong></p>
+
+            <p>Art. 3.4. <strong>Zawodników biorących udział w meczu obowiązuje bezwzględny zakaz noszenia wszelkiego rodzaju biżuterii (kolczyków, zegarków, pierścionków itp.) oraz okularów w tym także korekcyjnych, z wyjątkiem posiadania lekarskiej zgody na dopuszczenie do gry. Nie stosowanie się do powyższego zakazu skutkuje otrzymaniem przez zawodnika żółtej kartki.</strong></p>
+
+            <p>Art. 3.5. Drużyny odpowiadają za kary nałożone na ich zawodników.</p>
+
+            <p>Art. 3.6. <strong>W przypadku gry nieuprawnionego zawodnika zespół zostaje ukarany karą finansową w wysokości 100 zł a wynik meczu zostaje zweryfikowany na 5-0 na korzyść rywali, o ile wynik nie był wyższy. Karę należy uiścić najpóźniej w dniu kolejnego spotkania. W przeciwnym razie drużyna nie zostanie dopuszczona do następnych meczy, a zawodnik zostanie dożywotnio zdyskwalifikowany. Podczas dłużej trwającego postępowania wyjaśniającego weryfikację zawodnika drużyna może rozgrywać kolejne mecze, jednakże po udowodnieniu wystąpienia nieprawidłowości wobec drużyny lub zawodnika walkowery i kary zostają nałożone od momentu rozegrania meczu o którym mowa w postępowaniu.</strong></p>
+
+            <p>Art. 3.7. W przypadku nie przybycia zespołu na mecz drużyna zostaje ukarana karą finansową w wysokości 50 zł, a wynik meczu zostanie ustalony na 5-0 na korzyść rywali. Czas oczekiwania na drużyny wynosi 15 min. od planowanego rozpoczęcia meczu. <strong>Mecz może się rozpocząć tylko przy obecności drużyn w składach po minimum 5 zawodników. Brak wymaganej liczby graczy skutkuje walkowerem. (wyjątek stanowi równa ilość brakujących zawodników w obu drużynach). </strong>O odgwizdaniu walkowera decyduje sędzia. Termin opłacenia walkowera ustala się na 2 dni przed rozpoczęciem kolejnego meczu. Trzy walkowery powodują automatyczne wykluczenie zespołu z rozgrywek i zawieszenie grających w nim zawodników. Odwieszenie zawodnika może nastąpić po zapłaceniu zaległych kwot przez zespół bądź przez zainteresowanego zawodnika w stopniu proporcjonalnym do zadłużenia zespołu.</p>
+
+            <p style="text-align: center;"><strong>4. POSTANOWIENIA KOŃCOWE</strong></p>
+
+            <p>Art. 4.1. Drużyny i zawodnicy występujący w rozgrywkach Skockiej Ligi Orlik&nbsp;są zobowiązani do bezwzględnego przestrzegania, komunikatów, terminów i rozporządzenia Zarządu Ligi. W przeciwnym razie drużyna/zawodnik może zostać nie dopuszczona/y lub wykluczona/y z rozgrywek i ukarana/y finansowo.</p>
+
+            <p>Art. 4.2.<strong> Zgłoszenie się drużyny do rozgrywek jest równoznaczne z akceptacją niniejszego regulaminu przez wszystkich graczy. Każdy kierownik jest zobowiązany zapoznać z regulaminem zawodników swojego zespołu.</strong></p>
+
+            <p>Art. 4.3. Wszystkie sprawy związane z protestami, karami i wykroczeniami rozpatrywać będą Organizatorzy Ligi.</p>
+
+            <p>Art. 4.4. Protesty dotyczące zawodów muszą być wnoszone pisemnie wraz z dokumentacją do Organizatorów Ligi najpóźniej w pierwszy poniedziałek następujący po zakończeniu meczu, którego dotyczą. Wnoszący musi uiścić w tym samym terminie kaucję w wysokości 25 zł. Kaucja podlega zwrotowi w przypadku ustalenia zasadności protestu.</p>
+
+            <p>Art. 4.5. Termin nie obowiązuje w przypadku spraw dotyczących ewentualnego występowania w zawodach zawodników nieuprawnionych.</p>
+
+            <p>Art. 4.6. Protesty będą rozpatrywane w terminie 14 dni od momentu ich zgłoszenia.</p>
+
+            <p>Art. 4.7. W miejscu rozgrywania meczu obowiązuje kategoryczny zakaz spożywania alkoholu i palenia wyrobów tytoniowych.</p>
+
+            <p>Art. 4.8. Nietrzeźwi zawodnicy będą surowo karani (minimum 5 meczów zawieszenia + kara finansowa) i nie dopuszczani do gry.</p>
+
+            <p>Art. 4.9. Wszelkie wpłaty z tytułu zapisania drużyny, kar, kaucji itp. przekazywane są na działalność Skockiej Ligi Orlik.</p>
+
+            <p>Art. 4.10. Zarządzanie zespołem pozostaje wewnętrzną kwestią drużyny oraz jej kierownika. W przypadku powstania ewentualnych sporów w drużynie, które mogą doprowadzić do zakłócenia rozgrywek Zarząd Ligi podejmie decyzje o wykluczeniu drużyny z udziału w lidze.</p>
+
+            <p>Art. 4.11. Zarząd Ligi zastrzega sobie prawo do nie przyjęcia do rozgrywek zespołu, którego nazwa budzi społeczny sprzeciw i narusza dobre obyczaje.</p>
+
+            <p>Art. 4.12. Zarząd ligi może zabronić udziału w meczach drużynie, która na swoich koszulkach posiada napisy budzące społeczny sprzeciw i naruszające dobre obyczaje.</p>
+
+            <p>&nbsp;</p>
+
+        </div>
+    {% endblock content %}

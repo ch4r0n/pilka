@@ -92,6 +92,8 @@ class Players
      */
     private $other;
 
+    public $file;
+
     /**
      * @return string
      */
@@ -361,5 +363,37 @@ class Players
     public function getPozycja()
     {
         return $this->pozycja;
+    }
+
+    public function isFile($file)
+    {
+        if (file_exists(dirname($file))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Set file
+     *
+     * @param string $lastname
+     * @return Players
+     */
+    public function setFile($lastname)
+    {
+        $this->file = $lastname;
+
+        return $this;
+    }
+
+    /**
+     * Get file
+     *
+     * @return
+     */
+    public function getFile()
+    {
+        return $this->file;
     }
 }

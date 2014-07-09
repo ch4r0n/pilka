@@ -26,8 +26,8 @@ class AppKernel extends Kernel
             new FOS\CommentBundle\FOSCommentBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new FSi\Bundle\NewsBundle\FSiNewsBundle(),
-//            new Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
             new Cup\HomeBundle\CupHomeBundle(),
+            new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -15,17 +15,21 @@ class PlayersType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstname')
-            ->add('lastname')
-            ->add('userId')
-            ->add('age')
-            ->add('height')
-            ->add('numer')
-            ->add('country')
-            ->add('pozycja')
-            ->add('other')
+            ->add('firstname', 'text', array('required'  => true))
+            ->add('lastname', 'text', array('required'  => true))
+//            ->add('userId')
+            ->add('age', 'number', array('required'  => false))
+            ->add('height', 'number', array('required'  => false))
+            ->add('numer', 'number', array('required'  => false))
+            ->add('country', 'text', array('required'  => false))
+            ->add('pozycja', 'text', array('required'  => false))
+            ->add('other', 'text', array('required'  => false))
             ->add('team')
-        ;
+            ->add('file', 'file', array(
+                'required' => false,
+                'label' => 'zdjecie',
+                'error_bubbling' => false
+            ));
     }
     
     /**

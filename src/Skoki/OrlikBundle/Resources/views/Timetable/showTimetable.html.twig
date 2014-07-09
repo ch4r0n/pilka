@@ -10,8 +10,19 @@
     {% block content %}
         {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
 
-<div class="block-data">
-        <h2>Kalendarz / Wyniki</h2>
+    <div class="block-data">
+        <h2>Mecze / Wyniki</h2>
+        <div class="content-home">
+            <span class="rounds-menu">
+            <b>Lista kolejek: </b>
+            <ul class="rounds-list">
+                <li><a href="#round-next">(najbliższa)</a></li>
+                {% for round in rounds %}
+                    <li><a href="#round-{{ round.getTorder }}">{{ round.getTorder }}</a></li>
+                {% endfor %}
+            </ul>
+            </span>
         {{ render(controller('SkokiOrlikBundle:Timetable:matchList', { 'matches': matches })) }}
+        </div>
     </div>
     {% endblock %}
