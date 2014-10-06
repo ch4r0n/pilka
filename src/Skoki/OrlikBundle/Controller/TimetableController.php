@@ -34,7 +34,7 @@ class TimetableController extends Controller
         $matchList = $this->get('orlik.timetable.manager')->getTimetable($matches);
         $nowDate = new \DateTime();
         $timestamp = intval($nowDate->getTimestamp());
-
+        $matchList = array_reverse($matchList);
         return $this->render('SkokiOrlikBundle:Timetable:tableList.html.twig', array('matches' => $matchList, 'nowDate' => $timestamp));
 //        return $this->render('SkokiOrlikBundle:Timetable:list.html.twig', array('matches' => $matchList));
     }

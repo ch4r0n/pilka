@@ -19,9 +19,13 @@ class MatchController extends Controller
             'away' => $matchManager->getTeamLastMatches($match->getAway())
         );
 
-        $match = $matchManager->getMatchDetails($match);
+        $matchDetails = $matchManager->getMatchDetails($match);
 
-        return $this->render('SkokiOrlikBundle:Match:show.html.twig', array('match' => $match, 'teams_form' => $teamsForm));
+        $goals = $this->getDoctrine()
+            ->getRepository(Repository::PLAYER_GOALS)
+            ->findBy(array('match' => $match));
+
+        return $this->render('SkokiOrlikBundle:Match:show.html.twig', array('match' => $matchDetails, 'teams_form' => $teamsForm, 'goals' => $goals));
     }
 
     public function updateAction($id)

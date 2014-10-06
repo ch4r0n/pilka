@@ -3,10 +3,13 @@
 namespace Skoki\OrlikBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Skoki\OrlikBundle\Entity\Players;
 use Skoki\OrlikBundle\Form\PlayersType;
+use Imagine\Gd\Imagine;
+use Imagine\Image\ImageInterface;
 
 /**
  * Players controller.
@@ -36,12 +39,22 @@ class PlayersController extends Controller
     public function createAction(Request $request)
     {
         $entity = new Players();
-        $form = $this->createCreateForm($entity);
+//        $form = $this->createCreateForm($entity);
+        $form = $this->createForm(new PlayersType(), $entity);
         $form->handleRequest($request);
-
-//        var_dump($form->getData()-getFile());die();
+//        $cmf = $this->get('cmf_media.upload_file_helper');
+//        var_dump($form->get('image')->getNormData());die();
+//        var_dump($form['image']->getData());die();
+//$form['image']->getData()->move($entity->getFullImagePath(), $form->get('image')->getNormData());
+//        $pic = new Imagine();
+//        $pic->open($form->get('image'));
+//        $pic->save($entity->getFullImagePath( ));
+//        print_r($pic);
+//        die();
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+            //var_dump($form->get('filepic'));die();
+            $em = $this->getDoctrine()->getEntityManager();
+
             $em->persist($entity);
             $em->flush();
 
@@ -81,7 +94,8 @@ class PlayersController extends Controller
     {
         $entity = new Players();
         $form   = $this->createCreateForm($entity);
-
+//$im = new Imagine();
+//        var_dump($im);die();
         $validator = $this->get('validator');
 
         return $this->render('SkokiOrlikBundle:Players:new.html.twig', array(
@@ -98,18 +112,53 @@ class PlayersController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('SkokiOrlikBundle:Teams')->findOneById($id);
-//        $entity = new Players();
-//        $form   = $this->createCreateForm($entity);
-//        var_dump($request->getMethod());die();
-//        if ($request->getMethod() == 'POST') {
-//            var_dump($request->request->get());die();
-//        }
+        $team = $em->getRepository('SkokiOrlikBundle:Teams')->findOneById($id);
 
+        $formFields = array();
+        for ($i=0;$i<10;$i++) {
+            $formFields[$i] = array(
+                'first' => 'firstname_' . $i,
+                'last' => 'lastname_' . $i
+            );
+        }
+
+        if ($request->getMethod() == 'POST') {
+
+            $fieldsList = array();
+            $teamId = intval($request->request->get('team'));
+            $teamActive = $em->getRepository('SkokiOrlikBundle:Teams')->findOneById($teamId);
+            if ($teamActive) {
+                $team = $teamActive;
+                $playerManager = $this->get('orlik.players.manager');
+
+                foreach ($formFields as $key => $name) {
+                    $firstname = $request->request->get($name['first']);
+                    $lastname = $request->request->get($name['last']);
+
+                    if ($firstname != '' && $lastname != '') {
+                        $fieldsList[] = array(
+                            'firstname' => $firstname,
+                            'lastname' => $lastname
+                        );
+                    }
+                }
+
+                $playerManager->createManyPlayers($team, $fieldsList);
+            }
+        }
+        if ($team) {
+            $players = $em->getRepository('SkokiOrlikBundle:Players')->getTeamPlayers($team);
+
+        }
+        if (empty($players)) {
+            $players = null;
+        }
         $validator = $this->get('validator');
 
         return $this->render('SkokiOrlikBundle:Players:teamPlayers.html.twig', array(
-            'team' => $entity,
+            'team' => $team,
+            'fields' => $formFields,
+            'players' => $players
         ));
     }
 

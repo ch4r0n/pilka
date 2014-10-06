@@ -11,4 +11,6 @@ final class Repository
     const STATTABLE = 'SkokiOrlikBundle:StatTable';
     const TOURNAMENTS = 'SkokiOrlikBundle:Tournaments';
     const PLAYERS = 'SkokiOrlikBundle:Players';
+    const PLAYER_GOALS = 'SkokiOrlikBundle:PlayerGoals';
+    const PLAYER_CARDS = 'SkokiOrlikBundle:PlayerCards';
 }

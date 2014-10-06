@@ -19,7 +19,7 @@ class TableController extends Controller
 
         $matchManager = $this->get('orlik.match.manager');
         foreach ($tabela as $key => $teamRaw) {
-            $tabela[$key]->teamForm = $matchManager->getTeamLastMatches($teamRaw->teamId);
+            $tabela[$key]->teamForm = $matchManager->getTeamLastMatches($teamRaw->teamId, 6);
         }
 
         return $this->render('SkokiOrlikBundle:Table:Tabela.html.twig', array('tabela' => $tabela));

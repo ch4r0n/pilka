@@ -28,6 +28,8 @@ class AppKernel extends Kernel
             new FSi\Bundle\NewsBundle\FSiNewsBundle(),
             new Cup\HomeBundle\CupHomeBundle(),
             new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
+            new Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
+//            new Gregwar\ImageBundle\GregwarImageBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

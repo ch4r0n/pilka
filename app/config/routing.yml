@@ -45,8 +45,8 @@ orlik_news:
     resource: "@FSiNewsBundle/Resources/config/routing/news.yml"
     prefix: /orlik/news
 
-#cmf_media_file:
-#    resource: "@CmfMediaBundle/Resources/config/routing/file.xml"
-#
-#cmf_media_image:
-#    resource: "@CmfMediaBundle/Resources/config/routing/image.xml"
+cmf_media_file:
+    resource: "@CmfMediaBundle/Resources/config/routing/file.xml"
+
+cmf_media_image:
+    resource: "@CmfMediaBundle/Resources/config/routing/image.xml"

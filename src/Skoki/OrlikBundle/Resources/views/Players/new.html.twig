@@ -2,8 +2,9 @@
 
 {% block content -%}
     <h1>Players creation</h1>
-
+    <form action="{{ path('player_create') }}" method="post">
     {{ form_widget(form) }}
+    </form>
 
         <ul class="record_actions">
     <li>
@@ -12,4 +13,9 @@
         </a>
     </li>
 </ul>
+    {#<form class="form" enctype="multipart/form-data" action="{{ path('player_create') }}" method="post">#}
+        {#<h2 class="form-fignin-heading">Please Upload</h2>#}
+        {#<input type="file" name="img">#}
+        {#<button class="btn btn-large btn-primary" type="submit">Upload</button>#}
+    {#</form>#}
 {% endblock %}

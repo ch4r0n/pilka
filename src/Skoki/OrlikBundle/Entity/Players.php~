@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Players
  *
- * @ORM\Table()
+ * @ORM\Table(name="players")
  * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\PlayersRepository")
  */
 class Players
@@ -38,7 +38,7 @@ class Players
     /**
      * @var integer
      *
-     * @ORM\Column(name="user_id", type="integer")
+     * @ORM\Column(name="user_id", type="integer", nullable=true)
      */
     private $userId;
 
@@ -65,6 +65,13 @@ class Players
     private $height;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="numer", type="integer", nullable=true)
+     */
+    private $numer;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="country", type="string", length=100, nullable=true)
@@ -85,6 +92,31 @@ class Players
      */
     private $other;
 
+    /**
+     * @var ArrayCollection<PlayerGoals> $playerGoals
+     *
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\PlayerGoals", mappedBy="player", cascade={"all"}, orphanRemoval=true)
+     */
+    private $playerGoals;
+
+    /**
+     * @var ArrayCollection<PlayerCards> $playerCards
+     *
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\PlayerCards", mappedBy="player", cascade={"all"}, orphanRemoval=true)
+     */
+    private $playerCards;
+
+    public $file;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->playerGoals = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->playerCards = new \Doctrine\Common\Collections\ArrayCollection();
+        //$this->away = new \Doctrine\Common\Collections\ArrayCollection();
+    }
     /**
      * @return string
      */
@@ -219,6 +251,29 @@ class Players
     }
 
     /**
+     * Set numer
+     *
+     * @param integer $numer
+     * @return Players
+     */
+    public function setNumer($numer)
+    {
+        $this->numer = $numer;
+
+        return $this;
+    }
+
+    /**
+     * Get numer
+     *
+     * @return integer
+     */
+    public function getNumer()
+    {
+        return $this->numer;
+    }
+
+    /**
      * Set country
      *
      * @param string $country
@@ -308,5 +363,94 @@ class Players
     public function getTeam()
     {
         return $this->team;
+    }
+
+    /**
+     * Set pozycja
+     *
+     * @param string $pozycja
+     * @return Players
+     */
+    public function setPozycja($pozycja)
+    {
+        $this->pozycja = $pozycja;
+
+        return $this;
+    }
+
+    /**
+     * Get pozycja
+     *
+     * @return string 
+     */
+    public function getPozycja()
+    {
+        return $this->pozycja;
+    }
+
+    public function isFile($file)
+    {
+        if (file_exists(dirname($file))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Set file
+     *
+     * @param string $lastname
+     * @return Players
+     */
+    public function setFile($lastname)
+    {
+        $this->file = $lastname;
+
+        return $this;
+    }
+
+    /**
+     * Get file
+     *
+     * @return
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+
+    /**
+     * Add playerGoals
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals
+     * @return Tournaments
+     */
+    public function addPlayerGoal(\Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals)
+    {
+        $this->playerGoals[] = $playerGoals;
+
+        return $this;
+    }
+
+    /**
+     * Remove playerGoals
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals
+     */
+    public function removePlayerGoals(\Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals)
+    {
+        $this->playerGoals->removeElement($playerGoals);
+    }
+
+    /**
+     * Get playerGoals
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPlayerGoals()
+    {
+        return $this->playerGoals;
     }
 }

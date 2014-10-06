@@ -180,9 +180,9 @@ class MatchManager {
               'przeciwnikId' => int 7
         1 =>....
      */
-    public function getTeamLastMatches($teamId)
+    public function getTeamLastMatches($teamId, $limit = 5)
     {
-        $teamPlayedMatches = $this->matchRepo->getTeamPlayedMatches($teamId);
+        $teamPlayedMatches = $this->matchRepo->getTeamPlayedMatches($teamId, $limit);
         $lastStat = array();
 
         foreach ($teamPlayedMatches as $match) {

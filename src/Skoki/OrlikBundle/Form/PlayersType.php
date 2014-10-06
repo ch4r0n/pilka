@@ -4,6 +4,7 @@ namespace Skoki\OrlikBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class PlayersType extends AbstractType
@@ -25,11 +26,12 @@ class PlayersType extends AbstractType
             ->add('pozycja', 'text', array('required'  => false))
             ->add('other', 'text', array('required'  => false))
             ->add('team')
-            ->add('file', 'file', array(
+            ->add('image', 'file', array(
                 'required' => false,
                 'label' => 'zdjecie',
                 'error_bubbling' => false
-            ));
+            ))
+            ->add('dodaj', 'submit');
     }
     
     /**

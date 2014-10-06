@@ -11,7 +11,6 @@
         {% else %}
             {% set logo = 'bundles/skokiorlik/images/teams/noHerb.png'%}
         {% endif %}
-
 <div class="block-data team-details">
     {% block teamForm %}
         {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': teamForm} %}
@@ -19,6 +18,18 @@
         <img src="{{ asset(logo) }}" class="team-logo mid" />
         <h1>{{ team.name }}</h1>
     </div>
+
+        <div id="team_players" class="block-data">
+            <h3>Zawodnicy drużyny:</h3>
+            {% if players is not null %}
+                <ul>
+                    {% for player in players %}
+                        <li>{{ player.getFirstname }} - {{ player.lastname }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
 <div class="block-data">
         {% block teamMatches %}
             {% include 'SkokiOrlikBundle:Timetable:matchesList.html.twig' with {'matches': matches, 'nowDate': nowDate} %}

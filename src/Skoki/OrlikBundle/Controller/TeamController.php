@@ -41,9 +41,23 @@ class TeamController extends Controller
             ->getTeamLasMatchList($id);
         $nowDate = new \DateTime();
         $timestamp = intval($nowDate->getTimestamp());
-//        var_dump(array_merge($matchesHome, $matchesAway));die();
 
-        return $this->render('SkokiOrlikBundle:Team:Show.html.twig', array('id' => $id, 'team' => $team, 'matches' => $matches, 'teamForm' => $last, 'nowDate' => $timestamp));
+        $em = $this->getDoctrine()->getManager();
+        if ($team) {
+            $players = $em->getRepository('SkokiOrlikBundle:Players')->getTeamPlayers($team);
+
+        }
+        if (empty($players)) {
+            $players = null;
+        }
+        $matches = array_reverse($matches);
+        return $this->render('SkokiOrlikBundle:Team:Show.html.twig', array(
+            'id' => $id,
+            'team' => $team,
+            'matches' => $matches,
+            'teamForm' => $last,
+            'nowDate' => $timestamp,
+            'players' => $players));
     }
 
     public function listAction()

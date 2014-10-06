@@ -116,11 +116,27 @@ class Matches
     private $teamMatches;
 
     /**
+     * @var ArrayCollection<MatchGoals> $matchGoals
+     *
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\PlayerGoals", mappedBy="match", cascade={"all"}, orphanRemoval=true)
+     */
+    private $matchGoals;
+
+    /**
+     * @var ArrayCollection<MatchCards> $matchCards
+     *
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\PlayerCards", mappedBy="match", cascade={"all"}, orphanRemoval=true)
+     */
+    private $matchCards;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
         $this->matchTeams = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->matchGoals = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->matchCards = new \Doctrine\Common\Collections\ArrayCollection();
         //$this->away = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -550,5 +566,104 @@ class Matches
     public function getMatchDate()
     {
         return $this->matchDate;
+    }
+
+    /**
+     * Add teamMatches
+     *
+     * @param \Skoki\OrlikBundle\Entity\TeamMatches $teamMatches
+     * @return Matches
+     */
+    public function addTeamMatch(\Skoki\OrlikBundle\Entity\TeamMatches $teamMatches)
+    {
+        $this->teamMatches[] = $teamMatches;
+
+        return $this;
+    }
+
+    /**
+     * Remove teamMatches
+     *
+     * @param \Skoki\OrlikBundle\Entity\TeamMatches $teamMatches
+     */
+    public function removeTeamMatch(\Skoki\OrlikBundle\Entity\TeamMatches $teamMatches)
+    {
+        $this->teamMatches->removeElement($teamMatches);
+    }
+
+    /**
+     * Get teamMatches
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTeamMatches()
+    {
+        return $this->teamMatches;
+    }
+
+    /**
+     * Add matchGoals
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerGoals $matchGoals
+     * @return Matches
+     */
+    public function addMatchGoal(\Skoki\OrlikBundle\Entity\PlayerGoals $matchGoals)
+    {
+        $this->matchGoals[] = $matchGoals;
+
+        return $this;
+    }
+
+    /**
+     * Remove matchGoals
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerGoals $matchGoals
+     */
+    public function removeMatchGoal(\Skoki\OrlikBundle\Entity\PlayerGoals $matchGoals)
+    {
+        $this->matchGoals->removeElement($matchGoals);
+    }
+
+    /**
+     * Get matchGoals
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getMatchGoals()
+    {
+        return $this->matchGoals;
+    }
+
+    /**
+     * Add matchCards
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerCards $matchCards
+     * @return Matches
+     */
+    public function addMatchCard(\Skoki\OrlikBundle\Entity\PlayerCards $matchCards)
+    {
+        $this->matchCards[] = $matchCards;
+
+        return $this;
+    }
+
+    /**
+     * Remove matchCards
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerCards $matchCards
+     */
+    public function removeMatchCard(\Skoki\OrlikBundle\Entity\PlayerCards $matchCards)
+    {
+        $this->matchCards->removeElement($matchCards);
+    }
+
+    /**
+     * Get matchCards
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getMatchCards()
+    {
+        return $this->matchCards;
     }
 }

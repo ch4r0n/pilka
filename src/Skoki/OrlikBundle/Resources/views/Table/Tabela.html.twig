@@ -40,7 +40,7 @@
                     <td class="hidden-md">{{ team.teamReds }}</td>
                     <td class="hidden-md">{{ team.teamYellows }}</td>
                     <td>{{ team.teamPkt }}</td>
-                    <td>
+                    <td class="team_form_col">
                     {% if team.teamForm|length > 0  %}
                         {% block teamForm %}
                             {% include 'SkokiOrlikBundle:Team:TeamForm.html.twig' with {'teamForm': team.teamForm} %}

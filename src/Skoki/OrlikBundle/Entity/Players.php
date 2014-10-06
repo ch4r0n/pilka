@@ -3,11 +3,14 @@
 namespace Skoki\OrlikBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Players
  *
  * @ORM\Table(name="players")
+ * @ORM\HasLifecycleCallbacks
  * @ORM\Entity(repositoryClass="Skoki\OrlikBundle\Repository\PlayersRepository")
  */
 class Players
@@ -92,8 +95,38 @@ class Players
      */
     private $other;
 
-    public $file;
+    /**
+     * @var ArrayCollection<PlayerGoals> $playerGoals
+     *
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\PlayerGoals", mappedBy="player", cascade={"all"}, orphanRemoval=true)
+     */
+    private $playerGoals;
 
+    /**
+     * @var ArrayCollection<PlayerCards> $playerCards
+     *
+     * @ORM\OneToMany(targetEntity="Skoki\OrlikBundle\Entity\PlayerCards", mappedBy="player", cascade={"all"}, orphanRemoval=true)
+     */
+    private $playerCards;
+
+
+    /**
+     * @var string $image
+     * @Assert\File( maxSize = "2000000", mimeTypesMessage = "Please upload a valid Image")
+     * @ORM\Column(name="image", type="string", length=255, nullable=true)
+     */
+    private $image;
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->playerGoals = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->playerCards = new \Doctrine\Common\Collections\ArrayCollection();
+        //$this->away = new \Doctrine\Common\Collections\ArrayCollection();
+    }
     /**
      * @return string
      */
@@ -101,6 +134,27 @@ class Players
     {
         return $this->firstname . ' ' .$this->lastname;
     }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
 
     /**
      * Get id
@@ -374,26 +428,161 @@ class Players
         }
     }
 
+//    /**
+//     * Set filepic
+//     *
+//     * @param string $filepath
+//     * @return Players
+//     */
+//    public function setFilepic($filepath)
+//    {
+//        $this->filepic = $filepath;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * Get filepic
+//     *
+//     * @return
+//     */
+//    public function getFilepic()
+//    {
+//        return $this->filepic;
+//    }
+
+
     /**
-     * Set file
+     * Add playerGoals
      *
-     * @param string $lastname
-     * @return Players
+     * @param \Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals
+     * @return Tournaments
      */
-    public function setFile($lastname)
+    public function addPlayerGoal(\Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals)
     {
-        $this->file = $lastname;
+        $this->playerGoals[] = $playerGoals;
 
         return $this;
     }
 
     /**
-     * Get file
+     * Remove playerGoals
      *
-     * @return
+     * @param \Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals
      */
-    public function getFile()
+    public function removePlayerGoals(\Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals)
     {
-        return $this->file;
+        $this->playerGoals->removeElement($playerGoals);
     }
+
+    /**
+     * Get playerGoals
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPlayerGoals()
+    {
+        return $this->playerGoals;
+    }
+
+    /**
+     * Remove playerGoals
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals
+     */
+    public function removePlayerGoal(\Skoki\OrlikBundle\Entity\PlayerGoals $playerGoals)
+    {
+        $this->playerGoals->removeElement($playerGoals);
+    }
+
+    /**
+     * Add playerCards
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerCards $playerCards
+     * @return Players
+     */
+    public function addPlayerCard(\Skoki\OrlikBundle\Entity\PlayerCards $playerCards)
+    {
+        $this->playerCards[] = $playerCards;
+
+        return $this;
+    }
+
+    /**
+     * Remove playerCards
+     *
+     * @param \Skoki\OrlikBundle\Entity\PlayerCards $playerCards
+     */
+    public function removePlayerCard(\Skoki\OrlikBundle\Entity\PlayerCards $playerCards)
+    {
+        $this->playerCards->removeElement($playerCards);
+    }
+
+    /**
+     * Get playerCards
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPlayerCards()
+    {
+        return $this->playerCards;
+    }
+
+    public function getFullImagePath() {
+        return null === $this->image ? null : $this->getUploadRootDir(). $this->image;
+    }
+
+    protected function getUploadRootDir() {
+        // the absolute directory path where uploaded documents should be saved
+        return $this->getTmpUploadRootDir().$this->getId()."/";
+    }
+
+    protected function getTmpUploadRootDir() {
+        // the absolute directory path where uploaded documents should be saved
+        return __DIR__ . '/../../../../web/upload/';
+    }
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function uploadImage() {
+        // the file property can be empty if the field is not required
+        if (null === $this->image) {
+            return;
+        }
+        if(!$this->id){
+            $this->image->move($this->getTmpUploadRootDir(), $this->image->getClientOriginalName());
+        }else{
+            $this->image->move($this->getUploadRootDir(), $this->image->getClientOriginalName());
+        }
+        $this->setImage($this->image->getClientOriginalName());
+    }
+
+    /**
+     * @ORM\PostPersist()
+     */
+    public function moveImage()
+    {
+        if (null === $this->image) {
+            return;
+        }
+        if(!is_dir($this->getUploadRootDir())){
+            mkdir($this->getUploadRootDir());
+        }
+        copy($this->getTmpUploadRootDir().$this->image, $this->getFullImagePath());
+        unlink($this->getTmpUploadRootDir().$this->image);
+    }
+
+    /**
+     * @ORM\PreRemove()
+     */
+    public function removeImage()
+    {
+        unlink($this->getFullImagePath());
+        rmdir($this->getUploadRootDir());
+    }
+
+
+
 }

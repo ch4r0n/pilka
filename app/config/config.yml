@@ -165,3 +165,36 @@ stfalcon_tinymce:
     theme:
         simple:
             theme: "modern"
+
+#gregwar_image:
+#    cache_dir:  my_cache_dir
+#    web_dir: %kernel.root_dir%/../../public_html
+#    throw_exception: true
+
+#liip_imagine:
+#    loaders:
+#        default:
+#            filesystem:
+#              data_root: %kernel.root_dir%/../web/uploads/images/full
+#    resolvers:
+#        default:
+#            web_path:
+#                web_root: %kernel.root_dir%/../web
+#                cache_prefix: /uploads/images
+#    cache: default
+#    filter_sets:
+#        avatar:
+#            quality: 90
+#            filters:
+#                thumbnail_min: { size: 50, mode: inset }
+#        full: quality: 100
+
+#liip_imagine:
+#    # ...
+#    filter_sets:
+#        # default filter to be used with the image preview
+#        image_upload_thumbnail:
+#            data_loader: cmf_media_doctrine_phpcr
+#            quality: 85
+#            filters:
+#                thumbnail: { size: [100, 100], mode: outbound }

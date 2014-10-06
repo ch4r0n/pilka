@@ -3,23 +3,33 @@
 {% block content -%}
 <h1>Dodaj zawodnikó do drużyny: {{ team.getName }}</h1>
 
-<form  method="post" action="{{ path('team_players_new', {'id' : team.getId }) }}" id="join_a_course_form">
+    <div id="team_players">
+        {% if players is not null %}
+                <ul>
+            {% for player in players %}
+                <li>{{ player.getFirstname }} - {{ player.lastname }}    (<a href="{{ path('player_edit', { 'id': player.id }) }}">edytuj</a>)</li>
+            {% endfor %}
+                </ul>
+            {% endif %}
+    </div>
+
+<form  method="post" action="{{ path('team_players_new', {'id' : team.getId }) }}" id="multiple-players-form">
     <div class="box">
-        <p>
-            <label>Zaqodnik 1</label>
-            <input type="text" name="firstname1" value="">
-            <input type="text" name="lastname1" value="">
-        </p>
-        <p>
-            <label>Zaqodnik 2</label>
-            <input type="text" name="firstname2" value="">
-            <input type="text" name="lastname2" value="">
-        </p>
-    </div><p>
-        <label>Zaqodnik 3</label>
-        <input type="text" name="firstname3" value="">
-        <input type="text" name="lastname3" value="">
-    </p>
+        <table>
+            <tr>
+                <th></th>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+            </tr>
+        {% for nr, fieldname in fields %}
+            {% set numer = nr + 1 %}
+            <tr>
+                <td><label>Zaqodnik {{ numer }}</label></td>
+                <td><input type="text" name="{{ fieldname['first'] }}" value=""></td>
+                <td> <input type="text" name="{{ fieldname['last'] }}" value=""></td>
+            </tr>
+        {% endfor %}
+        </table>
     <input type="hidden" name="team" value="{{ team.getId }}">
     <input type="submit" value="Dodaj zawodników" name = "submit_course_join"/>
     <input type="hidden" name="_method" value="POST">
