@@ -46,27 +46,27 @@ class TimetableManager
         $lastRoundId = null;
         if (!empty($list)) {
             foreach ($list as $match) {
-                //var_dump($match->getRoundOrder(), $match->getRounds()->getDate()->format('d/m/Y'), $match->getId());
                 $roundTimestamp = $match->getRounds()->getDate()->format('U');
-                $tempTab[$match->getRoundId()]['roundNumber'] = $match->getRoundOrder();
-                $tempTab[$match->getRoundId()]['roundDate'] = intval($roundTimestamp);
-                if ($nowDate > $roundTimestamp) {
-                    $tempTab[$match->getRoundId()]['status'] = 0; //prev
-                } else {
-                    if ($flagPrev) {
-                        $flagPrev = false;
-                        $tempTab[$match->getRoundId()]['status'] = 3; //nextone
-                        if ($lastRoundId != null) {
-                            $tempTab[$lastRoundId]['status'] = 2; //lastone
+                if (array_key_exists($match->getRoundId(), $tempTab)) {
+                    $tempTab[$match->getRoundId()]['roundNumber'] = $match->getRoundOrder();
+                    $tempTab[$match->getRoundId()]['roundDate'] = intval($roundTimestamp);
+                    if ($nowDate > $roundTimestamp) {
+                        $tempTab[$match->getRoundId()]['status'] = 0; //prev
+                    } else {
+                        if ($flagPrev) {
+                            $flagPrev = false;
+                            $tempTab[$match->getRoundId()]['status'] = 3; //nextone
+                            if ($lastRoundId != null) {
+                                $tempTab[$lastRoundId]['status'] = 2; //lastone
+                            }
+
                         }
-
+                        if (!isset($tempTab[$lastRoundId]['status'])) {
+                            $tempTab[$match->getRoundId()]['status'] = 1; //next
+                        }
                     }
-                    if (!isset($tempTab[$lastRoundId]['status'])) {
-                        $tempTab[$match->getRoundId()]['status'] = 1; //next
-                    }
+                    $lastRoundId = $match->getRoundId();
                 }
-                $lastRoundId = $match->getRoundId();
-
                 $tempTab[$match->getRoundId()]['matches'][$match->getMatchDate()->format('H:i')] = $this->matchManager->getMatchDetails($match);
             }
         }

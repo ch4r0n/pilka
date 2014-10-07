@@ -26,6 +26,8 @@ class MatchManager {
     protected $yellowAway;
     protected $hour;
 
+    public $teamsList = array();
+
     protected $teamsNameArray;
 
     public function __construct($entityManager)
@@ -33,6 +35,10 @@ class MatchManager {
         $this->em = $entityManager;
         $this->matchRepo = $entityManager->getRepository('SkokiOrlikBundle:Matches');
         $this->teamRepo = $entityManager->getRepository('SkokiOrlikBundle:Teams');
+        $teamsList = $this->teamRepo->findAll();
+        foreach($teamsList as $team) {
+            $this->teamsList[$team->getId()] = $team;
+        }
     }
 
     public function getMatchRepo()
@@ -50,8 +56,8 @@ class MatchManager {
         $this->match = $match;
         $this->home_id = $match->getHome();
         $this->away_id = $match->getAway();
-        $this->home = $this->teamRepo->findOneById($this->home_id);
-        $this->away = $this->teamRepo->findOneById($this->away_id);
+        $this->home = $this->teamsList[$this->home_id];
+        $this->away = $this->teamsList[$this->away_id];
         $this->scoreHome = $match->getScoreHome();
         $this->scoreAway = $match->getScoreAway();
         $this->redHome = $match->getRedHome();
@@ -254,7 +260,7 @@ class MatchManager {
         if (isset($this->teamsNameArray)) {
             return $this->teamsNameArray;
         } else {
-            $teamsList = $this->teamRepo->findAll();
+            $teamsList = $this->teamsList;
             $teamsMapArray = array();
             foreach ($teamsList as $team) {
                 $teamsMapArray[$team->getId()] = $team->getName();
